@@ -1,1 +1,0 @@
-Image-embedded deployment build: all website images are embedded directly into HTML. No standalone image upload is required. PDF documents remain as separate downloadable assets.
