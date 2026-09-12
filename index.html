@@ -676,7 +676,7 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 </tbody>
 </table>
 <div class="snapshot-overlay">
-<button class="btn-primary" onclick="document.getElementById('audit').scrollIntoView({behavior:'smooth'})" type="button">🔓 Unlock My 5-Account Research Snapshot</button>
+<button class="btn-primary" onclick="document.getElementById('audit').scrollIntoView({behavior:'smooth'})" type="button">View the Paid 3–5 Account Research Pilot</button>
 </div>
 </div>
 </section>
@@ -915,5 +915,23 @@ function toggleFAQ(el){
 }
 </script>
 
+<script>
+(function(){
+  function revealSections(){
+    var els=document.querySelectorAll('.reveal');
+    if(!els.length) return;
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){ if(entry.isIntersecting){ entry.target.classList.add('in-view'); io.unobserve(entry.target); } });
+      },{rootMargin:'120px 0px',threshold:0.01});
+      els.forEach(function(el){io.observe(el);});
+    } else {
+      els.forEach(function(el){el.classList.add('in-view');});
+    }
+    setTimeout(function(){ els.forEach(function(el){ if(el.getBoundingClientRect().top < window.innerHeight*1.5) el.classList.add('in-view'); }); },300);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',revealSections); else revealSections();
+})();
+</script>
 </body>
 </html>
