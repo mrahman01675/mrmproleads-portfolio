@@ -4,23 +4,16 @@
 <head><title>MRMProLeads | B2B ABM Research &amp; Sales Intelligence for SaaS Teams</title>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-
-
 <link href="https://mrmproleads.netlify.app/" rel="canonical"/>
 <link href="assets/asset-1.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="assets/asset-2.png" rel="apple-touch-icon" sizes="180x180"/>
 <meta content="#090d17" name="theme-color"/>
-
-
-
-
-
-<meta content="1200" property="og:image:width"/>
-<meta content="630" property="og:image:height"/>
+<meta content="1448" property="og:image:width"/>
+<meta content="1086" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="MRMProLeads | Predictable B2B Revenue Through High-Precision ABM" name="twitter:title"/>
-<meta content="High-precision ABM research and buying committee mapping for Salesforce-native SaaS companies. Human-reviewed research, zero fluff." name="twitter:description"/>
-<meta content="assets/asset-4.jpg" name="twitter:image"/>
+<meta content="MRMProLeads | B2B ABM Research &amp; Sales Intelligence for SaaS Teams" name="twitter:title"/>
+<meta content="Human-reviewed account research, buying signals, and decision-maker mapping for B2B SaaS teams." name="twitter:description"/>
+<meta content="https://mrmproleads.netlify.app/assets/hero-mrmproleads-4x3.webp" name="twitter:image"/>
 <style>
 :root{
   --void:#05070d; --bg-main:#090d17; --bg-card:#121a2c; --bg-card-hover:#182238; --bg-raised:#0d1220;
@@ -122,32 +115,6 @@ body.light-theme .site-header{background:rgba(247,248,251,.92);}
 .tool-badge{font-weight:600;font-size:.88rem;color:var(--text-primary);background:rgba(255,255,255,.04);padding:.5rem 1.1rem;border-radius:var(--radius-full);border:1px solid var(--border);text-decoration:none;transition:all .2s ease;}
 a.tool-badge:hover{background:var(--accent-gold-soft);border-color:var(--border-gold);color:var(--accent-gold-bright);transform:translateY(-2px);}
 
-/* movable score slider */
-.score-section{margin:5rem auto;}
-.score-slider-outer{position:relative;}
-.score-slider-viewport{overflow:hidden;border-radius:var(--radius-lg);}
-.score-slider-track{display:flex;gap:1.5rem;cursor:grab;touch-action:pan-y;will-change:transform;padding:.4rem .2rem 1rem;}
-.score-slider-track.dragging{cursor:grabbing;}
-.score-slider-track.dragging .score-card{pointer-events:none;}
-.score-card{flex:0 0 auto;width:290px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.1rem 1.7rem;text-align:center;position:relative;box-shadow:var(--shadow-md);user-select:none;-webkit-user-drag:none;}
-.score-card.highlighted{border-color:var(--border-gold);background:linear-gradient(150deg,rgba(245,158,11,.12) 0%,var(--bg-card) 65%);}
-.score-card::before{content:'';position:absolute;top:0;left:1.4rem;right:1.4rem;height:3px;border-radius:0 0 6px 6px;background:linear-gradient(90deg,var(--accent-gold),var(--accent-blue));}
-.score-badge-tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:.5rem;color:var(--accent-gold-bright);}
-.score-value{font-family:var(--font-display);font-size:2.6rem;font-weight:800;line-height:1;margin:.4rem 0 .7rem;}
-.score-card h4{font-size:1.05rem;margin-bottom:.5rem;}
-.score-card p{font-size:.83rem;color:var(--text-tertiary);}
-.score-slider-controls{display:flex;justify-content:center;align-items:center;gap:1.3rem;margin-top:1.6rem;}
-.score-nav-btn{background:var(--bg-card);border:1px solid var(--border-strong);color:var(--text-primary);width:44px;height:44px;border-radius:50%;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;}
-.score-nav-btn:hover:not(:disabled){background:var(--accent-gold);color:#1a1206;border-color:var(--accent-gold);}
-.score-nav-btn:disabled{opacity:.35;cursor:default;}
-.score-dots{display:flex;gap:.45rem;}
-.score-dot{width:8px;height:8px;border-radius:50%;background:var(--border-strong);border:none;cursor:pointer;padding:0;transition:all .2s;}
-.score-dot.active{background:var(--accent-gold);width:22px;border-radius:5px;}
-.score-hint{text-align:center;font-size:.78rem;color:var(--text-tertiary);margin-top:.9rem;display:flex;align-items:center;justify-content:center;gap:.4rem;}
-.score-evidence-thumb{display:block;width:100%;height:118px;object-fit:cover;object-position:top;border-radius:12px;border:1px solid var(--border);margin-top:1rem;opacity:.95;transition:transform .2s,opacity .2s;}
-.score-evidence-thumb:hover{transform:scale(1.02);opacity:1;}
-.pipeline-bars{display:grid;gap:1rem;padding:1rem 0}.pipeline-bar-row{display:grid;grid-template-columns:130px 1fr auto;gap:.6rem;align-items:center;font-size:.78rem;color:var(--text-secondary)}.pipeline-bar-track{height:14px;background:rgba(255,255,255,.07);border-radius:999px;overflow:hidden}.pipeline-bar-fill{display:block;height:100%;width:0;border-radius:999px;transition:width .45s ease}.pipeline-bar-fill.blue{background:linear-gradient(90deg,#2563eb,#60a5fa)}.pipeline-bar-fill.gold{background:linear-gradient(90deg,#f59e0b,#fbbf24)}.pipeline-bar-fill.green{background:linear-gradient(90deg,#10b981,#34d399)}.pipeline-bar-row strong{color:var(--text-primary);font-size:.76rem;min-width:74px;text-align:right}@media(max-width:640px){.pipeline-bar-row{grid-template-columns:1fr}.pipeline-bar-row strong{text-align:left}.score-evidence-thumb{height:105px;}}
-
 /* comparison table */
 .comparison-section{margin:5rem auto;text-align:center;width:100%;}
 .comparison-table-wrapper{width:100%;max-width:960px;margin:0 auto;overflow-x:auto;border-radius:var(--radius-lg);border:1px solid var(--border);background:var(--bg-card);box-shadow:var(--shadow-md);}
@@ -215,11 +182,6 @@ a.tool-badge:hover{background:var(--accent-gold-soft);border-color:var(--border-
 .process-step h4{font-size:1rem;margin-bottom:.5rem;}
 .process-step p{font-size:.85rem;color:var(--text-tertiary);}
 
-/* calendly embed */
-.calendly-wrap{max-width:820px;margin:2.5rem auto 0;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);background:var(--bg-raised);}
-.or-divider{display:flex;align-items:center;gap:1rem;max-width:460px;margin:2.5rem auto;color:var(--text-tertiary);font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;}
-.or-divider::before,.or-divider::after{content:'';flex:1;height:1px;background:var(--border);}
-
 /* generic cards */
 .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2.5rem 0 4rem;}
 .card{background:var(--bg-card);border-radius:var(--radius-lg);padding:2rem;border:1px solid var(--border);transition:all .3s;position:relative;}
@@ -235,19 +197,6 @@ a.tool-badge:hover{background:var(--accent-gold-soft);border-color:var(--border-
 .method-box p{font-size:.86rem;color:var(--text-tertiary);}
 .deliverable-chips{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:1.8rem;}
 .deliverable-chip{background:var(--bg-raised);border:1px solid var(--border);color:var(--card-text);padding:.55rem 1.05rem;border-radius:var(--radius-full);font-size:.84rem;font-weight:600;display:inline-flex;align-items:center;gap:.4rem;}
-
-/* calculator / quiz */
-.calculator-card{background:linear-gradient(160deg,var(--bg-card) 0%,var(--void) 130%);border:1px solid var(--border-gold);border-radius:var(--radius-lg);padding:2.5rem 2rem;max-width:820px;margin:4rem auto;box-shadow:var(--shadow-lg);}
-.calc-inputs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem;margin:1.5rem 0;}
-.calc-group{display:flex;flex-direction:column;text-align:left;}
-.calc-group label{font-size:.86rem;color:var(--text-secondary);margin-bottom:.4rem;font-weight:600;}
-.calc-group input,.calc-group select{background:var(--void);border:1px solid var(--border);border-radius:var(--radius-sm);padding:.75rem 1rem;color:var(--text-primary);font-size:.94rem;width:100%;font-family:var(--font-body);}
-.calc-range{width:100%;accent-color:var(--accent-gold);margin:.2rem 0 .8rem;}
-.range-value{font-weight:700;color:var(--accent-gold-bright);float:right;}
-.calc-result{background:rgba(245,158,11,.09);border:1px dashed var(--border-gold);border-radius:var(--radius-md);padding:1.2rem;text-align:center;margin-top:1.2rem;}
-.calc-result h3{font-size:2rem;color:var(--accent-gold-bright);margin-top:.3rem;}
-.calc-actions{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-top:1.2rem;}
-.chart-container{max-width:380px;margin:1.5rem auto 0;}
 
 /* snapshot */
 .snapshot-section{margin:5rem auto;}
@@ -359,42 +308,29 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 <meta content="vEEB1T4bkBjWEspG-8rmOP4kSPhaEOJRj2clUKWsiBg" name="google-site-verification"/>
 
 
+<meta content="MRMProLeads premium B2B ABM research banner" property="og:image:alt"/>
 
 
-
-<meta content="1400" property="og:image:width"/>
-<meta content="560" property="og:image:height"/>
-<meta content="MRMProLeads — ABM Research Partner for Salesforce-native SaaS" property="og:image:alt"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="https://mrmproleads.netlify.app/assets/asset-6.jpg" name="twitter:image"/>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-17ZBPZC3GE"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-17ZBPZC3GE');</script>
-<meta content="Human-reviewed ABM research and sales intelligence for B2B SaaS teams: ICP research, buying-signal discovery, decision-maker mapping, and account intelligence." name="description"/><meta content="website" property="og:type"/><meta content="https://mrmproleads.netlify.app/" property="og:url"/><meta content="B2B ABM Research &amp; Sales Intelligence for SaaS Teams" property="og:title"/><meta content="Turn target accounts into usable sales intelligence with focused account research, buying signals, and decision-maker mapping." property="og:description"/><meta content="https://mrmproleads.netlify.app/assets/hero-mrmproleads-4x3.webp" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="B2B ABM Research &amp; Sales Intelligence for SaaS Teams" name="twitter:title"/><meta content="Human-reviewed account research, buying signals, and decision-maker mapping for B2B SaaS." name="twitter:description"/><meta content="https://mrmproleads.netlify.app/assets/hero-mrmproleads-4x3.webp" name="twitter:image"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://mrmproleads.netlify.app/#organization","name":"MRMProLeads","url":"https://mrmproleads.netlify.app/","founder":{"@type":"Person","name":"Mahbubur R."}},{"@type":"WebSite","@id":"https://mrmproleads.netlify.app/#website","url":"https://mrmproleads.netlify.app/","name":"MRMProLeads","publisher":{"@id":"https://mrmproleads.netlify.app/#organization"}},{"@type":"WebPage","@id":"https://mrmproleads.netlify.app/#webpage","url":"https://mrmproleads.netlify.app/","name":"B2B ABM Research & Sales Intelligence for SaaS Teams","isPartOf":{"@id":"https://mrmproleads.netlify.app/#website"}},{"@type":"Service","name":"ABM Research & Sales Intelligence","provider":{"@id":"https://mrmproleads.netlify.app/#organization"},"serviceType":"B2B ABM research, account intelligence, and decision-maker mapping"}]}</script></head>
+<meta content="Human-reviewed ABM research and sales intelligence for B2B SaaS teams: ICP research, buying-signal discovery, decision-maker mapping, and account intelligence." name="description"/><meta content="website" property="og:type"/><meta content="https://mrmproleads.netlify.app/" property="og:url"/><meta content="B2B ABM Research &amp; Sales Intelligence for SaaS Teams" property="og:title"/><meta content="Turn target accounts into usable sales intelligence with focused account research, buying signals, and decision-maker mapping." property="og:description"/><meta content="https://mrmproleads.netlify.app/assets/hero-mrmproleads-4x3.webp" property="og:image"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://mrmproleads.netlify.app/#organization","name":"MRMProLeads","url":"https://mrmproleads.netlify.app/","founder":{"@type":"Person","name":"Mahbubur R."}},{"@type":"WebSite","@id":"https://mrmproleads.netlify.app/#website","url":"https://mrmproleads.netlify.app/","name":"MRMProLeads","publisher":{"@id":"https://mrmproleads.netlify.app/#organization"}},{"@type":"WebPage","@id":"https://mrmproleads.netlify.app/#webpage","url":"https://mrmproleads.netlify.app/","name":"B2B ABM Research & Sales Intelligence for SaaS Teams","isPartOf":{"@id":"https://mrmproleads.netlify.app/#website"}},{"@type":"Service","name":"ABM Research & Sales Intelligence","provider":{"@id":"https://mrmproleads.netlify.app/#organization"},"serviceType":"B2B ABM research, account intelligence, and decision-maker mapping"}]}</script></head>
 <body><a class="skip-link" href="#main-content">Skip to content</a>
 <div id="progress-container"><div id="progress-bar"></div></div>
-<div class="welcome-banner" id="personalization-banner">
-<strong id="url-greeting">Welcome to MRMProLeads.</strong> <span id="ip-greeting"></span>
-</div>
 <header class="site-header">
 <div class="container header-inner">
-<a class="logo" href="#">MRMPro<span>Leads</span></a>
+<a class="logo" href="#main-content">MRMPro<span>Leads</span></a>
 <nav style="display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;">
 <ul class="nav-links">
-<li><a href="#scores">Scores</a></li>
 <li><a href="#why">Why Us</a></li>
 <li><a href="#showcase">Showcase</a></li>
 <li><a href="#portfolio">Case Studies</a></li>
 <li><a href="#methodology">Methodology</a></li>
 <li><a href="#services">Services</a></li>
-<li><a href="#tools">Tools</a></li>
-<li><a href="#calculator">Calculator</a></li>
 <li><a href="#resources">Resources</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#audit">Contact</a></li>
 </ul>
 <div class="nav-actions">
-<button aria-label="Toggle theme" class="icon-btn" id="theme-toggle" title="Toggle theme"><span id="theme-icon">🌙</span></button>
-<button aria-label="Export PDF" class="icon-btn" id="pdf-export-btn" title="Export revenue report">📥</button>
 </div>
 </nav>
 </div>
@@ -409,7 +345,6 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 <p class="subhead">Turn target accounts into usable sales intelligence — with ICP research, buying-signal discovery, decision-maker mapping, contact intelligence, and evidence-aware account research.</p>
 <div class="hero-cta">
 <a class="btn-primary" href="#audit">Request a Paid Research Pilot</a>
-
 </div>
 </section>
 <div class="activity-strip" style="margin-top:1.5rem"><span class="activity-pill"><strong>MRMProLeads</strong> — ABM Research Partner for Salesforce-native SaaS</span><span class="activity-pill">CRO · VP Sales · VP RevOps · Head of Key Accounts</span></div>
@@ -438,7 +373,7 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 <span class="activity-pill">🎯 ICP-first targeting</span>
 <span class="activity-pill">🔎 Buying committee mapping</span>
 <span class="activity-pill">✅ Research-driven outreach preparation</span>
-<span class="activity-pill">📅 20-minute revenue audit</span>
+<span class="activity-pill">💼 Paid 3–5 account research pilot</span>
 </div>
 <div class="container tool-stack">
 <h3>Powered By Industry-Standard Intelligence &amp; Data Systems</h3>
@@ -455,7 +390,6 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 </div>
 </div>
 <!-- Movable Website Grader & Performance Score Slider -->
-
 <section class="container comparison-section reveal" id="why">
 <div class="section-heading">
 <span class="eyebrow">The Difference</span>
@@ -467,7 +401,7 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 <thead><tr><th>Feature / Approach</th><th>Generic Lead Gen Agencies</th><th>MRMProLeads ABM Engine</th></tr></thead>
 <tbody>
 <tr><td>Targeting Strategy</td><td>Unverified mass list scraping</td><td>Hand-picked Buying Committees</td></tr>
-<tr><td>Data Accuracy</td><td>15-30% bounce rates common</td><td>Human-Reviewed Buying Committee Research</td></tr>
+<tr><td>Data Accuracy</td><td>Quality varies; stale data can create avoidable waste</td><td>Human-Reviewed Buying Committee Research</td></tr>
 <tr><td>Focus Metric</td><td>Vanity Metrics (Open/Click rates)</td><td>Qualified Pipeline &amp; Revenue Meetings</td></tr>
 <tr><td>Messaging Style</td><td>Generic template spam</td><td>Hyper-personalized Account Sequences</td></tr>
 </tbody>
@@ -485,7 +419,7 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 <article class="showcase-card pinned">
 <div>
 <div class="showcase-top"><span class="platform-badge li">in LinkedIn</span><span class="pin-tag">📌 Pinned Post</span></div>
-<h3>Steal My Exact 5-Step ABM Research Framework</h3>
+<h3>5-Step ABM Research Framework</h3>
 <p>The exact stakeholder-mapping sequence used to go from a blank account list to a fully reviewed buying committee — shared step-by-step for other B2B teams to copy.</p>
 </div>
 <a class="showcase-link" href="https://www.linkedin.com/posts/mrahman01675_steal-my-exact-5-step-abm-research-framework-ugcPost-7495502486225526784-ugZ7" rel="noopener noreferrer" target="_blank">View the post on LinkedIn →</a>
@@ -590,8 +524,6 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 </div>
 </div>
 </section>
-
-
 <section class="container reveal" id="methodology" style="margin:5rem auto;">
 <div class="section-heading">
 <span class="eyebrow">The Process</span>
@@ -641,12 +573,10 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 <div class="process-row">
 <div class="process-step"><div class="process-num">1</div><h4>Discovery Call</h4><p>20 minutes to understand your ICP, target market, and current pipeline gaps.</p></div>
 <div class="process-step"><div class="process-num">2</div><h4>Custom Research Scope</h4><p>A defined account list and research plan tailored to your goals — agreed before work starts.</p></div>
-<div class="process-step"><div class="process-num">3</div><h4>Research &amp; Delivery</h4><p>Buying-committee mapping and verified contacts, delivered on the agreed timeline.</p></div>
+<div class="process-step"><div class="process-num">3</div><h4>Research &amp; Delivery</h4><p>Buying-committee mapping and reviewed contact intelligence, delivered on the agreed scope and timeline.</p></div>
 <div class="process-step"><div class="process-num">4</div><h4>Review &amp; Iterate</h4><p>A walkthrough call, refinements, and an option to continue as an ongoing pipeline.</p></div>
 </div>
 </section>
-
-
 <section class="container reveal" id="results" style="padding-top:1rem;">
 <div class="section-heading">
 <span class="eyebrow">Track Record</span>
@@ -675,7 +605,7 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 </div>
 <div class="section-heading" style="margin-top:2rem;">
 <h3>Live Data Preview</h3>
-<p>Sample structure only — real client data stays private. Unlock a tailored 5-account snapshot for your ICP.</p>
+<p>Sample structure only — real client data stays private. Use the paid pilot to scope a focused 3–5 account research engagement.</p>
 </div>
 <div class="snapshot-wrap">
 <table>
@@ -699,7 +629,7 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 </div>
 <div class="faq-item" onclick="toggleFAQ(this)">
 <div class="faq-question">How fast can I see results? <span>+</span></div>
-<div class="faq-answer"><p>Typically, you can expect the first qualified meetings within 2-3 weeks. A full pipeline usually builds over 30-60 days, depending on your ACV and sales cycle.</p></div>
+<div class="faq-answer"><p>Research is designed to improve targeting and outreach readiness; meeting volume and timing depend on your offer, market, sales cycle, and execution.</p></div>
 </div>
 <div class="faq-item" onclick="toggleFAQ(this)">
 <div class="faq-question">What makes your approach different? <span>+</span></div>
@@ -707,7 +637,7 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 </div>
 <div class="faq-item" onclick="toggleFAQ(this)">
 <div class="faq-question">What tools power the research? <span>+</span></div>
-<div class="faq-answer"><p>Industry-standard platforms — Apollo.io, Snov.io, LinkedIn Sales Navigator, Hunter.io, NeverBounce, and HubSpot CRM — combined with a 100% human review pass before anything reaches your inbox.</p></div>
+<div class="faq-answer"><p>Industry-standard research and sales-intelligence platforms, combined with a human review pass before research is delivered.</p></div>
 </div>
 </section>
 <section class="container reveal" id="resources" style="margin-top:4rem;">
@@ -738,7 +668,7 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 <section class="container reveal journey-section" style="margin-top:4rem;">
 <div class="section-heading"><span class="eyebrow">Timeline</span><h2>📅 My Journey</h2><p>From freelance lead research to a focused ABM research practice built for B2B SaaS teams.</p></div>
 <div class="journey-layout">
-<div class="journey-portrait-wrap"><img class="journey-portrait" src="assets/founder-journey-premium.jpg" width="912" height="1155" loading="lazy" alt="Mahbubur Rahman — Founder &amp; Lead ABM Strategist"/><div class="portrait-caption"><strong>Mahbubur Rahman</strong><span>Founder &amp; Lead ABM Strategist</span></div></div>
+<div class="journey-portrait-wrap"><img alt="Mahbubur Rahman — Founder &amp; Lead ABM Strategist" class="journey-portrait" height="1155" loading="lazy" src="assets/founder-journey-premium.jpg" width="912"/><div class="portrait-caption"><strong>Mahbubur Rahman</strong><span>Founder &amp; Lead ABM Strategist</span></div></div>
 <div class="timeline">
 <div class="timeline-item"><div class="timeline-content"><h4>2025</h4><p>Started freelance B2B lead generation</p></div></div>
 <div class="timeline-item"><div class="timeline-content"><h4>2026</h4><p>Specialized in Salesforce-native ABM &amp; pitched 10+ SaaS companies</p></div></div>
@@ -749,21 +679,18 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 <section class="container cta-section reveal" id="audit">
 <h2>Start with a Paid 3–5 Account Research Pilot</h2>
 <p style="color:var(--text-secondary);margin-top:.4rem;">Tell me the market, ICP, or account type you want researched. I’ll confirm scope and next steps before research begins.</p>
-<form action="/success.html" class="contact-form" data-netlify="true" id="contact-form" method="POST" name="contact" netlify-honeypot="bot-field" onsubmit="return handleContactSubmit(event)">
+<form action="/success.html" class="contact-form" data-netlify="true" id="contact-form" method="POST" name="contact" netlify-honeypot="bot-field">
 <input name="form-name" type="hidden" value="contact"/>
 <input aria-hidden="true" autocomplete="off" name="bot-field" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" tabindex="-1" type="text"/>
 <input name="fullname" placeholder="Full Name" required="" type="text"/>
-<input id="work-email" name="email" oninput="saveLeadDraft(this.value)" placeholder="Work Email" required="" type="email"/>
+<input id="work-email" name="email" placeholder="Work Email" required="" type="email"/>
 <div class="business-email-error" id="email-error">Please use a business email (e.g. you@company.com).</div>
 <input name="company" placeholder="Company Name / Website" required="" type="text"/>
 <p class="draft-note">🔒 Your details are sent through Netlify Forms. No unnecessary fields.</p>
 <button class="btn-primary" style="width:100%;" type="submit">Request Pilot Scope</button>
 </form><p class="pilot-note">Pilot scope: 3–5 target accounts. No fabricated contacts, no guessed emails, and no generic scraped lists.</p>
-<p style="color:var(--text-tertiary);font-size:.85rem;margin-top:.8rem;">Prefer email first? Submit above and you'll get a link to .</p>
-
-
+<p style="color:var(--text-tertiary);font-size:.85rem;margin-top:.8rem;">Prefer email first? Use the form above to request the pilot scope.</p>
 </section>
-
 <section class="container reveal" style="margin:3.5rem auto;">
 <div class="section-heading"><span class="eyebrow">Elsewhere</span><h2>🔗 Explore More of My Work</h2></div>
 <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
@@ -783,7 +710,6 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 <input type="submit" value="Subscribe Free"/>
 </form>
 </div>
-
 </main>
 <footer>
 <div class="container">
@@ -795,140 +721,6 @@ body.end-reached #back-to-top{opacity:1;visibility:visible;pointer-events:auto;t
 <div aria-hidden="true" id="page-end-sentinel"></div>
 <div class="floating-cta"><span>Need sharper account intelligence?</span><a class="btn-primary" href="#audit" style="padding:.4rem 1rem!important;">Request Pilot</a></div>
 <button aria-label="Back to top" id="back-to-top" title="Back to top" type="button">↑</button>
-
-
-<button aria-label="Open MRMProLeads Assistant" class="assistant-toggle" id="assistant-toggle" type="button">🤖</button>
-<div class="assistant-panel" id="assistant-panel">
-<div class="assistant-head"><strong>MRMProLeads Assistant</strong><button class="mini-btn" onclick="toggleAssistant()" style="padding:.2rem .4rem;" type="button">×</button></div>
-<div class="assistant-body">
-<div class="assistant-messages" id="assistant-messages">
-<div class="assistant-msg bot">Hi! I can help you decide whether ABM, buying-committee mapping, or a revenue audit is the best next step.</div>
-</div>
-<div class="assistant-options">
-<button class="assistant-option" data-q="abm" type="button">What is ABM?</button>
-<button class="assistant-option" data-q="fit" type="button">Am I a good fit?</button>
-<button class="assistant-option" data-q="proof" type="button">Where's the proof?</button>
-<button class="assistant-option" data-q="audit" type="button">What is the audit?</button>
-<button class="assistant-option" data-q="pricing" type="button">How do I get started?</button>
-</div>
-</div>
-</div>
-
-<script>
-/* Movable / draggable score slider */
-(function(){
-  const viewport = document.getElementById('scoreViewport');
-  const track = document.getElementById('scoreTrack');
-  const prevBtn = document.getElementById('scorePrev');
-  const nextBtn = document.getElementById('scoreNext');
-  const dotsWrap = document.getElementById('scoreDots');
-  if(!viewport || !track) return;
-  const cards = Array.from(track.children);
-  if(!cards.length) return;
-
-  let gap = 24, cardW = cards[0].offsetWidth, maxScroll = 0, current = 0, dragging = false, startX = 0, startTranslate = 0;
-
-  function measure(){
-    const cs = getComputedStyle(track);
-    gap = parseFloat(cs.columnGap || cs.gap) || 24;
-    cardW = cards[0].getBoundingClientRect().width;
-    const trackWidth = cards.length * cardW + (cards.length - 1) * gap;
-    maxScroll = Math.max(0, trackWidth - viewport.clientWidth);
-    current = Math.min(current, maxScroll);
-    render(false);
-    buildDots();
-  }
-
-  function render(animate){
-    track.style.transition = animate ? 'transform .45s cubic-bezier(.22,.61,.36,1)' : 'none';
-    track.style.transform = `translateX(${-current}px)`;
-    if(prevBtn) prevBtn.disabled = current <= 1;
-    if(nextBtn) nextBtn.disabled = current >= maxScroll - 1;
-    updateDots();
-  }
-
-  function step(dir){
-    current = Math.min(Math.max(current + dir*(cardW+gap), 0), maxScroll);
-    render(true);
-  }
-
-  function buildDots(){
-    if(!dotsWrap) return;
-    const count = Math.round(maxScroll/(cardW+gap)) + 1;
-    dotsWrap.innerHTML = '';
-    for(let i=0;i<count;i++){
-      const b = document.createElement('button');
-      b.type = 'button'; b.className = 'score-dot'; b.setAttribute('aria-label','Show score set '+(i+1));
-      b.addEventListener('click', () => { current = Math.min(i*(cardW+gap), maxScroll); render(true); });
-      dotsWrap.appendChild(b);
-    }
-    updateDots();
-  }
-  function updateDots(){
-    if(!dotsWrap) return;
-    const idx = Math.round(current/(cardW+gap));
-    Array.from(dotsWrap.children).forEach((d,i) => d.classList.toggle('active', i===idx));
-  }
-
-  track.addEventListener('pointerdown', e => {
-    dragging = true; startX = e.clientX; startTranslate = current;
-    try{ track.setPointerCapture(e.pointerId); }catch(err){}
-    track.style.transition = 'none';
-    track.classList.add('dragging');
-  });
-  track.addEventListener('pointermove', e => {
-    if(!dragging) return;
-    const dx = e.clientX - startX;
-    current = Math.min(Math.max(startTranslate - dx, 0), maxScroll);
-    track.style.transform = `translateX(${-current}px)`;
-  });
-  function endDrag(){
-    if(!dragging) return;
-    dragging = false;
-    track.classList.remove('dragging');
-    const idx = Math.round(current/(cardW+gap));
-    current = Math.min(Math.max(idx,0)*(cardW+gap), maxScroll);
-    render(true);
-  }
-  track.addEventListener('pointerup', endDrag);
-  track.addEventListener('pointercancel', endDrag);
-  track.addEventListener('pointerleave', () => { if(dragging) endDrag(); });
-  track.addEventListener('dragstart', e => e.preventDefault());
-
-  if(prevBtn) prevBtn.addEventListener('click', () => step(-1));
-  if(nextBtn) nextBtn.addEventListener('click', () => step(1));
-
-  let resizeTimer;
-  window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(measure, 120); });
-  measure();
-})();
-
-/* Portfolio gallery filters */
-(function(){
-  const chips = document.querySelectorAll('.filter-chip');
-  const cards = document.querySelectorAll('#caseGrid .case-card');
-  if(!chips.length) return;
-  chips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      chips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      const f = chip.dataset.filter;
-      cards.forEach(card => card.classList.toggle('hide', !(f === 'all' || card.dataset.category === f)));
-    });
-  });
-})();
-
-/* FAQ accordion */
-function toggleFAQ(el){
-  const answer = el.querySelector('.faq-answer');
-  const icon = el.querySelector('.faq-question span');
-  const isOpen = !!answer.style.maxHeight;
-  document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = null);
-  document.querySelectorAll('.faq-question span').forEach(i => i.textContent = '+');
-  if (!isOpen){ answer.style.maxHeight = answer.scrollHeight + 'px'; icon.textContent = '−'; }
-}
-</script>
-
 <script>
 (function(){
   function revealSections(){
@@ -945,6 +737,12 @@ function toggleFAQ(el){
     setTimeout(function(){ els.forEach(function(el){ if(el.getBoundingClientRect().top < window.innerHeight*1.5) el.classList.add('in-view'); }); },300);
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',revealSections); else revealSections();
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('.counter').forEach(function(el){var target=Number(el.getAttribute('data-target'));if(!Number.isFinite(target))return;var suffix=el.textContent.includes('%')?'%':'+';var t0=null;function tick(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/900);var v=Math.round(target*(1-Math.pow(1-p,3)));el.textContent=v+suffix;if(p<1)requestAnimationFrame(tick);}requestAnimationFrame(tick);});
+  var top=document.getElementById('back-to-top');if(top){window.addEventListener('scroll',function(){top.classList.toggle('show',window.scrollY>700);},{passive:true});top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});}
 })();
 </script>
 </body>
