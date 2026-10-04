@@ -41,15 +41,43 @@ GA4 measurement ID already present in the site: `G-17ZBPZC3GE`. The primary form
 - LinkedIn Insight Tag and Meta Pixel are intentionally not hardcoded without real account IDs. Enable them only after the IDs are supplied and only if paid/retargeting campaigns are actually planned.
 
 
-## Client Hunter
-The `/client-hunter/` page is the One-Stop Client Hunter layer. It includes browser-local diagnosis, a public-URL evidence preview via `/api/research-preview`, local CSV/XLSX account preview, service selection, offer-aware scope building, evidence transparency, research walkthrough, before/after comparison, and structured pilot qualification. The URL preview is deliberately evidence-conservative and does not fabricate ICP fit, intent, funding, revenue, or decision-maker facts.
+## Research Starter
+The `/research-starter/` page is the One-Stop Research Starter layer. It includes browser-local diagnosis, a public-URL evidence preview via `/api/research-preview`, local CSV/XLSX account preview, service selection, offer-aware scope building, evidence transparency, research walkthrough, before/after comparison, and structured pilot qualification. The URL preview is deliberately evidence-conservative and does not fabricate ICP fit, intent, funding, revenue, or decision-maker facts.
 
 
-## V5.2 — Client Hunter trust/conversion upgrade (2026-09-30)
+## V5.2 — Research Starter trust/conversion upgrade (2026-09-30)
 - Upgraded `/api/research-preview` with observed timestamp and public evidence-source trail.
-- Client Hunter preview now distinguishes public snapshot vs full paid account investigation.
+- Research Starter preview now distinguishes public snapshot vs full paid account investigation.
 - Added source-aware evidence links to preview results.
 - Added a public-safe, documented six-account enterprise research case-study section without inventing commercial outcomes.
 - Added a compact proof strip to the homepage using existing documented execution/process evidence.
-- Added contextual Client Hunter CTAs to key service, methodology, insight, agency, resource, pricing, comparison, FAQ and product pages.
+- Added contextual Research Starter CTAs to key service, methodology, insight, agency, resource, pricing, comparison, FAQ and product pages.
 - Preserved the evidence rule: unknown information stays unknown; no fabricated testimonials, outcomes or buyer intent.
+
+
+### V5.2 Founder / Brand Rendering Fix (2026-10-04)
+- Hero founder portrait now uses the full-frame square founder image instead of the cropped 4:5 variant.
+- Hero signal board overlap reduced so the founder portrait remains clearly visible.
+- Navbar MRMProLeads logo is embedded directly in HTML as a data URI for reliable local and deployed rendering.
+- Existing V5.2 features and content are preserved.
+
+
+## V5.2 GODMODE conversion/UI cleanup — 2026-10-04
+- Hero founder portrait removed; replaced with evidence-led account-intelligence visual.
+- Built-for strip upgraded into larger premium positioning cards.
+- Client path reframed as Discover → Diagnose → Review → Pilot → Retain.
+- Evidence claims boxes use positive/boundary color coding and sharper language.
+- Homepage methodology condensed; full methodology remains linked.
+- Revenue ecosystem reframed around one research engine and a standalone flywheel.
+- Publishing section now uses MRMProLeads.com as the umbrella business HQ.
+- Editorial flow duplicate removed.
+- Footer reduced to essential navigation.
+
+
+## V5.3 — Conversion Architecture (2026-10-04)
+- Homepage is now the premium conversion layer: centered hero, separate Account Intelligence showcase, Research Starter teaser, $99 pilot path, proof/evidence, methodology preview, founder trust and editorial teaser.
+- Deep material is preserved on dedicated pages: `/account-intelligence/`, `/methodology/`, `/proof/`, `/pricing/`, `/insights/`, `/resources/`, `/about/`.
+- `/research-starter/` is the public utility; `/client-hunter/` remains only as a noindex compatibility alias.
+- Editorial is positioned as a secondary authority + passive-income layer through Insights, Resource Hub and Gumroad; services remain the core commercial offer.
+- Public-facing terminology no longer uses the internal Client Hunter label.
+- Existing analytics, form infrastructure, evidence discipline, founder assets and public links are preserved.
