@@ -39,3 +39,17 @@ GA4 measurement ID already present in the site: `G-17ZBPZC3GE`. The primary form
 - Added a category-definition insight for research-led ABM intelligence.
 - Kept case-study claims evidence-safe; no fabricated client names, star ratings or commercial outcomes were added.
 - LinkedIn Insight Tag and Meta Pixel are intentionally not hardcoded without real account IDs. Enable them only after the IDs are supplied and only if paid/retargeting campaigns are actually planned.
+
+
+## Client Hunter
+The `/client-hunter/` page is the One-Stop Client Hunter layer. It includes browser-local diagnosis, a public-URL evidence preview via `/api/research-preview`, local CSV/XLSX account preview, service selection, offer-aware scope building, evidence transparency, research walkthrough, before/after comparison, and structured pilot qualification. The URL preview is deliberately evidence-conservative and does not fabricate ICP fit, intent, funding, revenue, or decision-maker facts.
+
+
+## V5.2 — Client Hunter trust/conversion upgrade (2026-09-30)
+- Upgraded `/api/research-preview` with observed timestamp and public evidence-source trail.
+- Client Hunter preview now distinguishes public snapshot vs full paid account investigation.
+- Added source-aware evidence links to preview results.
+- Added a public-safe, documented six-account enterprise research case-study section without inventing commercial outcomes.
+- Added a compact proof strip to the homepage using existing documented execution/process evidence.
+- Added contextual Client Hunter CTAs to key service, methodology, insight, agency, resource, pricing, comparison, FAQ and product pages.
+- Preserved the evidence rule: unknown information stays unknown; no fabricated testimonials, outcomes or buyer intent.

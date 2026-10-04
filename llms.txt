@@ -31,3 +31,7 @@ MRMProLeads provides research-led B2B account intelligence and ABM research for 
 
 ## Research standard
 Research uses publicly available business information and publicly accessible professional data. Private or non-public personal information is outside the operating standard.
+
+
+## Client Hunter
+MRMProLeads Client Hunter: /client-hunter/ — diagnose the research problem, preview public account evidence, upload a small account set locally, choose a research layer, build a pilot scope, and submit a structured pilot request. The URL preview reports public-page evidence and explicitly marks unsupported information as not established.

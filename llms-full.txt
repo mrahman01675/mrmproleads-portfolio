@@ -1,7 +1,7 @@
 # MRMProLeads — AI-readable service and knowledge summary
 
 ## Identity
-MRMProLeads is a research-led B2B account intelligence practice founded by Mahbubur Rahman. The service is positioned for B2B SaaS teams and outbound agencies that need account-level context rather than only raw contact lists.
+MRMProLeads is a research-led B2B account intelligence practice founded by Mahbubur R. The service is positioned for B2B SaaS teams and outbound agencies that need account-level context rather than only raw contact lists.
 
 ## What the work covers
 MRMProLeads researches ICP fit, target accounts, business context, public growth/buying signals, relevant decision-makers and buying committees, public business contact routes where available, opportunity angles and evidence/source notes.
@@ -37,3 +37,7 @@ https://mrmproleads.com/compare/
 https://mrmproleads.com/case-studies/
 https://mrmproleads.com/insights/
 https://mrmproleads.com/about/
+
+
+## Client Hunter
+MRMProLeads Client Hunter: /client-hunter/ — diagnose the research problem, preview public account evidence, upload a small account set locally, choose a research layer, build a pilot scope, and submit a structured pilot request. The URL preview reports public-page evidence and explicitly marks unsupported information as not established.
