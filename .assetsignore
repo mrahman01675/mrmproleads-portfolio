@@ -2,7 +2,6 @@
 _worker.js
 wrangler.toml
 .assetsignore
-_redirects
 _headers
 functions/**
 .git/**
@@ -11,3 +10,4 @@ functions/**
 START-PREVIEW.bat
 STOP-PREVIEW.bat
 LOCAL-PREVIEW-README.txt
+netlify.toml

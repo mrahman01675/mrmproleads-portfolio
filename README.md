@@ -1,3 +1,5 @@
+Current hardening release: V5.5.7.2 — Cloudflare redirect configuration fix.
+
 
 > **Current hardening release: V5.5.7 — production hardening pass.**
 
@@ -10,7 +12,7 @@ Primary domain: https://mrmproleads.com/
 - Cloudflare Workers: primary production Worker + static assets + API routes
 - Spaceship: domain/DNS
 - Spacemail: business email
-- Netlify: no deployment dependency
+- Netlify: backup deployment via netlify.toml; redirects to .com
 
 ## Locked commercial ladder
 - $99 — Paid Research Test — 3 accounts

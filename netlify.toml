@@ -1,0 +1,8 @@
+# Netlify backup deployment only.
+# Primary production remains Cloudflare Workers at mrmproleads.com.
+
+[[redirects]]
+  from = "/*"
+  to = "https://mrmproleads.com/:splat"
+  status = 301
+  force = true
