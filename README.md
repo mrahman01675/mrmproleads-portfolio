@@ -7,7 +7,7 @@ Primary domain: https://mrmproleads.com/
 
 ## Architecture
 - GitHub: source/code
-- Cloudflare Pages: hosting/CDN + auto deploy
+- Cloudflare Workers: primary production Worker + static assets + API routes
 - Spaceship: domain/DNS
 - Spacemail: business email
 - Netlify: no deployment dependency
@@ -20,7 +20,7 @@ Primary domain: https://mrmproleads.com/
 - $399/month — Monthly Account Intelligence — 10 fresh accounts/month
 
 ## Form delivery
-The site form posts to `/api/pilot` (Cloudflare Pages Function). Set these Cloudflare Pages/Workers environment secrets/variables:
+The site form posts to `/api/pilot` through the production Cloudflare Worker. Set these Worker environment secrets/variables:
 - `RESEND_API_KEY` — Resend API key
 - `CONTACT_TO_EMAIL` — destination inbox
 - `CONTACT_FROM_EMAIL` — verified sender address on the email provider
@@ -61,7 +61,7 @@ The `/research-starter/` page is the One-Stop Research Starter layer. It include
 ### V5.2 Founder / Brand Rendering Fix (2026-10-04)
 - Hero founder portrait now uses the full-frame square founder image instead of the cropped 4:5 variant.
 - Hero signal board overlap reduced so the founder portrait remains clearly visible.
-- Navbar MRMProLeads logo is embedded directly in HTML as a data URI for reliable local and deployed rendering.
+- Navbar MRMProLeads logo is served as an external optimized asset for smaller HTML payloads and better caching.
 - Existing V5.2 features and content are preserved.
 
 

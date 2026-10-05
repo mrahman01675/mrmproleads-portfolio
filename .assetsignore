@@ -1,0 +1,13 @@
+# Cloudflare Worker static-asset exclusions
+_worker.js
+wrangler.toml
+.assetsignore
+_redirects
+_headers
+functions/**
+.git/**
+.wrangler/**
+*.md
+START-PREVIEW.bat
+STOP-PREVIEW.bat
+LOCAL-PREVIEW-README.txt
