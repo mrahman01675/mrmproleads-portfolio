@@ -2,13 +2,21 @@ const MAX_BYTES = 700_000;
 const MAX_REDIRECTS = 2;
 
 export async function onRequestPost({ request }) {
+  const securityHeaders = { 'Cache-Control':'no-store', 'X-Content-Type-Options':'nosniff' };
+  if (request.method !== 'POST') return json({error:'Method not allowed.'},405,securityHeaders);
+  const contentType = request.headers.get('content-type') || '';
+  if (!/application\/json/i.test(contentType)) return json({error:'JSON request body required.'},415,securityHeaders);
+  const length = Number(request.headers.get('content-length') || 0);
+  if (length && length > 4096) return json({error:'Request too large.'},413,securityHeaders);
   try {
     const body = await request.json();
     let url = String(body?.url || '').trim();
-    if (!url) return json({ error: 'A public company URL is required.' }, 400);
+    if (!url) return json({ error: 'A public company URL is required.' }, 400, securityHeaders);
+    if (url.length > 500) return json({ error: 'The URL is too long.' }, 400, securityHeaders);
     if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
     const parsed = new URL(url);
-    if (!isSafeHostname(parsed.hostname)) return json({ error: 'That hostname is not allowed for public research preview.' }, 400);
+    if (!['http:','https:'].includes(parsed.protocol) || parsed.username || parsed.password || (parsed.port && !['80','443'].includes(parsed.port))) return json({ error: 'Only public HTTP(S) URLs on standard ports are supported.' }, 400, securityHeaders);
+    if (!isSafeHostname(parsed.hostname)) return json({ error: 'That hostname is not allowed for public research preview.' }, 400, securityHeaders);
     const result = await fetchPublic(url, 0);
     return json({
       finalUrl: result.url,
@@ -25,7 +33,7 @@ export async function onRequestPost({ request }) {
       observedAt: result.observedAt
     });
   } catch (e) {
-    return json({ error: 'The public page could not be fetched. Try the company homepage or use the pilot form with the URL.' }, 502);
+    return json({ error: 'The public page could not be fetched. Try the company homepage or use the pilot form with the URL.' }, 502, securityHeaders);
   }
 }
 
@@ -36,6 +44,7 @@ async function fetchPublic(url, depth) {
     const loc = res.headers.get('location');
     if (!loc) throw new Error('Redirect without location');
     const next = new URL(loc, url);
+    if (!['http:','https:'].includes(next.protocol) || next.username || next.password || (next.port && !['80','443'].includes(next.port))) throw new Error('Unsafe redirect');
     if (!isSafeHostname(next.hostname)) throw new Error('Unsafe redirect');
     return fetchPublic(next.toString(), depth + 1);
   }
