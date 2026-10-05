@@ -1,3 +1,6 @@
+
+> **Current hardening release: V5.5.7 — production hardening pass.**
+
 # MRMProLeads — Final Website
 
 Primary domain: https://mrmproleads.com/
@@ -81,3 +84,11 @@ The `/research-starter/` page is the One-Stop Research Starter layer. It include
 - Editorial is positioned as a secondary authority + passive-income layer through Insights, Resource Hub and Gumroad; services remain the core commercial offer.
 - Public-facing terminology no longer uses the internal Client Hunter label.
 - Existing analytics, form infrastructure, evidence discipline, founder assets and public links are preserved.
+
+## Research Starter V5.4 split
+The Research Starter is intentionally split into two focused pages:
+
+- `/research-starter/` — Diagnose + Research URL + Upload Accounts
+- `/research-starter/scope/` — Service Selector + Scope Builder + Walkthrough + Evidence + Before/After + Pilot
+
+The workflow navigation is floating/compact and auto-hides while scrolling down. Context from page 1 can be carried into the pilot page locally through browser storage.
