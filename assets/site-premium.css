@@ -232,3 +232,424 @@
  .site-footer .footer-social{gap:9px 18px!important}
  .site-footer .footer-social a{font-size:.76rem!important}
 }
+
+/* V5.3.16 navbar logo reliability */
+.brand img.brand-logo{display:block!important;width:210px!important;height:auto!important;max-width:100%!important;min-width:0!important;object-fit:contain!important;visibility:visible!important;opacity:1!important}
+@media(max-width:780px){.brand img.brand-logo{width:165px!important}}
+
+
+/* V5.3.21 — GLOBAL ONE-SHOT NORMALIZATION */
+
+/* Canonical global shell */
+.mrm-canonical-header{position:sticky;top:0;z-index:2000;background:#0b1220!important;border-bottom:1px solid rgba(255,255,255,.12)!important;box-shadow:0 10px 30px rgba(0,0,0,.22);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.mrm-nav-wrap{width:min(1180px,calc(100% - 40px));margin:0 auto;min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.mrm-brand{display:flex;align-items:center;flex:0 0 auto;text-decoration:none!important}
+.mrm-brand-logo{display:block!important;width:228px!important;height:auto!important;max-width:100%;opacity:1!important;visibility:visible!important}
+.mrm-nav{display:flex;align-items:center;justify-content:flex-end;gap:20px;flex-wrap:wrap}
+.mrm-nav a{color:#e7edf6!important;text-decoration:none!important;font-weight:700}
+.mrm-nav a:hover,.mrm-nav a:focus-visible{color:#fff!important}
+.mrm-nav a[aria-current="page"]{color:#ffd978!important}
+.mrm-nav-cta{padding:11px 16px;border-radius:12px;background:linear-gradient(135deg,#ffd978,#f5bd4b)!important;color:#111!important;font-weight:900!important;box-shadow:0 8px 24px rgba(245,189,75,.16)}
+.mrm-canonical-footer{border-top:1px solid rgba(255,255,255,.12)!important;margin-top:72px!important;background:linear-gradient(180deg,rgba(10,15,25,.35),rgba(5,9,16,.88))!important}
+.mrm-footer-wrap{width:min(1180px,calc(100% - 40px));margin:0 auto;padding:46px 0 28px}
+.mrm-footer-top{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:40px;padding-bottom:30px}
+.mrm-footer-brand a{display:inline-flex;text-decoration:none!important}
+.mrm-footer-brand-logo{display:block!important;width:228px!important;height:auto!important;opacity:1!important;visibility:visible!important}
+.mrm-footer-brand>div{margin-top:10px;color:#a9b6c8!important;font-size:.92rem}
+.mrm-footer-links{display:flex;justify-content:flex-end;gap:16px;flex-wrap:wrap}
+.mrm-footer-links a,.mrm-footer-bottom a{color:#c2cfdf!important;text-decoration:none!important}
+.mrm-footer-links a:hover,.mrm-footer-links a:focus-visible,.mrm-footer-bottom a:hover,.mrm-footer-bottom a:focus-visible{color:#fff!important}
+.mrm-footer-bottom{padding-top:20px;border-top:1px solid rgba(255,255,255,.08);color:#91a0b4!important;font-size:.84rem;line-height:1.7}
+/* Workflow subnav used by Research Starter */
+.mrm-workflow-nav{position:sticky!important;top:76px!important;z-index:1500!important;background:rgba(10,16,28,.96)!important;border-bottom:1px solid rgba(255,255,255,.09)!important;box-shadow:0 8px 24px rgba(0,0,0,.16)!important;padding-top:10px!important;padding-bottom:10px!important}
+.mrm-workflow-nav .mini-nav{width:min(1180px,calc(100% - 40px));margin:0 auto;justify-content:flex-end}
+.mrm-workflow-nav .mini-nav a{color:#e5edf8!important;background:#111a2b!important;border:1px solid rgba(255,255,255,.12)!important}
+.mrm-workflow-nav .mini-nav a:hover,.mrm-workflow-nav .mini-nav a:focus-visible{color:#fff!important;border-color:rgba(255,217,120,.55)!important;background:#172238!important}
+/* Deep research pages */
+.deep-page .section-head{text-align:center}
+.deep-page .section-head h2{max-width:900px;margin-left:auto;margin-right:auto}
+.deep-page .lead{max-width:850px;margin:0 auto 38px;text-align:center}
+.deep-page .hero-mini{padding:90px 0 45px}
+.deep-page .hero-mini h1{font-size:clamp(3rem,7vw,6rem);letter-spacing:-.05em;line-height:1.03}
+.deep-page .hero-mini .eyebrow{text-align:center}
+.deep-page .deep-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.deep-page .deep-grid .card{height:100%}
+@media(max-width:800px){.mrm-nav-wrap{min-height:70px;padding:12px 0;align-items:flex-start}.mrm-nav{gap:10px}.mrm-nav a{font-size:.9rem}.mrm-nav-cta{padding:9px 12px}.mrm-footer-top{grid-template-columns:1fr}.mrm-footer-links{justify-content:flex-start}.mrm-workflow-nav{top:70px!important}.mrm-workflow-nav .mini-nav{justify-content:flex-start}}
+@media(max-width:560px){.mrm-nav-wrap{flex-direction:column;gap:12px}.mrm-brand-logo,.mrm-footer-brand-logo{width:190px!important}.mrm-nav{justify-content:flex-start}.mrm-footer-links{gap:12px}.mrm-workflow-nav .mini-nav{width:min(100% - 28px,1180px);gap:7px}.mrm-workflow-nav .mini-nav a{font-size:.78rem;padding:8px 10px}}
+/* High-contrast dark controls */
+button,input,select,textarea{font-family:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid rgba(255,217,120,.65);outline-offset:2px}
+
+
+/* =========================================================
+   MRMProLeads Research Starter — V5.4 GODMODE visual system
+   Scoped to /research-starter/ and /research-starter/scope/
+   ========================================================= */
+.research-starter-page{--rs-panel:#0d1625;--rs-panel-2:#101b2d;--rs-line:rgba(255,255,255,.12);--rs-text:#f7f9fd;--rs-muted:#b6c2d4;--rs-accent:#ffd978;--rs-blue:#31b8ff;--rs-max:960px}
+.research-starter-page .rs-hero{width:min(var(--rs-max),calc(100% - 40px));margin:0 auto;text-align:center;padding:72px 0 48px}
+.research-starter-page .rs-hero-compact{padding-bottom:34px}
+.research-starter-page .rs-kicker{display:inline-flex;align-items:center;gap:10px;color:var(--rs-blue);font-weight:900;letter-spacing:.12em;font-size:.76rem;text-transform:uppercase;margin-bottom:18px}
+.research-starter-page .rs-kicker:before{content:"";width:28px;height:1px;background:var(--rs-accent);display:inline-block}
+.research-starter-page .rs-hero h1{max-width:900px;margin:0 auto;font-size:clamp(2.8rem,6vw,5.7rem);line-height:.98;letter-spacing:-.055em;color:var(--rs-text)}
+.research-starter-page .rs-hero h1 em{font-style:normal;color:var(--rs-accent)}
+.research-starter-page .rs-lead{max-width:780px;margin:24px auto 0;color:var(--rs-muted);font-size:1.05rem;line-height:1.75}
+.research-starter-page .rs-hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:26px}
+.research-starter-page .rs-hero-card{max-width:900px;margin:34px auto 0;padding:30px;text-align:left;background:linear-gradient(145deg,rgba(20,33,54,.96),rgba(12,18,30,.98));border:1px solid var(--rs-line);border-radius:24px;box-shadow:0 24px 70px rgba(0,0,0,.28)}
+.research-starter-page .rs-hero-card h2{margin:8px 0 18px;font-size:clamp(1.5rem,3vw,2.1rem);text-align:center}
+.research-starter-page .rs-hero-card .eyebrow{text-align:center}
+.research-starter-page .rs-hero-card p{max-width:760px;margin:20px auto 0;text-align:center}
+.research-starter-page .pipeline{justify-content:center;margin-top:18px}
+.research-starter-page .section{padding:58px 0}
+.research-starter-page .section-head{width:min(820px,calc(100% - 40px));margin:0 auto 26px;text-align:center}
+.research-starter-page .section-head h2{font-size:clamp(1.8rem,3.5vw,2.65rem);line-height:1.08;letter-spacing:-.035em;margin:10px auto 12px;color:var(--rs-text)}
+.research-starter-page .section-head p{max-width:760px;margin-left:auto;margin-right:auto;line-height:1.75}
+.research-starter-page .section-head .notice{max-width:820px;margin-left:auto;margin-right:auto;text-align:left}
+.research-starter-page .tool-card,.research-starter-page .result{width:min(var(--rs-max),calc(100% - 40px));margin-left:auto;margin-right:auto;box-sizing:border-box;background:linear-gradient(145deg,rgba(15,26,43,.98),rgba(10,17,29,.98));border:1px solid var(--rs-line);border-radius:22px;box-shadow:0 22px 65px rgba(0,0,0,.22)}
+.research-starter-page .tool-card{padding:26px}
+.research-starter-page .result{padding:24px}
+.research-starter-page .grid2,.research-starter-page .grid3{width:min(var(--rs-max),calc(100% - 40px));margin-left:auto;margin-right:auto}
+.research-starter-page .grid3{gap:16px}
+.research-starter-page .service-card{min-height:128px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;cursor:pointer;transition:transform .18s ease,border-color .18s ease,background .18s ease}
+.research-starter-page .service-card:hover,.research-starter-page .service-card:focus-visible{transform:translateY(-2px);border-color:rgba(255,217,120,.5);background:linear-gradient(145deg,#14223a,#0d1727)}
+.research-starter-page .service-card.active{border-color:rgba(255,217,120,.7);box-shadow:0 0 0 1px rgba(255,217,120,.18),0 22px 65px rgba(0,0,0,.25)}
+.research-starter-page .scope-output{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
+.research-starter-page .scope-price{font-size:clamp(2rem,4vw,3.1rem);font-weight:900;color:var(--rs-accent);letter-spacing:-.04em;text-align:right}
+.research-starter-page .walkthrough,.research-starter-page .compare-toggle{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.research-starter-page .walk-step{flex:1 1 130px;min-height:76px;border:1px solid var(--rs-line);border-radius:14px;background:#0a1322;color:#dce6f3;padding:12px;cursor:pointer}
+.research-starter-page .walk-step.active{border-color:rgba(255,217,120,.65);background:#152238;color:#fff}
+.research-starter-page .walk-detail{margin-top:18px;padding:24px;border:1px solid var(--rs-line);border-radius:18px;background:#09121f;min-height:170px}
+.research-starter-page .evidence-row{display:grid;grid-template-columns:180px minmax(0,1fr) 150px;gap:18px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.research-starter-page .evidence-row:last-child{border-bottom:0}
+.research-starter-page .compare-toggle button{border:1px solid var(--rs-line);background:#0b1422;color:#dfe8f5;border-radius:999px;padding:10px 14px;cursor:pointer}
+.research-starter-page .compare-toggle button.active{background:#18253a;color:#fff;border-color:rgba(255,217,120,.55)}
+.research-starter-page .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.research-starter-page .form-grid .full{grid-column:1/-1}
+.research-starter-page label{color:#dce5f1;font-weight:700}
+.research-starter-page input,.research-starter-page select,.research-starter-page textarea{margin-top:7px;color:#f7f9fd!important;background:#070f1b!important;border-color:rgba(255,255,255,.16)!important}
+.research-starter-page input::placeholder,.research-starter-page textarea::placeholder{color:#8190a5!important;opacity:1}
+.research-starter-page .rs-next-page{padding-top:20px}
+.research-starter-page .rs-next-card{width:min(var(--rs-max),calc(100% - 40px));margin:0 auto;padding:28px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;background:linear-gradient(135deg,#121d2f,#0c1421);border:1px solid rgba(255,217,120,.18);border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.22)}
+.research-starter-page .rs-next-card h2{margin:7px 0 8px}
+.research-starter-page .rs-next-card p{margin:0;max-width:650px}
+/* Workflow navigation: compact, floating, non-duplicative, and self-hiding on scroll. */
+.mrm-workflow-nav.rs-workflow{position:fixed!important;top:82px!important;right:24px;left:auto!important;width:auto!important;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important;z-index:1800!important;transition:transform .22s ease,opacity .22s ease}
+.mrm-workflow-nav.rs-workflow.is-hidden{transform:translateY(-18px);opacity:0;pointer-events:none}
+.mrm-workflow-nav.rs-workflow .mini-nav{width:auto!important;margin:0!important;justify-content:flex-end!important;padding:8px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(8,14,24,.94)!important;box-shadow:0 18px 45px rgba(0,0,0,.28);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.mrm-workflow-nav.rs-workflow .mini-nav a{background:#101a2b!important;color:#eaf0f8!important;border-color:rgba(255,255,255,.13)!important}
+.mrm-workflow-nav.rs-workflow .mini-nav a:hover,.mrm-workflow-nav.rs-workflow .mini-nav a:focus-visible{background:#18263d!important;color:#fff!important;border-color:rgba(255,217,120,.55)!important}
+/* Canonical CTA contrast: never render pale text on the yellow CTA. */
+.mrm-nav-cta,.mrm-nav-cta:visited{color:#0a0e16!important;text-shadow:none!important;opacity:1!important}
+@media(max-width:900px){.research-starter-page .grid3{grid-template-columns:1fr 1fr}.research-starter-page .evidence-row{grid-template-columns:1fr;gap:8px}.mrm-workflow-nav.rs-workflow{top:74px!important;right:14px}}
+@media(max-width:620px){.research-starter-page .rs-hero{width:min(100% - 28px,680px);padding-top:48px}.research-starter-page .rs-hero h1{font-size:clamp(2.35rem,13vw,4rem)}.research-starter-page .tool-card,.research-starter-page .result,.research-starter-page .grid2,.research-starter-page .grid3,.research-starter-page .rs-next-card{width:min(100% - 28px,680px)}.research-starter-page .grid3{grid-template-columns:1fr}.research-starter-page .form-grid{grid-template-columns:1fr}.research-starter-page .form-grid .full{grid-column:auto}.research-starter-page .scope-output{grid-template-columns:1fr}.research-starter-page .scope-price{text-align:left}.research-starter-page .rs-next-card{flex-direction:column;align-items:flex-start}.mrm-workflow-nav.rs-workflow{top:68px!important;right:10px;left:10px!important;width:auto!important}.mrm-workflow-nav.rs-workflow .mini-nav{overflow-x:auto;justify-content:flex-start!important;max-width:100%;border-radius:14px}.mrm-workflow-nav.rs-workflow .mini-nav a{white-space:nowrap}}
+
+/* V5.4.1 GODMODE visual normalization — research starter */
+.research-starter-page .grid2,.research-starter-page .grid3{align-items:stretch;}
+.research-starter-page .grid2 > *, .research-starter-page .grid3 > *{height:100%;}
+.research-starter-page .service-card{min-height:132px;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:26px 22px!important;}
+.research-starter-page .service-card p{margin:6px 0 0;}
+.research-starter-page .tool-card{color:var(--rs-text);}
+.research-starter-page button.btn{appearance:none;-webkit-appearance:none;border:1px solid transparent;cursor:pointer;font:inherit;line-height:1.2;}
+.research-starter-page button.btn-primary{background:linear-gradient(135deg,#ffd36b,#f5b942);color:#101318;border-color:#ffd978;box-shadow:0 12px 30px rgba(245,185,66,.18);}
+.research-starter-page button.btn-secondary{background:#111d30;color:#eaf0f8;border-color:rgba(255,255,255,.16);}
+.research-starter-page button.btn:disabled{opacity:.45;cursor:not-allowed;}
+.research-starter-page input,.research-starter-page select,.research-starter-page textarea{font:inherit;color:#edf3fb;background:#0a1423;border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:11px 13px;}
+.research-starter-page input[type=file]{padding:10px;background:#0a1423;}
+.research-starter-page .compare-toggle{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+.research-starter-page .compare-toggle button{font:inherit;font-weight:800;}
+.research-starter-page .rs-next-card .btn{white-space:nowrap;}
+.tool-stack-section{width:min(1040px,calc(100% - 40px));margin:10px auto 54px;}
+.tool-stack-section .section-heading{text-align:center;max-width:820px;margin:0 auto 28px;}
+.tool-stack-section .section-heading p{max-width:760px;margin-left:auto;margin-right:auto;}
+.mrm-tools-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.mrm-tool-card{min-height:178px;padding:24px;border-radius:20px;background:linear-gradient(145deg,rgba(15,26,43,.98),rgba(10,17,29,.98));border:1px solid rgba(255,255,255,.11);display:flex;flex-direction:column;align-items:flex-start;gap:9px;box-shadow:0 18px 50px rgba(0,0,0,.18);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;}
+.mrm-tool-card:hover,.mrm-tool-card:focus-visible{transform:translateY(-3px);border-color:rgba(255,217,120,.45);box-shadow:0 22px 60px rgba(0,0,0,.26);outline:none;}
+.mrm-tool-card strong{font-size:1.2rem;color:#f8fbff;}
+.mrm-tool-card > span:not(.mrm-tool-type){color:#b7c3d4;line-height:1.55;}
+.mrm-tool-card small{margin-top:auto;color:#ffd978;font-weight:800;}
+.mrm-tool-type{font-size:.68rem;letter-spacing:.12em;font-weight:900;color:#31b8ff;}
+.mrm-tool-card.is-affiliate{border-color:rgba(255,217,120,.24);}
+.mrm-tool-card.is-affiliate .mrm-tool-type{color:#ffd978;}
+.tool-disclosure{text-align:center;color:#8f9caf;font-size:.82rem;max-width:780px;margin:18px auto 0;}
+@media(max-width:900px){.mrm-tools-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:620px){.mrm-tools-grid{grid-template-columns:1fr;}.tool-stack-section{width:min(100% - 28px,680px);}.mrm-tool-card{min-height:150px;}}
+
+
+/* V5.4.2 GODMODE — systemic visual normalization */
+.mrm-canonical-header{
+  background:rgba(7,12,22,.72)!important;
+  backdrop-filter:blur(20px) saturate(135%)!important;
+  -webkit-backdrop-filter:blur(20px) saturate(135%)!important;
+  border-bottom:1px solid rgba(255,255,255,.10)!important;
+  box-shadow:0 10px 34px rgba(0,0,0,.18)!important;
+}
+.mrm-nav-wrap{min-height:74px!important}
+.mrm-nav a:not(.mrm-nav-cta){color:#e5ebf4!important}
+.mrm-nav a:not(.mrm-nav-cta):hover{color:#ffd978!important}
+
+/* Homepage hero: remove dead vertical space while keeping the atmospheric premium background. */
+.hero-centered{padding:clamp(54px,7vw,92px) 20px clamp(42px,5vw,72px)!important}
+.hero-centered h1{margin-top:18px!important}
+.hero-centered .hero-copy{margin-top:22px!important}
+.hero-centered .micro{margin-top:24px!important}
+
+/* Methodology: 4 strategic stages + 5 supporting research capabilities. */
+.methodology-section{width:min(1040px,calc(100% - 40px));margin:0 auto 54px}
+.methodology-section-head{text-align:center;max-width:820px;margin:0 auto 28px}
+.methodology-section-head .eyebrow{margin-bottom:8px}
+.methodology-section-head h2{margin:0 auto 12px;max-width:820px;font-size:clamp(2rem,4vw,3rem);line-height:1.08;letter-spacing:-.04em}
+.methodology-section-head p{margin:0 auto;color:#aeb9ca;max-width:760px}
+.methodology-stage-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.methodology-stage-card,.methodology-capability-card{background:linear-gradient(145deg,rgba(16,27,45,.98),rgba(9,16,28,.98));border:1px solid rgba(255,255,255,.11);border-radius:20px;box-shadow:0 18px 55px rgba(0,0,0,.18)}
+.methodology-stage-card{min-height:230px;padding:24px;display:flex;flex-direction:column}
+.methodology-stage-card>span,.methodology-capability-card>span{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:rgba(245,189,75,.09);border:1px solid rgba(245,189,75,.24);color:#ffd978;font-size:.76rem;font-weight:900}
+.methodology-stage-card h3{font-size:1.35rem;margin:18px 0 8px}
+.methodology-stage-card p,.methodology-capability-card p{color:#aeb9ca;margin:0;line-height:1.65}
+.methodology-capabilities{margin-top:8px}
+.methodology-capability-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.methodology-capability-card{min-height:150px;padding:22px;display:flex;gap:15px;align-items:flex-start}
+.methodology-capability-card h3{margin:0 0 5px;font-size:1.08rem}
+.methodology-capability-card:nth-child(4){grid-column:1 / span 1}
+.methodology-capability-card:nth-child(5){grid-column:2 / span 1}
+
+/* Pricing: every package has the same obvious action hierarchy; lists remain readable left-aligned. */
+.pricing-grid .card{text-align:center;display:flex;flex-direction:column}
+.pricing-grid .card ul,.pricing-grid .card p{ text-align:left }
+.pricing-grid .pricing-cta{align-self:center;margin-top:auto;min-width:220px;text-align:center}
+.pricing-grid .pricing-cta:hover{transform:translateY(-2px)}
+
+/* Research Starter: never allow browser-default controls to leak into the premium UI. */
+.research-starter-page .choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+.research-starter-page .choice-grid .choice{appearance:none;-webkit-appearance:none;width:100%;min-height:58px;padding:13px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(145deg,#0d1829,#0a1321);color:#e9eef6;font:inherit;font-weight:750;line-height:1.35;text-align:left;cursor:pointer;transition:transform .18s ease,border-color .18s ease,background .18s ease,box-shadow .18s ease}
+.research-starter-page .choice-grid .choice:hover{transform:translateY(-1px);border-color:rgba(255,217,120,.42);background:#132239}
+.research-starter-page .choice-grid .choice.active{border-color:rgba(255,217,120,.78);background:linear-gradient(145deg,#182a45,#102036);box-shadow:0 0 0 1px rgba(255,217,120,.18),0 12px 30px rgba(0,0,0,.20);color:#fff}
+.research-starter-page .file-drop input[type=file]::file-selector-button{appearance:none;border:1px solid rgba(255,217,120,.35);background:#18263a;color:#f5f8fc;border-radius:10px;padding:9px 13px;margin-right:10px;font:inherit;font-weight:800;cursor:pointer}
+.research-starter-page .file-drop input[type=file]::file-selector-button:hover{background:#20324e;border-color:rgba(255,217,120,.6)}
+.research-starter-page .mrm-workflow-nav.rs-workflow{top:88px!important;right:24px!important;left:auto!important;width:auto!important}
+.research-starter-page .mrm-workflow-nav.rs-workflow .mini-nav{display:flex!important;align-items:center!important;gap:6px!important;padding:7px!important;background:rgba(7,13,24,.88)!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:15px!important;box-shadow:0 16px 44px rgba(0,0,0,.30)!important;backdrop-filter:blur(18px)!important}
+.research-starter-page .mrm-workflow-nav.rs-workflow .mini-nav a{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:36px!important;padding:8px 12px!important;border-radius:10px!important;background:#111c2d!important;color:#eaf0f8!important;border:1px solid rgba(255,255,255,.10)!important;font-size:.82rem!important;font-weight:800!important;white-space:nowrap!important;text-decoration:none!important}
+.research-starter-page .mrm-workflow-nav.rs-workflow .mini-nav a:hover{background:#1a2a43!important;border-color:rgba(255,217,120,.55)!important;color:#fff!important}
+@media(max-width:900px){.methodology-stage-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.methodology-capability-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.research-starter-page .choice-grid{grid-template-columns:1fr}.research-starter-page .mrm-workflow-nav.rs-workflow{right:14px!important}}
+@media(max-width:620px){.methodology-section{width:min(100% - 28px,680px)}.methodology-stage-grid,.methodology-capability-grid{grid-template-columns:1fr}.methodology-stage-card{min-height:0}.methodology-capability-card:nth-child(4),.methodology-capability-card:nth-child(5){grid-column:auto}.research-starter-page .mrm-workflow-nav.rs-workflow{top:70px!important;right:10px!important;left:10px!important;width:auto!important}.research-starter-page .mrm-workflow-nav.rs-workflow .mini-nav{justify-content:flex-start!important;overflow-x:auto!important}.research-starter-page .mrm-workflow-nav.rs-workflow .mini-nav a{flex:0 0 auto!important}}
+
+
+/* =========================================================
+   V5.4.3 — screenshot-driven visual correction pass
+   Purpose: remove dead space, restore hierarchy, and eliminate
+   browser-looking / duplicate controls without changing business logic.
+   ========================================================= */
+
+/* HOME — the previous hero top padding created a visibly empty band. */
+.hero-centered{padding:42px 20px 58px!important}
+.hero-centered h1{margin-top:14px!important}
+@media(max-width:700px){.hero-centered{padding-top:36px!important;padding-bottom:46px!important}}
+
+/* SERVICES — offer cards should be content-driven, not stretched to the
+   tallest sibling leaving large dead zones under short descriptions. */
+.offer-ladder-grid{align-items:start!important}
+.offer-ladder-grid>.card{height:auto!important;min-height:0!important;align-self:start!important}
+
+/* METHODOLOGY — four strategic stages remain the outer process; five
+   capabilities are a supporting 3+2 capability set, not another process. */
+.methodology-stage-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.methodology-stage-card{min-height:210px;padding:22px}
+.methodology-capability-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.methodology-capability-card{min-height:142px;padding:20px}
+.methodology-capability-card:nth-child(1),
+.methodology-capability-card:nth-child(2),
+.methodology-capability-card:nth-child(3){grid-column:span 2}
+.methodology-capability-card:nth-child(4){grid-column:2 / span 2}
+.methodology-capability-card:nth-child(5){grid-column:4 / span 2}
+@media(max-width:900px){
+  .methodology-stage-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .methodology-capability-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .methodology-capability-card:nth-child(n){grid-column:auto}
+}
+@media(max-width:620px){
+  .methodology-stage-grid,.methodology-capability-grid{grid-template-columns:1fr}
+}
+
+/* RESEARCH STARTER — workflow navigation is a real premium subnav, not a
+   tiny floating browser-like strip. */
+.research-starter-page .mrm-workflow-nav.rs-workflow{
+  position:sticky!important;top:76px!important;right:auto!important;left:auto!important;width:100%!important;
+  padding:8px 0!important;background:rgba(8,14,24,.96)!important;
+  border-top:1px solid rgba(255,255,255,.06)!important;border-bottom:1px solid rgba(255,255,255,.10)!important;
+  box-shadow:0 8px 26px rgba(0,0,0,.18)!important;backdrop-filter:blur(18px)!important;-webkit-backdrop-filter:blur(18px)!important;
+}
+.research-starter-page .mrm-workflow-nav.rs-workflow .mini-nav{
+  width:min(960px,calc(100% - 40px))!important;margin:0 auto!important;justify-content:center!important;
+  display:flex!important;gap:8px!important;padding:4px!important;border:0!important;border-radius:14px!important;background:transparent!important;box-shadow:none!important;
+}
+.research-starter-page .mrm-workflow-nav.rs-workflow .mini-nav a{
+  min-height:38px!important;padding:8px 14px!important;border-radius:11px!important;
+  background:#101b2d!important;border:1px solid rgba(255,255,255,.12)!important;color:#dfe8f5!important;
+  box-shadow:0 5px 16px rgba(0,0,0,.12)!important;font-size:.82rem!important;font-weight:850!important;
+}
+.research-starter-page .mrm-workflow-nav.rs-workflow .mini-nav a:hover,
+.research-starter-page .mrm-workflow-nav.rs-workflow .mini-nav a:focus-visible{background:#182942!important;border-color:rgba(255,217,120,.55)!important;color:#fff!important}
+
+/* Client path — turn the raw arrow chain into a clear process strip. */
+.research-starter-page .rs-hero-card .pipeline{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;margin:20px auto 0}
+.research-starter-page .rs-hero-card .pipeline span{display:inline-flex;align-items:center;padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.11);color:#dfe7f2;font-size:.78rem;font-weight:800}
+.research-starter-page .rs-hero-card .pipeline b{color:#ffd978;font-size:.9rem}
+
+/* Diagnose controls — Back must look like an intentional secondary action. */
+.research-starter-page #diagnose .tool-card>div[style*="justify-content:space-between"]{padding-top:4px;align-items:center}
+.research-starter-page #diagBack{border:1px solid rgba(255,255,255,.15)!important;background:rgba(255,255,255,.035)!important;color:#cbd6e4!important;box-shadow:none!important}
+.research-starter-page #diagBack:hover{border-color:rgba(255,217,120,.42)!important;color:#fff!important;background:rgba(255,217,120,.06)!important}
+.research-starter-page #diagNext{box-shadow:0 10px 26px rgba(245,189,75,.16)!important}
+
+/* INSIGHTS — keep one contextual Research Starter CTA, not two stacked copies. */
+.insights-next-cta{margin-top:18px}
+
+@media(max-width:620px){
+  .research-starter-page .mrm-workflow-nav.rs-workflow{top:70px!important;padding:7px 0!important}
+  .research-starter-page .mrm-workflow-nav.rs-workflow .mini-nav{width:calc(100% - 20px)!important;justify-content:flex-start!important;overflow-x:auto!important}
+  .research-starter-page .mrm-workflow-nav.rs-workflow .mini-nav a{flex:0 0 auto!important;font-size:.76rem!important;padding:8px 11px!important}
+  .research-starter-page .rs-hero-card .pipeline{justify-content:flex-start}
+}
+
+
+/* V5.4.4 — Research Starter surgical visual correction.
+   The workflow mini-nav is intentionally removed; Back is a true secondary control. */
+.research-starter-page .mrm-workflow-nav.rs-workflow{display:none!important}
+.research-starter-page #diagBack{
+  appearance:none!important;-webkit-appearance:none!important;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  min-height:44px!important;padding:10px 18px!important;
+  border:1px solid rgba(255,255,255,.18)!important;
+  border-radius:12px!important;
+  background:#111d30!important;
+  color:#eaf0f8!important;
+  font-family:inherit!important;font-size:.92rem!important;font-weight:800!important;
+  line-height:1!important;text-decoration:none!important;
+  box-shadow:0 6px 18px rgba(0,0,0,.16)!important;
+  opacity:1!important;cursor:pointer!important;
+}
+.research-starter-page #diagBack:hover{
+  background:#17263c!important;color:#fff!important;
+  border-color:rgba(255,217,120,.58)!important;
+}
+.research-starter-page #diagBack:focus-visible{
+  outline:2px solid #ffd978!important;outline-offset:3px!important;
+}
+
+/* V5.4.5 — Research Starter next-step CTA: explicit premium button treatment. */
+.research-starter-page .rs-next-card > .btn,
+.research-starter-page .rs-next-card a.btn-primary{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:48px!important;
+  padding:13px 20px!important;
+  border-radius:12px!important;
+  background:linear-gradient(135deg,#ffd978 0%,#f5b942 100%)!important;
+  color:#101318!important;
+  border:1px solid #ffe39a!important;
+  box-shadow:0 12px 28px rgba(245,185,66,.18)!important;
+  font-family:inherit!important;
+  font-size:.92rem!important;
+  font-weight:850!important;
+  line-height:1.15!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+  transition:transform .18s ease,box-shadow .18s ease,filter .18s ease!important;
+}
+.research-starter-page .rs-next-card > .btn:hover,
+.research-starter-page .rs-next-card a.btn-primary:hover,
+.research-starter-page .rs-next-card > .btn:focus-visible,
+.research-starter-page .rs-next-card a.btn-primary:focus-visible{
+  color:#0b0f16!important;
+  filter:brightness(1.04)!important;
+  transform:translateY(-2px)!important;
+  box-shadow:0 16px 34px rgba(245,185,66,.28)!important;
+  outline:2px solid rgba(255,217,120,.30)!important;
+  outline-offset:2px!important;
+}
+@media(max-width:620px){
+  .research-starter-page .rs-next-card > .btn,
+  .research-starter-page .rs-next-card a.btn-primary{width:100%!important;white-space:normal!important;}
+}
+
+/* V5.4.9 — GLOBAL PILOT CTA CONTRAST FIX
+   All commercial/pilot CTAs use the MRMProLeads gold treatment with true black text.
+   This final block intentionally wins over legacy/inherited anchor colors. */
+.mrm-nav-cta,
+.mrm-nav-cta:visited,
+.mrm-nav-cta:hover,
+.mrm-nav-cta:focus-visible,
+a.btn-primary,
+a.btn-primary:visited,
+a.btn-primary:hover,
+a.btn-primary:focus-visible,
+a.offer-cta,
+a.offer-cta:visited,
+a.offer-cta:hover,
+a.offer-cta:focus-visible,
+a[href*="#contact"].btn,
+a[href*="#contact"].btn:visited,
+a[href*="#contact"].btn:hover,
+a[href*="#contact"].btn:focus-visible,
+a[href*="/#contact"].btn,
+a[href*="/#contact"].btn:visited,
+a[href*="/#contact"].btn:hover,
+a[href*="/#contact"].btn:focus-visible,
+button.btn-primary,
+button.btn-primary:hover,
+button.btn-primary:focus-visible{
+  background:linear-gradient(135deg,#ffd978 0%,#f5bd4b 100%)!important;
+  color:#0a0e16!important;
+  -webkit-text-fill-color:#0a0e16!important;
+  text-shadow:none!important;
+  opacity:1!important;
+  border-color:#ffe39a!important;
+  font-weight:900!important;
+}
+
+/* Pilot CTA links that were previously rendered as gold text only. */
+a[href*="#contact"].offer-cta,
+a[href*="/#contact"].offer-cta{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:46px!important;
+  padding:12px 18px!important;
+  border-radius:12px!important;
+  background:linear-gradient(135deg,#ffd978 0%,#f5bd4b 100%)!important;
+  color:#0a0e16!important;
+  -webkit-text-fill-color:#0a0e16!important;
+  border:1px solid #ffe39a!important;
+  box-shadow:0 10px 26px rgba(245,189,75,.18)!important;
+  text-decoration:none!important;
+}
+
+a[href*="#contact"].offer-cta:hover,
+a[href*="/#contact"].offer-cta:hover,
+a[href*="#contact"].offer-cta:focus-visible,
+a[href*="/#contact"].offer-cta:focus-visible{
+  color:#0a0e16!important;
+  -webkit-text-fill-color:#0a0e16!important;
+  filter:brightness(1.04)!important;
+  transform:translateY(-2px);
+  box-shadow:0 14px 32px rgba(245,189,75,.28)!important;
+}
+
+/* V5.5.1 — premium separation for proof + audience sections */
+.proof-showcase,
+.audience-showcase{position:relative;overflow:hidden}
+.proof-showcase::before,
+.audience-showcase::before{content:"";position:absolute;inset:28px 0 auto;height:1px;background:linear-gradient(90deg,transparent,rgba(91,205,255,.28),rgba(255,204,92,.32),transparent);pointer-events:none}
+.decorative-section-head{position:relative;max-width:900px;margin:0 auto 34px;text-align:center}
+.decorative-section-head::before{content:"";display:block;width:74px;height:2px;margin:0 auto 18px;background:linear-gradient(90deg,#19bfff,#ffd15b);border-radius:999px;box-shadow:0 0 18px rgba(25,191,255,.2)}
+.decorative-section-head h2{margin:0 auto 12px;max-width:820px;letter-spacing:-.025em}
+.decorative-section-head p{max-width:720px;margin:0 auto;color:var(--muted)}
+.proof-showcase .proof-strip-grid{margin-top:8px}
+.proof-showcase .proof-strip-note{text-align:center;margin-top:18px}
+.audience-showcase{padding-top:76px}
+.audience-showcase .intent-grid{margin-top:8px}
+.audience-showcase .intent-item{min-height:176px;display:flex;flex-direction:column;justify-content:center;padding:26px 28px;border:1px solid rgba(150,170,200,.16);border-radius:22px;background:linear-gradient(145deg,rgba(17,27,43,.88),rgba(8,13,23,.84));box-shadow:0 18px 45px rgba(0,0,0,.16),inset 0 1px 0 rgba(255,255,255,.025)}
+.audience-showcase .intent-item.intent-core{border-color:rgba(255,203,91,.42);background:linear-gradient(145deg,rgba(29,29,37,.92),rgba(12,16,26,.88));box-shadow:0 18px 45px rgba(0,0,0,.18),0 0 32px rgba(255,203,91,.06),inset 0 1px 0 rgba(255,255,255,.035)}
+.audience-showcase .intent-item strong{font-size:1.28rem;margin:8px 0 8px}
+.audience-showcase .smallcaps{color:#5bcfff;letter-spacing:.16em}
+.audience-showcase .intent-core .smallcaps{color:#ffd15b}
+@media(max-width:780px){.decorative-section-head{margin-bottom:24px}.decorative-section-head h2{font-size:clamp(1.65rem,7vw,2.25rem)}.audience-showcase{padding-top:54px}.audience-showcase .intent-item{min-height:145px;padding:22px}.proof-showcase .proof-strip-grid{margin-top:0}}
