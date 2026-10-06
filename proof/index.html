@@ -141,7 +141,6 @@ h1,h2,h3,h4,.brand,.nav-cta,.price,.scale-number{font-family:Manrope,Inter,ui-sa
 #editorial-hub .resource-card{display:block;text-decoration:none}
 @media(max-width:700px){.hero-centered{padding-top:70px!important}.hero-centered h1{font-size:clamp(2.65rem,12vw,4.3rem)}.hero-centered .hero-actions{flex-direction:column;align-items:stretch}.hero-centered .hero-actions .btn{width:100%;box-sizing:border-box}.hero-centered .micro{flex-wrap:wrap;gap:10px 18px}}
 </style>
-
 <meta content="website" property="og:type"/><meta content="MRMProLeads" property="og:site_name"/><meta content="https://mrmproleads.com/proof/" property="og:url"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="en_US" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Research Proof &amp; Evidence | MRMProLeads" name="twitter:title"/><meta content="Public-safe proof, execution evidence and research standards from MRMProLeads." name="twitter:description"/><meta content="https://mrmproleads.com/assets/og-image.png" name="twitter:image"/><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -165,7 +164,236 @@ h1,h2,h3,h4,.brand,.nav-cta,.price,.scale-number{font-family:Manrope,Inter,ui-sa
 @media(max-width:780px){.brand img.brand-logo{width:165px}}
 </style> <link href="/assets/site-premium.css" rel="stylesheet"/>
 <link href="/assets/favicon-64.png" rel="icon" type="image/png"/>
-</head><body><header class="mrm-canonical-header"><div class="mrm-nav-wrap"><a aria-label="MRMProLeads home" class="mrm-brand" href="/"><img alt="MRMProLeads" class="mrm-brand-logo" decoding="async" height="35" loading="eager" src="/assets/logo-navbar-premium.webp" width="228"/></a><nav aria-label="Primary" class="mrm-nav"><a href="/services/">Services</a><a href="/account-intelligence/">Account Intelligence</a><a aria-current="page" href="/proof/">Proof</a><a href="/pricing/">Pricing</a><a href="/insights/">Insights</a><a href="/about/">About</a><a class="mrm-nav-cta" href="/#contact">Request a Pilot</a></nav></div></header><main class="deep-page"><section class="hero-mini"><div class="wrap"><div class="eyebrow">PROOF &amp; EVIDENCE</div><h1>See the work without exposing the data.</h1><p class="lead">A public-safe view of execution evidence, research structure and the boundaries of what MRMProLeads claims.</p></div></section><section class="section" id="proof"><div class="wrap">
+<style>
+/* V5.5.7.7 — site-wide premium CTA normalization */
+.premium-box{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:14px!important;
+  width:fit-content!important;
+  min-height:46px!important;
+  margin-top:14px!important;
+  padding:12px 16px!important;
+  border:1px solid rgba(255,205,92,.58)!important;
+  border-radius:14px!important;
+  background:linear-gradient(135deg,rgba(255,211,103,.16),rgba(255,190,66,.055))!important;
+  color:#ffd45f!important;
+  text-decoration:none!important;
+  font-weight:850!important;
+  line-height:1.25!important;
+  box-shadow:0 8px 24px rgba(245,189,75,.10), inset 0 1px 0 rgba(255,255,255,.05)!important;
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease,filter .18s ease!important;
+}
+.premium-box:hover{
+  transform:translateY(-2px)!important;
+  border-color:rgba(255,213,104,.95)!important;
+  background:linear-gradient(135deg,rgba(255,211,103,.23),rgba(255,190,66,.085))!important;
+  box-shadow:0 14px 34px rgba(245,189,75,.18),0 0 0 1px rgba(255,205,92,.08) inset!important;
+  filter:brightness(1.04)!important;
+}
+.premium-box:focus-visible{
+  outline:3px solid rgba(255,213,104,.34)!important;
+  outline-offset:3px!important;
+}
+@media (max-width:700px){
+  .premium-box{width:100%!important;max-width:100%!important;}
+}
+@media (prefers-reduced-motion:reduce){
+  .premium-box{transition:none!important}
+  .premium-box:hover{transform:none!important}
+}
+</style>
+<style id="site-wide-link-glow">
+/* V5.5.7.9 — every textual link gets the same restrained premium gold treatment.
+   Existing link text/arrows are preserved; no generated icons are added. */
+.site-link-glow{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  min-height:42px;
+  padding:.72rem 1rem;
+  border:1px solid rgba(245,190,58,.62);
+  border-radius:14px;
+  background:linear-gradient(180deg,rgba(245,190,58,.105),rgba(245,190,58,.035));
+  color:#ffd76a !important;
+  text-decoration:none !important;
+  box-shadow:0 0 0 1px rgba(245,190,58,.04),0 8px 24px rgba(245,190,58,.075);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease;
+}
+.site-link-glow:hover{
+  transform:translateY(-2px);
+  border-color:rgba(255,205,82,.95);
+  background:linear-gradient(180deg,rgba(245,190,58,.17),rgba(245,190,58,.065));
+  box-shadow:0 0 0 1px rgba(245,190,58,.08),0 0 24px rgba(245,190,58,.20),0 12px 28px rgba(245,190,58,.10);
+}
+.site-link-glow:focus-visible{
+  outline:2px solid #ffd76a;
+  outline-offset:3px;
+  box-shadow:0 0 0 4px rgba(245,190,58,.18),0 0 24px rgba(245,190,58,.20);
+}
+.site-link-glow:active{transform:translateY(0);}
+/* Keep the global navigation compact while retaining the same gold-light language. */
+header nav .site-link-glow,.site-header nav .site-link-glow{
+  min-height:38px;
+  padding:.48rem .72rem;
+  border-radius:10px;
+  box-shadow:0 0 0 1px rgba(245,190,58,.025),0 5px 16px rgba(245,190,58,.045);
+}
+@media (max-width:700px){
+  .site-link-glow{min-height:40px;padding:.65rem .85rem;}
+}
+@media (prefers-reduced-motion:reduce){
+  .site-link-glow{transition:none;}
+  .site-link-glow:hover{transform:none;}
+}
+</style>
+<style id="v55710-cta-icon-correction">
+/* V5.5.7.10 — CTA icon correction
+   Keep existing arrow characters in link text; never generate a second icon. */
+.site-link-glow::after,
+.premium-box::after,
+.resource-card .source-link::after{
+  content:none !important;
+  display:none !important;
+  width:0 !important;
+  height:0 !important;
+  flex:0 0 0 !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+</style><style id="v5718-public-resource-cards">
+/* V5.5.7.18 — Public Resources card system
+   Keep the whole card clickable, but give the card a stable 3-column layout. */
+.public-resources-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+  margin-top:28px;
+}
+.public-resource-card{
+  position:relative;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:stretch!important;
+  justify-content:flex-start!important;
+  width:100%!important;
+  min-width:0!important;
+  min-height:430px;
+  padding:30px!important;
+  margin:0!important;
+  border:1px solid rgba(245,190,58,.78)!important;
+  border-radius:20px!important;
+  background:linear-gradient(145deg,rgba(245,190,58,.075),rgba(9,15,25,.94) 42%,rgba(7,12,21,.98))!important;
+  color:inherit!important;
+  text-decoration:none!important;
+  box-shadow:0 14px 40px rgba(0,0,0,.24),0 0 28px rgba(245,190,58,.07)!important;
+  overflow:hidden;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease!important;
+}
+.public-resource-card:hover{
+  transform:translateY(-4px)!important;
+  border-color:rgba(255,211,91,.98)!important;
+  background:linear-gradient(145deg,rgba(245,190,58,.13),rgba(10,16,27,.96) 45%,rgba(7,12,21,.99))!important;
+  box-shadow:0 22px 52px rgba(0,0,0,.30),0 0 34px rgba(245,190,58,.16)!important;
+}
+.public-resource-card:focus-visible{
+  outline:3px solid rgba(255,215,106,.38)!important;
+  outline-offset:4px!important;
+}
+.public-resource-icon{
+  width:74px;height:74px;
+  display:grid;place-items:center;
+  margin-bottom:24px;
+  border:1px solid rgba(245,190,58,.58);
+  border-radius:17px;
+  background:rgba(245,190,58,.07);
+  color:#ffd76a;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 10px 24px rgba(245,190,58,.07);
+}
+.public-resource-icon svg{width:38px;height:38px;display:block}
+.public-resource-kicker{
+  color:#ffd76a;
+  font-size:.72rem;
+  line-height:1.2;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-bottom:10px;
+}
+.public-resource-card h3{
+  margin:0;
+  color:#f7f9fc;
+  font-size:clamp(1.35rem,2vw,1.72rem);
+  line-height:1.15;
+  letter-spacing:-.025em;
+}
+.public-resource-card p{
+  margin:22px 0 28px;
+  color:#c1cad8;
+  font-size:1rem;
+  line-height:1.7;
+}
+.public-resource-cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  min-height:54px;
+  margin-top:auto;
+  padding:14px 18px;
+  border:1px solid rgba(255,215,106,.78);
+  border-radius:14px;
+  background:linear-gradient(180deg,#ffd76a,#f5bd4b);
+  color:#101722!important;
+  font-weight:900;
+  line-height:1.25;
+  box-shadow:0 12px 30px rgba(245,189,75,.18),inset 0 1px 0 rgba(255,255,255,.30);
+  transition:transform .18s ease,box-shadow .18s ease,filter .18s ease;
+}
+.public-resource-card:hover .public-resource-cta{
+  transform:translateY(-1px);
+  filter:brightness(1.035);
+  box-shadow:0 16px 34px rgba(245,189,75,.25),0 0 20px rgba(245,189,75,.12),inset 0 1px 0 rgba(255,255,255,.34);
+}
+@media(max-width:900px){
+  .public-resources-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .public-resources-grid{grid-template-columns:1fr}
+  .public-resource-card{min-height:0;padding:24px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .public-resource-card,.public-resource-cta{transition:none!important}
+  .public-resource-card:hover,.public-resource-card:hover .public-resource-cta{transform:none!important}
+}
+</style>
+<style id="v5720-footer-final-layout">
+/* V5.5.7.20 — final footer layout
+   Left: brand + description + copyright.
+   Right: LinkedIn, Medium, Gumroad, Resources, Privacy.
+   Resource Hub removed because Resources already points to the resource library. */
+.mrm-footer-wrap{width:min(1180px,calc(100% - 40px));margin:auto;padding:46px 0 28px;}
+.mrm-footer-top{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:48px;padding-bottom:0;}
+.mrm-footer-brand a{display:inline-flex;text-decoration:none;}
+.mrm-footer-brand-logo{display:block;width:228px;height:auto;opacity:1;visibility:visible;}
+.mrm-footer-brand>div:not(.mrm-footer-copyright){margin-top:10px;color:#94a3b8;font-size:.92rem;line-height:1.55;}
+.mrm-footer-copyright{margin-top:14px;color:#8290a5;font-size:.84rem;line-height:1.7;}
+.mrm-footer-links{display:flex;justify-content:flex-end;align-items:center;gap:10px;flex-wrap:wrap;}
+.mrm-footer-links .site-link-glow{min-width:0;}
+.mrm-footer-bottom{display:none!important;}
+@media(max-width:900px){
+  .mrm-footer-top{grid-template-columns:1fr;gap:24px;align-items:start;}
+  .mrm-footer-links{justify-content:flex-start;}
+}
+@media(max-width:560px){
+  .mrm-footer-wrap{padding:36px 0 24px;}
+  .mrm-footer-brand-logo{width:190px;}
+  .mrm-footer-links{gap:8px;}
+}
+</style>
+</head><body><header class="mrm-canonical-header"><div class="mrm-nav-wrap"><a aria-label="MRMProLeads home" class="mrm-brand" href="/"><img alt="MRMProLeads" class="mrm-brand-logo" decoding="async" height="35" loading="eager" src="/assets/logo-navbar-premium.webp" width="228"/></a><nav aria-label="Primary" class="mrm-nav"><a class="site-link-glow" href="/services/">Services</a><a class="site-link-glow" href="/account-intelligence/">Account Intelligence</a><a aria-current="page" class="site-link-glow" href="/proof/">Proof</a><a class="site-link-glow" href="/pricing/">Pricing</a><a class="site-link-glow" href="/insights/">Insights</a><a class="site-link-glow" href="/about/">About</a><a class="mrm-nav-cta site-link-glow" href="/#contact">Request a Pilot</a></nav></div></header><main class="deep-page"><section class="hero-mini"><div class="wrap"><div class="eyebrow">PROOF &amp; EVIDENCE</div><h1>See the work without exposing the data.</h1><p class="lead">A public-safe view of execution evidence, research structure and the boundaries of what MRMProLeads claims.</p></div></section><section class="section" id="proof"><div class="wrap">
 <div class="section-head"><div class="eyebrow">Research proof</div><h2>Proof of the work — without exposing the data.</h2>
 <p>I use real research structure and documented execution evidence while keeping client/prospect PII out of the public site.</p></div>
 <div class="proof-scale">
@@ -194,19 +422,19 @@ h1,h2,h3,h4,.brand,.nav-cta,.price,.scale-number{font-family:Manrope,Inter,ui-sa
 <p style="margin-top:14px;color:var(--muted);font-size:.86rem">The structure above is representative of the research workflow; it does not expose private client or prospect information.</p>
 </div>
 <div class="proof" style="margin-top:16px">
-<a href="/case-studies/"><article class="card"><div class="num">Case studies</div><h3>ABM Research Portfolio →</h3><p>Review selected account-intelligence and buying-committee research examples.</p></article></a>
-<a href="/evidence/research-at-scale/"><article class="card"><div class="num">Research at scale</div><h3>Aggregate Dataset Evidence →</h3><p>See the audited scale of the research dataset without exposing raw prospect records.</p></article></a>
-<a href="/evidence/research-evidence-framework/"><article class="card"><div class="num">Evidence framework</div><h3>Research Transparency →</h3><p>See how public evidence, contact information and research findings are separated.</p></article></a>
-<a href="/services/"><article class="card"><div class="num">Services</div><h3>Services &amp; Deliverables →</h3><p>Review the available ABM research, account intelligence and contact research workflows.</p></article></a>
-<a href="/assets/MRMProLeads-ABM-Research-Sample-Snapshot.pdf"><article class="card"><div class="num">Public-safe sample</div><h3>Research Snapshot PDF →</h3><p>See an anonymized example of account, ICP and buying-committee research structure.</p></article></a>
+<a class="premium-box site-link-glow" href="/case-studies/"><article class="card"><div class="num">Case studies</div><h3>ABM Research Portfolio →</h3><p>Review selected account-intelligence and buying-committee research examples.</p></article></a>
+<a class="premium-box site-link-glow" href="/evidence/research-at-scale/"><article class="card"><div class="num">Research at scale</div><h3>Aggregate Dataset Evidence →</h3><p>See the audited scale of the research dataset without exposing raw prospect records.</p></article></a>
+<a class="premium-box site-link-glow" href="/evidence/research-evidence-framework/"><article class="card"><div class="num">Evidence framework</div><h3>Research Transparency →</h3><p>See how public evidence, contact information and research findings are separated.</p></article></a>
+<a class="premium-box site-link-glow" href="/services/"><article class="card"><div class="num">Services</div><h3>Services &amp; Deliverables →</h3><p>Review the available ABM research, account intelligence and contact research workflows.</p></article></a>
+<a class="premium-box site-link-glow" href="/assets/MRMProLeads-ABM-Research-Sample-Snapshot.pdf"><article class="card"><div class="num">Public-safe sample</div><h3>Research Snapshot PDF →</h3><p>See an anonymized example of account, ICP and buying-committee research structure.</p></article></a>
 </div>
 </div></section><section class="section" id="evidence"><div class="wrap">
 <div class="section-head"><div class="eyebrow">Evidence-backed claims</div><h2>What I can prove publicly — and what I won’t claim.</h2><p>MRMProLeads separates execution evidence, illustrative research structure and outcome claims. The public site uses only claims that the available evidence can support.</p></div>
 <div class="evidence-grid">
-<article class="evidence-card"><div class="evidence-tag">Documented workflow</div><h3>ICP → accounts → people → enrichment → verification</h3><p>A public sample documents a repeatable research workflow covering ICP definition, target-account research, decision-maker identification, account enrichment, verification/cleaning and account-level notes.</p><a class="source-link" href="/evidence/research-evidence-framework/">View evidence framework →</a> <a class="source-link" href="/evidence/research-verification/">Verification standard →</a></article>
-<article class="evidence-card"><div class="evidence-tag">Anonymized enterprise sample</div><h3>6 target accounts with account-level research</h3><p>An anonymized enterprise sample documents six researched target accounts, Salesforce usage, account pain points, anonymized decision-maker contacts and a three-step outreach sequence.</p><a class="source-link" href="/case-studies/">Review public case-study material →</a></article>
-<article class="evidence-card"><div class="evidence-tag">Buying committee sample</div><h3>Beyond the CEO: mapping the buying group</h3><p>An anonymized three-account sample shows economic buyer, champion, technical evaluator, influencer and possible blocker roles, plus the buying signal and outreach angle for each account.</p><a class="source-link" href="/assets/MRMProLeads-ABM-Research-Sample-Snapshot.pdf">View public-safe research sample →</a></article>
-<article class="evidence-card"><div class="evidence-tag">Scale audit</div><h3>1,265-row research dataset</h3><p>The internal dataset audit shows a serial range through 1,265, with 1,263 populated records, 1,039 unique company names and roughly 1,200 LinkedIn profile references. Raw prospect records are not published.</p><a class="source-link" href="/evidence/research-at-scale/">See the aggregate audit →</a></article>
+<article class="evidence-card"><div class="evidence-tag">Documented workflow</div><h3>ICP → accounts → people → enrichment → verification</h3><p>A public sample documents a repeatable research workflow covering ICP definition, target-account research, decision-maker identification, account enrichment, verification/cleaning and account-level notes.</p><a class="source-link premium-box site-link-glow" href="/evidence/research-evidence-framework/">View evidence framework →</a> <a class="source-link premium-box site-link-glow" href="/evidence/research-verification/">Verification standard →</a></article>
+<article class="evidence-card"><div class="evidence-tag">Anonymized enterprise sample</div><h3>6 target accounts with account-level research</h3><p>An anonymized enterprise sample documents six researched target accounts, Salesforce usage, account pain points, anonymized decision-maker contacts and a three-step outreach sequence.</p><a class="source-link premium-box site-link-glow" href="/case-studies/">Review public case-study material →</a></article>
+<article class="evidence-card"><div class="evidence-tag">Buying committee sample</div><h3>Beyond the CEO: mapping the buying group</h3><p>An anonymized three-account sample shows economic buyer, champion, technical evaluator, influencer and possible blocker roles, plus the buying signal and outreach angle for each account.</p><a class="source-link premium-box site-link-glow" href="/assets/MRMProLeads-ABM-Research-Sample-Snapshot.pdf">View public-safe research sample →</a></article>
+<article class="evidence-card"><div class="evidence-tag">Scale audit</div><h3>1,265-row research dataset</h3><p>The internal dataset audit shows a serial range through 1,265, with 1,263 populated records, 1,039 unique company names and roughly 1,200 LinkedIn profile references. Raw prospect records are not published.</p><a class="source-link premium-box site-link-glow" href="/evidence/research-at-scale/">See the aggregate audit →</a></article>
 </div>
 <div class="claim-grid">
 <article class="claim-box safe"><h4>What I Can Substantiate</h4><p>Research execution at scale; structured ICP/account research; buying-committee mapping; contact-intelligence workflows; anonymized research examples; aggregate dataset counts.</p></article>
@@ -215,10 +443,42 @@ h1,h2,h3,h4,.brand,.nav-cta,.price,.scale-number{font-family:Manrope,Inter,ui-sa
 <div class="proof-footnote">Evidence classes are kept separate: internal scale audit ≠ client outcome; illustrative sample ≠ completed client campaign; public contact availability ≠ deliverability verification.</div>
 </div></section><section class="section" id="resources"><div class="wrap">
 <div class="section-head"><div class="eyebrow">Public resources</div><h2>See the work before you buy it.</h2><p>Public-safe material is available so a prospective client can judge the research structure, evidence discipline and deliverable depth before starting a paid pilot.</p></div>
-<div class="resource-grid">
-<a class="card resource-card" href="/assets/MRMProLeads-ABM-Research-Sample-Snapshot.pdf"><div class="num">01 · Sample</div><h3>ABM Research Snapshot</h3><p>An anonymized example of target-account overview, ICP fit, buying-committee structure and sales engagement recommendations.</p><span class="source-link">Open sample PDF →</span></a>
-<a class="card resource-card" href="/methodology/"><div class="num">02 · Standard</div><h3>Research Standards</h3><p>See how MRMProLeads separates public evidence, observed signals, interpretation and unknowns.</p><span class="source-link">Read the research standard →</span></a>
-<a class="card resource-card" href="/evidence/research-at-scale/"><div class="num">03 · Evidence</div><h3>Research at Scale Audit</h3><p>Review aggregate dataset counts and the privacy boundary without exposing prospect-level information.</p><span class="source-link">Open evidence page →</span></a>
+<div class="public-resources-grid">
+<a class="public-resource-card" href="/assets/MRMProLeads-ABM-Research-Sample-Snapshot.pdf">
+  <div class="public-resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h8l4 4v13H6z"/><path d="M14 3.5v4h4"/><path d="M8.5 12h7M8.5 15.5h7M8.5 9h2"/></svg></div>
+  <div class="public-resource-kicker">01 · Sample</div><h3>ABM Research Snapshot</h3>
+  <p>An anonymized example of target-account overview, ICP fit, buying-committee structure and sales engagement recommendations.</p>
+  <span class="public-resource-cta">Open sample PDF →</span>
+</a>
+<a class="public-resource-card" href="/methodology/">
+  <div class="public-resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18V10M10 18V6M15 18v-4M20 18V4"/><path d="M4 20h17"/></svg></div>
+  <div class="public-resource-kicker">02 · Standard</div><h3>Research Standards</h3>
+  <p>See how MRMProLeads separates public evidence, observed signals, interpretation and unknowns.</p>
+  <span class="public-resource-cta">Read the research standard →</span>
+</a>
+<a class="public-resource-card" href="/evidence/research-at-scale/">
+  <div class="public-resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.8" cy="10.8" r="6.4"/><path d="m16 16 4.2 4.2M8.5 10.8h4.6M10.8 8.5v4.6"/></svg></div>
+  <div class="public-resource-kicker">03 · Evidence</div><h3>Research at Scale Audit</h3>
+  <p>Review aggregate dataset counts and the privacy boundary without exposing prospect-level information.</p>
+  <span class="public-resource-cta">Open evidence page →</span>
+</a>
 </div>
-</div></section></main><footer class="mrm-canonical-footer"><div class="mrm-footer-wrap"><div class="mrm-footer-top"><div class="mrm-footer-brand"><a aria-label="MRMProLeads home" href="/"><img alt="MRMProLeads" class="footer-brand-logo" decoding="async" height="35" loading="lazy" src="/assets/logo-navbar-premium.webp" width="228"/></a><div>B2B Account Intelligence &amp; Sales Intelligence</div></div><nav aria-label="Footer" class="mrm-footer-links"><a href="/services/">Services</a><a href="/account-intelligence/">Account Intelligence</a><a href="/proof/">Proof</a><a href="/pricing/">Pricing</a><a href="/insights/">Insights</a><a href="/resources/">Resources</a><a href="/about/">About</a><a href="/privacy/">Privacy</a></nav></div><div class="mrm-footer-bottom">© 2026 MRMProLeads · Public proof is anonymized · <a href="https://www.linkedin.com/in/mrahman01675/" rel="noopener noreferrer" target="_blank">LinkedIn</a> · <a href="https://medium.com/@mrahman01675" rel="noopener noreferrer" target="_blank">Medium</a> · <a href="https://mrmproleads.gumroad.com" rel="noopener noreferrer" target="_blank">Gumroad</a> · <a href="https://silken-pancake-4aa.notion.site/MRMProLeads-B2B-Resource-Hub-385320d911098092a62bd45d756c8c57" rel="noopener noreferrer" target="_blank">Resource Hub</a></div></div></footer><script src="/assets/site-analytics.js" defer></script>
+</div></section></main><footer class="mrm-canonical-footer">
+  <div class="mrm-footer-wrap">
+    <div class="mrm-footer-top">
+      <div class="mrm-footer-brand">
+        <a aria-label="MRMProLeads home" href="/"><img alt="MRMProLeads" class="footer-brand-logo" decoding="async" height="35" loading="lazy" src="/assets/logo-navbar-premium.webp" width="228"/></a>
+        <div>B2B Account Intelligence &amp; Sales Intelligence</div>
+        <div class="mrm-footer-copyright">© 2026 MRMProLeads · Public proof is anonymized</div>
+      </div>
+      <nav aria-label="Footer" class="mrm-footer-links">
+        <a class="site-link-glow" href="https://www.linkedin.com/in/mrahman01675/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+        <a class="site-link-glow" href="https://medium.com/@mrahman01675" rel="noopener noreferrer" target="_blank">Medium</a>
+        <a class="site-link-glow" href="https://mrmproleads.gumroad.com/" rel="noopener noreferrer" target="_blank">Gumroad</a>
+        <a class="site-link-glow" href="/resources/">Resources</a>
+        <a class="site-link-glow" href="/privacy/">Privacy</a>
+      </nav>
+    </div>
+  </div>
+</footer><script defer="" src="/assets/site-analytics.js"></script>
 </body></html>
