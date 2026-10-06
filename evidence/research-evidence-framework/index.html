@@ -69,8 +69,132 @@
     {"@type":"ListItem","position":1,"name":"Home","item":"https://mrmproleads.com/"},
     {"@type":"ListItem","position":2,"name":"Research Evidence Framework","item":"https://mrmproleads.com/evidence/research-evidence-framework/"}
   ]
-}</script></head><body><header class="mrm-canonical-header"><div class="mrm-nav-wrap"><a aria-label="MRMProLeads home" class="mrm-brand" href="/"><img alt="MRMProLeads" class="mrm-brand-logo" decoding="async" height="35" loading="eager" src="/assets/logo-navbar-premium.webp" width="228"/></a><nav aria-label="Primary" class="mrm-nav"><a href="/services/">Services</a><a href="/account-intelligence/">Account Intelligence</a><a href="/proof/">Proof</a><a href="/pricing/">Pricing</a><a href="/insights/">Insights</a><a href="/about/">About</a><a class="mrm-nav-cta" href="/#contact">Request a Pilot</a></nav></div></header><main class="evf-page">
-<a class="evf-back" href="/">← Back to MRMProLeads</a>
+}</script><style>
+/* V5.5.7.7 — site-wide premium CTA normalization */
+.premium-box{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:14px!important;
+  width:fit-content!important;
+  min-height:46px!important;
+  margin-top:14px!important;
+  padding:12px 16px!important;
+  border:1px solid rgba(255,205,92,.58)!important;
+  border-radius:14px!important;
+  background:linear-gradient(135deg,rgba(255,211,103,.16),rgba(255,190,66,.055))!important;
+  color:#ffd45f!important;
+  text-decoration:none!important;
+  font-weight:850!important;
+  line-height:1.25!important;
+  box-shadow:0 8px 24px rgba(245,189,75,.10), inset 0 1px 0 rgba(255,255,255,.05)!important;
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease,filter .18s ease!important;
+}
+.premium-box:hover{
+  transform:translateY(-2px)!important;
+  border-color:rgba(255,213,104,.95)!important;
+  background:linear-gradient(135deg,rgba(255,211,103,.23),rgba(255,190,66,.085))!important;
+  box-shadow:0 14px 34px rgba(245,189,75,.18),0 0 0 1px rgba(255,205,92,.08) inset!important;
+  filter:brightness(1.04)!important;
+}
+.premium-box:focus-visible{
+  outline:3px solid rgba(255,213,104,.34)!important;
+  outline-offset:3px!important;
+}
+@media (max-width:700px){
+  .premium-box{width:100%!important;max-width:100%!important;}
+}
+@media (prefers-reduced-motion:reduce){
+  .premium-box{transition:none!important}
+  .premium-box:hover{transform:none!important}
+}
+</style>
+<style id="site-wide-link-glow">
+/* V5.5.7.9 — every textual link gets the same restrained premium gold treatment.
+   Existing link text/arrows are preserved; no generated icons are added. */
+.site-link-glow{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  min-height:42px;
+  padding:.72rem 1rem;
+  border:1px solid rgba(245,190,58,.62);
+  border-radius:14px;
+  background:linear-gradient(180deg,rgba(245,190,58,.105),rgba(245,190,58,.035));
+  color:#ffd76a !important;
+  text-decoration:none !important;
+  box-shadow:0 0 0 1px rgba(245,190,58,.04),0 8px 24px rgba(245,190,58,.075);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease;
+}
+.site-link-glow:hover{
+  transform:translateY(-2px);
+  border-color:rgba(255,205,82,.95);
+  background:linear-gradient(180deg,rgba(245,190,58,.17),rgba(245,190,58,.065));
+  box-shadow:0 0 0 1px rgba(245,190,58,.08),0 0 24px rgba(245,190,58,.20),0 12px 28px rgba(245,190,58,.10);
+}
+.site-link-glow:focus-visible{
+  outline:2px solid #ffd76a;
+  outline-offset:3px;
+  box-shadow:0 0 0 4px rgba(245,190,58,.18),0 0 24px rgba(245,190,58,.20);
+}
+.site-link-glow:active{transform:translateY(0);}
+/* Keep the global navigation compact while retaining the same gold-light language. */
+header nav .site-link-glow,.site-header nav .site-link-glow{
+  min-height:38px;
+  padding:.48rem .72rem;
+  border-radius:10px;
+  box-shadow:0 0 0 1px rgba(245,190,58,.025),0 5px 16px rgba(245,190,58,.045);
+}
+@media (max-width:700px){
+  .site-link-glow{min-height:40px;padding:.65rem .85rem;}
+}
+@media (prefers-reduced-motion:reduce){
+  .site-link-glow{transition:none;}
+  .site-link-glow:hover{transform:none;}
+}
+</style>
+<style id="v55710-cta-icon-correction">
+/* V5.5.7.10 — CTA icon correction
+   Keep existing arrow characters in link text; never generate a second icon. */
+.site-link-glow::after,
+.premium-box::after,
+.resource-card .source-link::after{
+  content:none !important;
+  display:none !important;
+  width:0 !important;
+  height:0 !important;
+  flex:0 0 0 !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+</style>
+<style id="v5720-footer-final-layout">
+/* V5.5.7.20 — final footer layout
+   Left: brand + description + copyright.
+   Right: LinkedIn, Medium, Gumroad, Resources, Privacy.
+   Resource Hub removed because Resources already points to the resource library. */
+.mrm-footer-wrap{width:min(1180px,calc(100% - 40px));margin:auto;padding:46px 0 28px;}
+.mrm-footer-top{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:48px;padding-bottom:0;}
+.mrm-footer-brand a{display:inline-flex;text-decoration:none;}
+.mrm-footer-brand-logo{display:block;width:228px;height:auto;opacity:1;visibility:visible;}
+.mrm-footer-brand>div:not(.mrm-footer-copyright){margin-top:10px;color:#94a3b8;font-size:.92rem;line-height:1.55;}
+.mrm-footer-copyright{margin-top:14px;color:#8290a5;font-size:.84rem;line-height:1.7;}
+.mrm-footer-links{display:flex;justify-content:flex-end;align-items:center;gap:10px;flex-wrap:wrap;}
+.mrm-footer-links .site-link-glow{min-width:0;}
+.mrm-footer-bottom{display:none!important;}
+@media(max-width:900px){
+  .mrm-footer-top{grid-template-columns:1fr;gap:24px;align-items:start;}
+  .mrm-footer-links{justify-content:flex-start;}
+}
+@media(max-width:560px){
+  .mrm-footer-wrap{padding:36px 0 24px;}
+  .mrm-footer-brand-logo{width:190px;}
+  .mrm-footer-links{gap:8px;}
+}
+</style>
+</head><body><header class="mrm-canonical-header"><div class="mrm-nav-wrap"><a aria-label="MRMProLeads home" class="mrm-brand" href="/"><img alt="MRMProLeads" class="mrm-brand-logo" decoding="async" height="35" loading="eager" src="/assets/logo-navbar-premium.webp" width="228"/></a><nav aria-label="Primary" class="mrm-nav"><a class="site-link-glow" href="/services/">Services</a><a class="site-link-glow" href="/account-intelligence/">Account Intelligence</a><a class="site-link-glow" href="/proof/">Proof</a><a class="site-link-glow" href="/pricing/">Pricing</a><a class="site-link-glow" href="/insights/">Insights</a><a class="site-link-glow" href="/about/">About</a><a class="mrm-nav-cta site-link-glow" href="/#contact">Request a Pilot</a></nav></div></header><main class="evf-page">
+<a class="evf-back site-link-glow" href="/">← Back to MRMProLeads</a>
 <section class="evf-hero">
 <div class="evf-kicker">Evidence Framework · 01 / 02</div>
 <h1>Research should be <span>understandable.</span></h1>
@@ -82,6 +206,23 @@
 <section class="evf-section"><div class="evf-kicker">Source hierarchy</div><h2>Not every source carries the same evidentiary value.</h2><div class="evf-card" style="margin-top:22px"><div class="evf-tier"><div class="evf-tier-no">01</div><div><h3>Official Sources</h3><p>Company websites, official announcements, regulatory filings, government records and official public documents. Best for core company information, leadership and official activity.</p></div></div><div class="evf-tier"><div class="evf-tier-no">02</div><div><h3>Public Institutional Sources</h3><p>Government databases, regulatory records, municipal records, industry organizations and public procurement records.</p></div></div><div class="evf-tier"><div class="evf-tier-no">03</div><div><h3>Professional Sources</h3><p>LinkedIn, professional profiles, industry publications and conference profiles for role history and organizational context.</p></div></div><div class="evf-tier"><div class="evf-tier-no">04</div><div><h3>Third-Party Data</h3><p>Contact databases, business directories, data providers and aggregated company databases. Useful for support, but important information should be independently checked where appropriate.</p></div></div><div class="evf-tier"><div class="evf-tier-no">05</div><div><h3>Inference</h3><p>An interpretation derived from available evidence. It should never be presented as a confirmed fact.</p></div></div></div></section>
 <section class="evf-section"><div class="evf-kicker">Fact vs inference</div><h2>Separate what we know from what the evidence may indicate.</h2><div class="evf-status"><div class="evf-card"><div class="evf-num">Confirmed</div><h3>Confirmed Fact</h3><p>Directly supported by an appropriate source.</p></div><div class="evf-card"><div class="evf-num">Interpretation</div><h3>ABM Hypothesis</h3><p>A reasonable interpretation of observed information.</p></div><div class="evf-card"><div class="evf-num">Unresolved</div><h3>Unverified</h3><p>Sufficient evidence has not yet been established.</p></div><div class="evf-card"><div class="evf-num">Conflict</div><h3>Discrepancy</h3><p>Two sources provide conflicting information; record it rather than guessing.</p></div></div></section>
 <section class="evf-section"><div class="evf-kicker">Confidence</div><h2>Make uncertainty visible.</h2><div class="evf-grid"><div class="evf-card"><div class="evf-num">High</div><h3>High Confidence</h3><p>Strongly supported by reliable and preferably independent evidence.</p></div><div class="evf-card"><div class="evf-num">Moderate</div><h3>Moderate Confidence</h3><p>Supported by reasonable evidence but may require additional confirmation.</p></div><div class="evf-card"><div class="evf-num">Low / Not verified</div><h3>Unresolved</h3><p>Limited evidence or insufficient support to present the information as confirmed.</p></div></div><p class="evf-mini">Confidence is not artificial precision. Its purpose is to make uncertainty visible.</p></section>
-<div class="evf-nav"><span></span><a class="evf-btn primary" href="/evidence/research-verification/">Continue to Verification Method →</a></div>
-</main><footer class="mrm-canonical-footer"><div class="mrm-footer-wrap"><div class="mrm-footer-top"><div class="mrm-footer-brand"><a aria-label="MRMProLeads home" href="/"><img alt="MRMProLeads" class="footer-brand-logo" decoding="async" height="35" loading="lazy" src="/assets/logo-navbar-premium.webp" width="228"/></a><div>B2B Account Intelligence &amp; Sales Intelligence</div></div><nav aria-label="Footer" class="mrm-footer-links"><a href="/services/">Services</a><a href="/account-intelligence/">Account Intelligence</a><a href="/proof/">Proof</a><a href="/pricing/">Pricing</a><a href="/insights/">Insights</a><a href="/resources/">Resources</a><a href="/about/">About</a><a href="/privacy/">Privacy</a></nav></div><div class="mrm-footer-bottom">© 2026 MRMProLeads · Public proof is anonymized · <a href="https://www.linkedin.com/in/mrahman01675/" rel="noopener noreferrer" target="_blank">LinkedIn</a> · <a href="https://medium.com/@mrahman01675" rel="noopener noreferrer" target="_blank">Medium</a> · <a href="https://mrmproleads.gumroad.com" rel="noopener noreferrer" target="_blank">Gumroad</a> · <a href="https://silken-pancake-4aa.notion.site/MRMProLeads-B2B-Resource-Hub-385320d911098092a62bd45d756c8c57" rel="noopener noreferrer" target="_blank">Resource Hub</a></div></div></footer><script src="/assets/site-analytics.js" defer></script>
+<div class="evf-nav"><span></span><a class="evf-btn primary premium-box site-link-glow" href="/evidence/research-verification/">Continue to Verification Method →</a></div>
+</main><footer class="mrm-canonical-footer">
+  <div class="mrm-footer-wrap">
+    <div class="mrm-footer-top">
+      <div class="mrm-footer-brand">
+        <a aria-label="MRMProLeads home" href="/"><img alt="MRMProLeads" class="footer-brand-logo" decoding="async" height="35" loading="lazy" src="/assets/logo-navbar-premium.webp" width="228"/></a>
+        <div>B2B Account Intelligence &amp; Sales Intelligence</div>
+        <div class="mrm-footer-copyright">© 2026 MRMProLeads · Public proof is anonymized</div>
+      </div>
+      <nav aria-label="Footer" class="mrm-footer-links">
+        <a class="site-link-glow" href="https://www.linkedin.com/in/mrahman01675/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+        <a class="site-link-glow" href="https://medium.com/@mrahman01675" rel="noopener noreferrer" target="_blank">Medium</a>
+        <a class="site-link-glow" href="https://mrmproleads.gumroad.com/" rel="noopener noreferrer" target="_blank">Gumroad</a>
+        <a class="site-link-glow" href="/resources/">Resources</a>
+        <a class="site-link-glow" href="/privacy/">Privacy</a>
+      </nav>
+    </div>
+  </div>
+</footer><script defer="" src="/assets/site-analytics.js"></script>
 </body></html>
