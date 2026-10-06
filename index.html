@@ -228,7 +228,7 @@ h1,h2,h3,h4,.brand,.nav-cta,.price,.scale-number{font-family:Manrope,Inter,ui-sa
 </style> <link href="/assets/site-premium.css" rel="stylesheet"/>
 <style>
 /* V5.5.7.7 — site-wide premium CTA normalization */
-.premium-cta{
+.premium-box{
   display:inline-flex!important;
   align-items:center!important;
   justify-content:space-between!important;
@@ -247,36 +247,121 @@ h1,h2,h3,h4,.brand,.nav-cta,.price,.scale-number{font-family:Manrope,Inter,ui-sa
   box-shadow:0 8px 24px rgba(245,189,75,.10), inset 0 1px 0 rgba(255,255,255,.05)!important;
   transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease,filter .18s ease!important;
 }
-.premium-cta:hover{
+.premium-box:hover{
   transform:translateY(-2px)!important;
   border-color:rgba(255,213,104,.95)!important;
   background:linear-gradient(135deg,rgba(255,211,103,.23),rgba(255,190,66,.085))!important;
   box-shadow:0 14px 34px rgba(245,189,75,.18),0 0 0 1px rgba(255,205,92,.08) inset!important;
   filter:brightness(1.04)!important;
 }
-.premium-cta:focus-visible{
+.premium-box:focus-visible{
   outline:3px solid rgba(255,213,104,.34)!important;
   outline-offset:3px!important;
 }
 @media (max-width:700px){
-  .premium-cta{width:100%!important;max-width:100%!important;}
+  .premium-box{width:100%!important;max-width:100%!important;}
 }
 @media (prefers-reduced-motion:reduce){
-  .premium-cta{transition:none!important}
-  .premium-cta:hover{transform:none!important}
+  .premium-box{transition:none!important}
+  .premium-box:hover{transform:none!important}
 }
-</style></head>
+</style>
+<style id="site-wide-link-glow">
+/* V5.5.7.9 — every textual link gets the same restrained premium gold treatment.
+   Existing link text/arrows are preserved; no generated icons are added. */
+.site-link-glow{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  min-height:42px;
+  padding:.72rem 1rem;
+  border:1px solid rgba(245,190,58,.62);
+  border-radius:14px;
+  background:linear-gradient(180deg,rgba(245,190,58,.105),rgba(245,190,58,.035));
+  color:#ffd76a !important;
+  text-decoration:none !important;
+  box-shadow:0 0 0 1px rgba(245,190,58,.04),0 8px 24px rgba(245,190,58,.075);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease;
+}
+.site-link-glow:hover{
+  transform:translateY(-2px);
+  border-color:rgba(255,205,82,.95);
+  background:linear-gradient(180deg,rgba(245,190,58,.17),rgba(245,190,58,.065));
+  box-shadow:0 0 0 1px rgba(245,190,58,.08),0 0 24px rgba(245,190,58,.20),0 12px 28px rgba(245,190,58,.10);
+}
+.site-link-glow:focus-visible{
+  outline:2px solid #ffd76a;
+  outline-offset:3px;
+  box-shadow:0 0 0 4px rgba(245,190,58,.18),0 0 24px rgba(245,190,58,.20);
+}
+.site-link-glow:active{transform:translateY(0);}
+/* Keep the global navigation compact while retaining the same gold-light language. */
+header nav .site-link-glow,.site-header nav .site-link-glow{
+  min-height:38px;
+  padding:.48rem .72rem;
+  border-radius:10px;
+  box-shadow:0 0 0 1px rgba(245,190,58,.025),0 5px 16px rgba(245,190,58,.045);
+}
+@media (max-width:700px){
+  .site-link-glow{min-height:40px;padding:.65rem .85rem;}
+}
+@media (prefers-reduced-motion:reduce){
+  .site-link-glow{transition:none;}
+  .site-link-glow:hover{transform:none;}
+}
+</style>
+<style id="v55710-cta-icon-correction">
+/* V5.5.7.10 — CTA icon correction
+   Keep existing arrow characters in link text; never generate a second icon. */
+.site-link-glow::after,
+.premium-box::after,
+.resource-card .source-link::after{
+  content:none !important;
+  display:none !important;
+  width:0 !important;
+  height:0 !important;
+  flex:0 0 0 !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+</style>
+<style id="v5720-footer-final-layout">
+/* V5.5.7.20 — final footer layout
+   Left: brand + description + copyright.
+   Right: LinkedIn, Medium, Gumroad, Resources, Privacy.
+   Resource Hub removed because Resources already points to the resource library. */
+.mrm-footer-wrap{width:min(1180px,calc(100% - 40px));margin:auto;padding:46px 0 28px;}
+.mrm-footer-top{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:48px;padding-bottom:0;}
+.mrm-footer-brand a{display:inline-flex;text-decoration:none;}
+.mrm-footer-brand-logo{display:block;width:228px;height:auto;opacity:1;visibility:visible;}
+.mrm-footer-brand>div:not(.mrm-footer-copyright){margin-top:10px;color:#94a3b8;font-size:.92rem;line-height:1.55;}
+.mrm-footer-copyright{margin-top:14px;color:#8290a5;font-size:.84rem;line-height:1.7;}
+.mrm-footer-links{display:flex;justify-content:flex-end;align-items:center;gap:10px;flex-wrap:wrap;}
+.mrm-footer-links .site-link-glow{min-width:0;}
+.mrm-footer-bottom{display:none!important;}
+@media(max-width:900px){
+  .mrm-footer-top{grid-template-columns:1fr;gap:24px;align-items:start;}
+  .mrm-footer-links{justify-content:flex-start;}
+}
+@media(max-width:560px){
+  .mrm-footer-wrap{padding:36px 0 24px;}
+  .mrm-footer-brand-logo{width:190px;}
+  .mrm-footer-links{gap:8px;}
+}
+</style>
+</head>
 <body>
 <div aria-hidden="true" class="nav-reveal-zone" id="navRevealZone"></div>
 <div aria-hidden="true" class="progress" id="progress"></div>
 <a class="skip" href="#main">Skip to content</a>
-<header class="mrm-canonical-header"><div class="mrm-nav-wrap"><a aria-label="MRMProLeads home" class="mrm-brand" href="/"><img alt="MRMProLeads" class="mrm-brand-logo" decoding="async" height="35" loading="eager" src="/assets/logo-navbar-premium.webp" width="228"/></a><nav aria-label="Primary" class="mrm-nav"><a href="/services/">Services</a><a href="/account-intelligence/">Account Intelligence</a><a href="/proof/">Proof</a><a href="/pricing/">Pricing</a><a href="/insights/">Insights</a><a href="/about/">About</a><a aria-current="page" class="mrm-nav-cta" href="/#contact">Request a Pilot</a></nav></div></header>
+<header class="mrm-canonical-header"><div class="mrm-nav-wrap"><a aria-label="MRMProLeads home" class="mrm-brand" href="/"><img alt="MRMProLeads" class="mrm-brand-logo" decoding="async" height="35" loading="eager" src="/assets/logo-navbar-premium.webp" width="228"/></a><nav aria-label="Primary" class="mrm-nav"><a class="site-link-glow" href="/services/">Services</a><a class="site-link-glow" href="/account-intelligence/">Account Intelligence</a><a class="site-link-glow" href="/proof/">Proof</a><a class="site-link-glow" href="/pricing/">Pricing</a><a class="site-link-glow" href="/insights/">Insights</a><a class="site-link-glow" href="/about/">About</a><a aria-current="page" class="mrm-nav-cta site-link-glow" href="/#contact">Request a Pilot</a></nav></div></header>
 <main id="main">
 <section class="hero" id="top"><div class="hero-orb one"></div><div class="hero-orb two"></div><div class="wrap hero-centered"><div>
 <div class="eyebrow">B2B SAAS • OUTBOUND AGENCIES • ACCOUNT INTELLIGENCE</div>
 <h1>Find the accounts worth pursuing.<br/><em>Know who matters. Know why now.</em></h1>
 <p class="hero-copy">MRMProLeads turns target accounts into actionable sales intelligence—researching ICP fit, business context, buying signals, buying roles and public contact routes so your team knows who to approach, why now, and what context to use.</p>
-<div class="hero-actions"><a class="premium-cta btn btn-primary" href="#contact">Request a 3-Account Pilot →</a><a class="btn-secondary btn premium-cta" href="/research-starter/">Open Research Starter →</a></div>
+<div class="hero-actions"><a class="premium-box btn btn-primary site-link-glow" href="#contact">Request a 3-Account Pilot →</a><a class="btn-secondary btn premium-box site-link-glow" href="/research-starter/">Open Research Starter →</a></div>
 <div aria-label="MRMProLeads research standards" class="research-pillars">
 <div class="research-pillars-head">
 <div class="eyebrow">RESEARCH STANDARD</div>
@@ -305,12 +390,12 @@ h1,h2,h3,h4,.brand,.nav-cta,.price,.scale-number{font-family:Manrope,Inter,ui-sa
 </div>
 </div>
 </div></div></section>
-<section aria-label="Public proof at a glance" class="proof-strip section proof-showcase"><div class="wrap"><div class="section-head decorative-section-head"><div class="eyebrow">01 · PROOF AT A GLANCE</div><h2>Proof you can inspect. Not promises you have to trust.</h2><p>Execution and research signals that show the depth of the operating system behind the work.</p></div><div class="proof-strip-grid"><a href="/case-studies/"><strong>6</strong><span>anonymized enterprise target accounts documented</span></a><a class="premium-cta" href="/evidence/research-at-scale/"><strong>1,263</strong><span>populated research records audited</span></a><a class="premium-cta" href="/assets/MRMProLeads-ABM-Research-Sample-Snapshot.pdf"><strong>Public sample</strong><span>account intelligence &amp; buying-committee structure</span></a></div><p class="proof-strip-note">These are execution/process signals, not guarantees of commercial outcomes.</p></div></section>
+<section aria-label="Public proof at a glance" class="proof-strip section proof-showcase"><div class="wrap"><div class="section-head decorative-section-head"><div class="eyebrow">01 · PROOF AT A GLANCE</div><h2>Proof you can inspect. Not promises you have to trust.</h2><p>Execution and research signals that show the depth of the operating system behind the work.</p></div><div class="proof-strip-grid"><a class="premium-box site-link-glow" href="/case-studies/"><strong>6</strong><span>anonymized enterprise target accounts documented</span></a><a class="premium-box site-link-glow" href="/evidence/research-at-scale/"><strong>1,263</strong><span>populated research records audited</span></a><a class="premium-box site-link-glow" href="/assets/MRMProLeads-ABM-Research-Sample-Snapshot.pdf"><strong>Public sample</strong><span>account intelligence &amp; buying-committee structure</span></a></div><p class="proof-strip-note">These are execution/process signals, not guarantees of commercial outcomes.</p></div></section>
 <section aria-label="Who MRMProLeads is for" class="section intent-strip audience-showcase"><div class="wrap"><div class="section-head decorative-section-head"><div class="eyebrow">02 · BUILT FOR THE MOTION</div><h2>Research that fits the sales motion you actually have.</h2><p>Built for teams that need sharper account selection, stronger context and research capacity without adding another research layer to manage.</p></div><div class="intent-grid">
 <article class="intent-item"><div class="smallcaps">Built for</div><strong>B2B SaaS Teams</strong><span>Better target-account research before outbound.</span></article>
 <article class="intent-item"><div class="smallcaps">Built for</div><strong>Outbound Agencies</strong><span>Reliable white-label research capacity behind delivery.</span></article>
 <article class="intent-item intent-core"><div class="smallcaps">Core Output</div><strong>Actionable Intelligence</strong><span>Account fit → why now → buying group → outreach context.</span></article>
-</div></div></section><section class="section reveal" id="account-intelligence-showcase"><div class="wrap"><div class="section-head"><div class="eyebrow">ACCOUNT INTELLIGENCE</div><h2>From account information to actionable sales context.</h2><p>See how raw account information becomes structured context around fit, why now, buying roles, evidence and the next outreach decision.</p></div><div class="visual hero-intelligence-visual intelligence-showcase"><div class="hero-intel-glow"></div><div class="hero-intel-card"><div class="hero-intel-head"><div><span class="hero-intel-kicker">ACCOUNT → INSIGHT</span><strong>Evidence-led account intelligence</strong></div><span class="hero-intel-live">Public evidence</span></div><div class="hero-intel-stack"><div class="hero-intel-row"><span><i class="hero-check">✓</i> ICP fit</span><b>Mapped</b></div><div class="hero-intel-row"><span><i class="hero-check">✓</i> Why now</span><b>Contextualized</b></div><div class="hero-intel-row"><span><i class="hero-check">✓</i> Buying roles</span><b>Identified</b></div><div class="hero-intel-row"><span><i class="hero-check">✓</i> Evidence</span><b>Sourced</b></div></div><div class="hero-intel-output"><span>OUTPUT</span><strong>Account context + buying group + outreach angle</strong></div></div></div><div class="center-cta"><a class="btn-secondary btn premium-cta" href="/account-intelligence/">Explore Account Intelligence →</a></div></div></section><section class="section reveal" id="research-starter-teaser"><div class="wrap"><div class="section-head"><div class="eyebrow">RESEARCH STARTER · START HERE</div><h2>Not sure which research layer you need? Start with the real problem.</h2><p>Diagnose the need, preview public evidence, bring a small account set and build the right pilot scope—without guessing which service fits.</p></div><div class="grid3 stagger"><article class="card glow-card"><div class="num">01</div><h3>Diagnose</h3><p>Find the research motion that matches your current sales problem.</p></article><article class="card glow-card"><div class="num">02</div><h3>Preview</h3><p>Test a public company URL and see what the evidence can actually establish.</p></article><article class="card glow-card"><div class="num">03</div><h3>Scope</h3><p>Bring a small account set and turn the research need into a controlled pilot.</p></article></div><div class="center-cta"><a class="premium-cta btn btn-primary" href="/research-starter/">Open Research Starter →</a></div></div></section>
+</div></div></section><section class="section reveal" id="account-intelligence-showcase"><div class="wrap"><div class="section-head"><div class="eyebrow">ACCOUNT INTELLIGENCE</div><h2>From account information to actionable sales context.</h2><p>See how raw account information becomes structured context around fit, why now, buying roles, evidence and the next outreach decision.</p></div><div class="visual hero-intelligence-visual intelligence-showcase"><div class="hero-intel-glow"></div><div class="hero-intel-card"><div class="hero-intel-head"><div><span class="hero-intel-kicker">ACCOUNT → INSIGHT</span><strong>Evidence-led account intelligence</strong></div><span class="hero-intel-live">Public evidence</span></div><div class="hero-intel-stack"><div class="hero-intel-row"><span><i class="hero-check">✓</i> ICP fit</span><b>Mapped</b></div><div class="hero-intel-row"><span><i class="hero-check">✓</i> Why now</span><b>Contextualized</b></div><div class="hero-intel-row"><span><i class="hero-check">✓</i> Buying roles</span><b>Identified</b></div><div class="hero-intel-row"><span><i class="hero-check">✓</i> Evidence</span><b>Sourced</b></div></div><div class="hero-intel-output"><span>OUTPUT</span><strong>Account context + buying group + outreach angle</strong></div></div></div><div class="center-cta"><a class="btn-secondary btn premium-box site-link-glow" href="/account-intelligence/">Explore Account Intelligence →</a></div></div></section><section class="section reveal" id="research-starter-teaser"><div class="wrap"><div class="section-head"><div class="eyebrow">RESEARCH STARTER · START HERE</div><h2>Not sure which research layer you need? Start with the real problem.</h2><p>Diagnose the need, preview public evidence, bring a small account set and build the right pilot scope—without guessing which service fits.</p></div><div class="grid3 stagger"><article class="card glow-card"><div class="num">01</div><h3>Diagnose</h3><p>Find the research motion that matches your current sales problem.</p></article><article class="card glow-card"><div class="num">02</div><h3>Preview</h3><p>Test a public company URL and see what the evidence can actually establish.</p></article><article class="card glow-card"><div class="num">03</div><h3>Scope</h3><p>Bring a small account set and turn the research need into a controlled pilot.</p></article></div><div class="center-cta"><a class="premium-box btn btn-primary site-link-glow" href="/research-starter/">Open Research Starter →</a></div></div></section>
 <section class="section" id="research-output">
 <div class="wrap">
 <div class="section-head"><div class="eyebrow">WHAT YOU RECEIVE</div><h2>Not a spreadsheet dump. A usable research handoff.</h2><p>The exact scope changes by engagement, but the output is organized around the decisions your team needs to make.</p></div>
@@ -325,12 +410,12 @@ h1,h2,h3,h4,.brand,.nav-cta,.price,.scale-number{font-family:Manrope,Inter,ui-sa
 </div>
 </section>
 <section class="section" id="why"><div class="wrap"><div class="section-head"><div class="eyebrow">Why this work matters</div><h2>Lead lists are easy. Account intelligence is harder.</h2><p>Sales teams rarely need more names. They need enough context to know which accounts deserve attention, who influences the decision, and why an outreach angle makes sense now.</p></div><div class="comparison"><article class="card"><div class="num">Typical lead list</div><h3>Contacts without the decision context</h3><ul class="list"><li>Large volume, limited account qualification</li><li>Job titles without buying-role context</li><li>Little explanation of why the account matters</li><li>Research scattered across disconnected fields</li></ul></article><article class="card good"><div class="num">MRMProLeads approach</div><h3>Research structured for action</h3><ul class="list"><li>ICP-qualified target-account research</li><li>Economic buyer, champion and evaluator mapping</li><li>Buying signals and account context</li><li>Contact intelligence with sourcing notes</li></ul></article></div></div></section>
-<section class="section" id="pilot"><div class="wrap"><div class="section-head"><div class="eyebrow">The commercial starting point</div><h2>Start small. Validate the research. Then scale.</h2><p>The first engagement is intentionally narrow: a paid 3-account research test designed to prove research quality before a larger workflow.</p></div><div class="pilot"><article class="card pilot-main"><div class="num">Paid research pilot</div><h3>3 accounts. Evidence-backed research. <a class="premium-cta" href="/pricing/" style="color:#fbbf24">View full pricing →</a></h3><p>We define the target profile, research each account, identify the primary relevant buying role, surface useful signals, and organize the findings so your team can act on them.</p><div class="deliver"><div>ICP &amp; target-account fit</div><div>Primary buyer / relevant buying role</div><div>Buying signals &amp; account context</div><div>Contact intelligence &amp; research notes</div></div></article><aside class="card price-card"><div><div class="num">Scope first</div><div class="price">$99 · 3 accounts</div><p class="muted">Paid Research Test. Scope is confirmed before research begins; use it to validate quality before scaling.</p></div><a class="premium-cta btn btn-primary" href="#contact">Request a 3-Account Pilot →</a></aside></div></div></section>
+<section class="section" id="pilot"><div class="wrap"><div class="section-head"><div class="eyebrow">The commercial starting point</div><h2>Start small. Validate the research. Then scale.</h2><p>The first engagement is intentionally narrow: a paid 3-account research test designed to prove research quality before a larger workflow.</p></div><div class="pilot"><article class="card pilot-main"><div class="num">Paid research pilot</div><h3>3 accounts. Evidence-backed research. <a class="premium-box site-link-glow" href="/pricing/" style="color:#fbbf24">View full pricing →</a></h3><p>We define the target profile, research each account, identify the primary relevant buying role, surface useful signals, and organize the findings so your team can act on them.</p><div class="deliver"><div>ICP &amp; target-account fit</div><div>Primary buyer / relevant buying role</div><div>Buying signals &amp; account context</div><div>Contact intelligence &amp; research notes</div></div></article><aside class="card price-card"><div><div class="num">Scope first</div><div class="price">$99 · 3 accounts</div><p class="muted">Paid Research Test. Scope is confirmed before research begins; use it to validate quality before scaling.</p></div><a class="premium-box btn btn-primary site-link-glow" href="#contact">Request a 3-Account Pilot →</a></aside></div></div></section>
 <section class="section reveal" id="methodology"><div class="wrap"><div class="section-head"><div class="eyebrow">How the research works</div><h2>Define → investigate → map → activate.</h2><p>A compact view of the research logic. The full methodology remains available for buyers who want the deeper standard.</p></div><div class="method-compact">
 <article><span>01 · DEFINE</span><strong>ICP + target criteria</strong><p>Company, market, technology, role and account-fit rules.</p></article><div class="method-arrow">→</div>
 <article><span>02 · INVESTIGATE</span><strong>Business context + signals</strong><p>Product, market, firmographics and relevant public changes.</p></article><div class="method-arrow">→</div>
 <article><span>03 · MAP</span><strong>Buying group</strong><p>Economic, functional, technical, champion and influencer roles where supported.</p></article><div class="method-arrow">→</div>
-<article><span>04 · ACTIVATE</span><strong>Why now + outreach context</strong><p>Evidence-backed context your sales team can actually use.</p></article></div><div class="flow-output reveal"><b>Output:</b> evidence-backed account intelligence with uncertainty clearly marked instead of guessed away.</div><div class="method-cta"><a class="btn-secondary btn premium-cta" href="/methodology/">See the full methodology →</a></div></div></section>
+<article><span>04 · ACTIVATE</span><strong>Why now + outreach context</strong><p>Evidence-backed context your sales team can actually use.</p></article></div><div class="flow-output reveal"><b>Output:</b> evidence-backed account intelligence with uncertainty clearly marked instead of guessed away.</div><div class="method-cta"><a class="btn-secondary btn premium-box site-link-glow" href="/methodology/">See the full methodology →</a></div></div></section>
 <section class="section" id="proof"><div class="wrap">
 <div class="section-head"><div class="eyebrow">Research proof</div><h2>Proof of the work — without exposing the data.</h2>
 <p>I use real research structure and documented execution evidence while keeping client/prospect PII out of the public site.</p></div>
@@ -360,20 +445,20 @@ h1,h2,h3,h4,.brand,.nav-cta,.price,.scale-number{font-family:Manrope,Inter,ui-sa
 <p style="margin-top:14px;color:var(--muted);font-size:.86rem">The structure above is representative of the research workflow; it does not expose private client or prospect information.</p>
 </div>
 <div class="proof" style="margin-top:16px">
-<a class="premium-cta" href="/case-studies/"><article class="card"><div class="num">Case studies</div><h3>ABM Research Portfolio →</h3><p>Review selected account-intelligence and buying-committee research examples.</p></article></a>
-<a class="premium-cta" href="/evidence/research-at-scale/"><article class="card"><div class="num">Research at scale</div><h3>Aggregate Dataset Evidence →</h3><p>See the audited scale of the research dataset without exposing raw prospect records.</p></article></a>
-<a class="premium-cta" href="/evidence/research-evidence-framework/"><article class="card"><div class="num">Evidence framework</div><h3>Research Transparency →</h3><p>See how public evidence, contact information and research findings are separated.</p></article></a>
-<a class="premium-cta" href="/services/"><article class="card"><div class="num">Services</div><h3>Services &amp; Deliverables →</h3><p>Review the available ABM research, account intelligence and contact research workflows.</p></article></a>
-<a class="premium-cta" href="/assets/MRMProLeads-ABM-Research-Sample-Snapshot.pdf"><article class="card"><div class="num">Public-safe sample</div><h3>Research Snapshot PDF →</h3><p>See an anonymized example of account, ICP and buying-committee research structure.</p></article></a>
+<a class="premium-box site-link-glow" href="/case-studies/"><article class="card"><div class="num">Case studies</div><h3>ABM Research Portfolio →</h3><p>Review selected account-intelligence and buying-committee research examples.</p></article></a>
+<a class="premium-box site-link-glow" href="/evidence/research-at-scale/"><article class="card"><div class="num">Research at scale</div><h3>Aggregate Dataset Evidence →</h3><p>See the audited scale of the research dataset without exposing raw prospect records.</p></article></a>
+<a class="premium-box site-link-glow" href="/evidence/research-evidence-framework/"><article class="card"><div class="num">Evidence framework</div><h3>Research Transparency →</h3><p>See how public evidence, contact information and research findings are separated.</p></article></a>
+<a class="premium-box site-link-glow" href="/services/"><article class="card"><div class="num">Services</div><h3>Services &amp; Deliverables →</h3><p>Review the available ABM research, account intelligence and contact research workflows.</p></article></a>
+<a class="premium-box site-link-glow" href="/assets/MRMProLeads-ABM-Research-Sample-Snapshot.pdf"><article class="card"><div class="num">Public-safe sample</div><h3>Research Snapshot PDF →</h3><p>See an anonymized example of account, ICP and buying-committee research structure.</p></article></a>
 </div>
 </div></section>
 <section class="section" id="evidence"><div class="wrap">
 <div class="section-head"><div class="eyebrow">Evidence-backed claims</div><h2>What I can prove publicly — and what I won’t claim.</h2><p>MRMProLeads separates execution evidence, illustrative research structure and outcome claims. The public site uses only claims that the available evidence can support.</p></div>
 <div class="evidence-grid">
-<article class="evidence-card"><div class="evidence-tag">Documented workflow</div><h3>ICP → accounts → people → enrichment → verification</h3><p>A public sample documents a repeatable research workflow covering ICP definition, target-account research, decision-maker identification, account enrichment, verification/cleaning and account-level notes.</p><a class="source-link premium-cta" href="/evidence/research-evidence-framework/">View evidence framework →</a></article>
-<article class="evidence-card"><div class="evidence-tag">Anonymized enterprise sample</div><h3>6 target accounts with account-level research</h3><p>An anonymized enterprise sample documents six researched target accounts, Salesforce usage, account pain points, anonymized decision-maker contacts and a three-step outreach sequence.</p><a class="source-link premium-cta" href="/case-studies/">Review public case-study material →</a></article>
-<article class="evidence-card"><div class="evidence-tag">Buying committee sample</div><h3>Beyond the CEO: mapping the buying group</h3><p>An anonymized three-account sample shows economic buyer, champion, technical evaluator, influencer and possible blocker roles, plus the buying signal and outreach angle for each account.</p><a class="source-link premium-cta" href="/assets/MRMProLeads-ABM-Research-Sample-Snapshot.pdf">View public-safe research sample →</a></article>
-<article class="evidence-card"><div class="evidence-tag">Scale audit</div><h3>1,263 populated research records</h3><p>The internal dataset audit covers a 1,265-row serial range with 1,263 populated records, 1,039 unique company names and roughly 1,200 LinkedIn profile references. Raw prospect records are not published.</p><a class="source-link premium-cta" href="/evidence/research-at-scale/">See the aggregate audit →</a></article>
+<article class="evidence-card"><div class="evidence-tag">Documented workflow</div><h3>ICP → accounts → people → enrichment → verification</h3><p>A public sample documents a repeatable research workflow covering ICP definition, target-account research, decision-maker identification, account enrichment, verification/cleaning and account-level notes.</p><a class="source-link premium-box site-link-glow" href="/evidence/research-evidence-framework/">View evidence framework →</a></article>
+<article class="evidence-card"><div class="evidence-tag">Anonymized enterprise sample</div><h3>6 target accounts with account-level research</h3><p>An anonymized enterprise sample documents six researched target accounts, Salesforce usage, account pain points, anonymized decision-maker contacts and a three-step outreach sequence.</p><a class="source-link premium-box site-link-glow" href="/case-studies/">Review public case-study material →</a></article>
+<article class="evidence-card"><div class="evidence-tag">Buying committee sample</div><h3>Beyond the CEO: mapping the buying group</h3><p>An anonymized three-account sample shows economic buyer, champion, technical evaluator, influencer and possible blocker roles, plus the buying signal and outreach angle for each account.</p><a class="source-link premium-box site-link-glow" href="/assets/MRMProLeads-ABM-Research-Sample-Snapshot.pdf">View public-safe research sample →</a></article>
+<article class="evidence-card"><div class="evidence-tag">Scale audit</div><h3>1,263 populated research records</h3><p>The internal dataset audit covers a 1,265-row serial range with 1,263 populated records, 1,039 unique company names and roughly 1,200 LinkedIn profile references. Raw prospect records are not published.</p><a class="source-link premium-box site-link-glow" href="/evidence/research-at-scale/">See the aggregate audit →</a></article>
 </div>
 <div class="claim-grid">
 <article class="claim-box safe"><h4>What I Can Substantiate</h4><p>Research execution at scale; structured ICP/account research; buying-committee mapping; contact-intelligence workflows; anonymized research examples; aggregate dataset counts.</p></article>
@@ -384,12 +469,12 @@ h1,h2,h3,h4,.brand,.nav-cta,.price,.scale-number{font-family:Manrope,Inter,ui-sa
 <section class="section" id="resources"><div class="wrap">
 <div class="section-head"><div class="eyebrow">Public resources</div><h2>See the work before you buy it.</h2><p>Public-safe material is available so a prospective client can judge the research structure, evidence discipline and deliverable depth before starting a paid pilot.</p></div>
 <div class="resource-grid">
-<a class="card resource-card" href="/assets/MRMProLeads-ABM-Research-Sample-Snapshot.pdf"><div class="num">01 · Sample</div><h3>ABM Research Snapshot</h3><p>An anonymized example of target-account overview, ICP fit, buying-committee structure and sales engagement recommendations.</p><span class="source-link">Open sample PDF →</span></a>
-<a class="card resource-card" href="/methodology/"><div class="num">02 · Standard</div><h3>Research Standards</h3><p>See how MRMProLeads separates public evidence, observed signals, interpretation and unknowns.</p><span class="source-link">Read the research standard →</span></a>
-<a class="card resource-card" href="/evidence/research-at-scale/"><div class="num">03 · Evidence</div><h3>Research at Scale Audit</h3><p>Review aggregate dataset counts and the privacy boundary without exposing prospect-level information.</p><span class="source-link">Open evidence page →</span></a>
+<a class="card resource-card site-link-glow" href="/assets/MRMProLeads-ABM-Research-Sample-Snapshot.pdf"><div class="num">01 · Sample</div><h3>ABM Research Snapshot</h3><p>An anonymized example of target-account overview, ICP fit, buying-committee structure and sales engagement recommendations.</p><span class="source-link">Open sample PDF →</span></a>
+<a class="card resource-card site-link-glow" href="/methodology/"><div class="num">02 · Standard</div><h3>Research Standards</h3><p>See how MRMProLeads separates public evidence, observed signals, interpretation and unknowns.</p><span class="source-link">Read the research standard →</span></a>
+<a class="card resource-card site-link-glow" href="/evidence/research-at-scale/"><div class="num">03 · Evidence</div><h3>Research at Scale Audit</h3><p>Review aggregate dataset counts and the privacy boundary without exposing prospect-level information.</p><span class="source-link">Open evidence page →</span></a>
 </div>
-</div></section><section class="section reveal" id="editorial-hub"><div class="wrap"><div class="section-head"><div class="eyebrow">RESEARCH &amp; INSIGHTS</div><h2>Research, insights &amp; practical tools.</h2><p>Learn from the research, use the frameworks, and explore practical resources and digital products built from the same research system.</p></div><div class="grid3 stagger"><a class="card resource-card" href="/insights/"><div class="num">Editorial</div><h3>Insights</h3><p>Deep articles on ABM, account intelligence, buying committees and B2B SaaS outbound research.</p></a><a class="card resource-card" href="/resources/"><div class="num">Resources</div><h3>Templates &amp; Hub</h3><p>Public-safe frameworks, checklists and working resources for sales research.</p></a><a class="card resource-card" href="https://mrmproleads.gumroad.com" rel="noopener noreferrer" target="_blank"><div class="num">Products</div><h3>Gumroad</h3><p>Practical digital products built from the same research operating system.</p></a></div><div class="center-cta"><a class="btn-secondary btn premium-cta" href="/insights/">Explore Research &amp; Insights →</a></div></div></section>
-<section class="section"><div class="wrap founder"><div class="founder-img"><img alt="Mahbubur R. — Founder of MRMProLeads" height="800" loading="lazy" src="/assets/founder-portrait-branded.webp" width="640"/></div><div><div class="section-head"><div class="eyebrow">Founder &amp; research partner</div><h2>Research should reduce uncertainty—not create more of it.</h2></div><p class="quote">“The goal is not to produce a bigger spreadsheet. It is to give a sales team enough relevant account context to decide who to approach, why now, and who should be involved.”</p><p class="signature">Mahbubur R. · MRMProLeads</p><p style="color:var(--muted)">Founder, MRMProLeads · B2B Account Intelligence &amp; ABM Research</p><a class="btn-secondary btn premium-cta" href="/about/">About MRMProLeads →</a></div></div></section>
+</div></section><section class="section reveal" id="editorial-hub"><div class="wrap"><div class="section-head"><div class="eyebrow">RESEARCH &amp; INSIGHTS</div><h2>Research, insights &amp; practical tools.</h2><p>Learn from the research, use the frameworks, and explore practical resources and digital products built from the same research system.</p></div><div class="grid3 stagger"><a class="card resource-card site-link-glow" href="/insights/"><div class="num">Editorial</div><h3>Insights</h3><p>Deep articles on ABM, account intelligence, buying committees and B2B SaaS outbound research.</p></a><a class="card resource-card site-link-glow" href="/resources/"><div class="num">Resources</div><h3>Templates &amp; Hub</h3><p>Public-safe frameworks, checklists and working resources for sales research.</p></a><a class="card resource-card site-link-glow" href="https://mrmproleads.gumroad.com" rel="noopener noreferrer" target="_blank"><div class="num">Products</div><h3>Gumroad</h3><p>Practical digital products built from the same research operating system.</p></a></div><div class="center-cta"><a class="btn-secondary btn premium-box site-link-glow" href="/insights/">Explore Research &amp; Insights →</a></div></div></section>
+<section class="section"><div class="wrap founder"><div class="founder-img"><img alt="Mahbubur R. — Founder of MRMProLeads" height="800" loading="lazy" src="/assets/founder-portrait-branded.webp" width="640"/></div><div><div class="section-head"><div class="eyebrow">Founder &amp; research partner</div><h2>Research should reduce uncertainty—not create more of it.</h2></div><p class="quote">“The goal is not to produce a bigger spreadsheet. It is to give a sales team enough relevant account context to decide who to approach, why now, and who should be involved.”</p><p class="signature">Mahbubur R. · MRMProLeads</p><p style="color:var(--muted)">Founder, MRMProLeads · B2B Account Intelligence &amp; ABM Research</p><a class="btn-secondary btn premium-box site-link-glow" href="/about/">About MRMProLeads →</a></div></div></section>
 <section class="section"><div class="wrap">
 <div class="section-head"><div class="eyebrow">Questions</div><h2>What happens after you request a pilot?</h2></div>
 <div class="card">
@@ -401,7 +486,24 @@ h1,h2,h3,h4,.brand,.nav-cta,.price,.scale-number{font-family:Manrope,Inter,ui-sa
 </div></section>
 <section class="section" id="contact"><div class="wrap contact"><div class="contact-copy"><div class="section-head"><div class="eyebrow">Request a paid pilot</div><h2>Tell me which accounts you want researched.</h2><p>Send the target profile, account set or research problem. I’ll review the scope and respond with a practical paid-pilot structure.</p></div><ul class="list"><li>Best for B2B SaaS teams and outbound agencies</li><li>Start with 3 accounts</li><li>Scope and pricing agreed before research begins</li><li>No raw prospect data is published on this site</li></ul><div class="safety-note" style="margin-top:24px"><strong style="color:#eef2f7">Private contact:</strong> use the secure site form. Your message is routed to MRMProLeads directly; no public email address is displayed on the website.</div></div><div class="card"><form action="/api/pilot" data-form="pilot-request" method="POST" name="pilot-request"><input name="_subject" type="hidden" value="New MRMProLeads Paid Pilot Request"/><div aria-hidden="true" class="hp-field"><label>Website confirmation<input autocomplete="off" name="website_confirm" tabindex="-1" type="text"/></label></div><div class="fields"><label>Name<input autocomplete="name" name="name" required=""/></label><label>Work email<input autocomplete="email" name="email" required="" type="email"/></label></div><div class="fields"><label>Company<input autocomplete="organization" name="company"/></label><label>Website<input name="website" placeholder="https://..." type="url"/></label></div><div class="fields"><label>Account count<select name="account_count"><option value="3">3 accounts</option><option value="5">5 accounts</option><option value="10">10 accounts</option><option value="custom">Custom / larger set</option></select></label><label>Business type<select name="business_type"><option value="">Select one</option><option>B2B SaaS / AI</option><option>Outbound / Lead-Generation Agency</option><option>Other B2B</option></select></label></div><div class="fields"><label>Urgency<select name="urgency"><option value="">Select one</option><option>Exploring</option><option>This month</option><option>Active sales need</option><option>Immediate</option></select></label><label>Starting asset<select name="starting_asset"><option value="">Select one</option><option>ICP / market definition</option><option>Target account list</option><option>CRM / existing data</option><option>Specific company URL</option></select></label></div><label>What are you trying to improve?<select name="research_goal"><option value="">Select one</option><option>Find better target accounts</option><option>Identify decision-makers</option><option>Understand buying signals</option><option>Map the buying committee</option><option>Improve outbound targeting</option><option>Research a specific account list</option><option>Other</option></select></label><label>What do you need researched?<textarea name="message" placeholder="Example: 3 US SaaS accounts, ICP qualification + buying committee mapping + contact intelligence." required=""></textarea></label><button class="btn btn-primary" type="submit">Request a 3-Account Pilot →</button><div class="form-note">No payment is taken by this form. Scope and pricing are agreed before work starts. Public proof is anonymized.</div></form></div></div></section>
 </main>
-<footer class="mrm-canonical-footer"><div class="mrm-footer-wrap"><div class="mrm-footer-top"><div class="mrm-footer-brand"><a aria-label="MRMProLeads home" href="/"><img alt="MRMProLeads" class="footer-brand-logo" decoding="async" height="35" loading="lazy" src="/assets/logo-navbar-premium.webp" width="228"/></a><div>B2B Account Intelligence &amp; Sales Intelligence</div></div><nav aria-label="Footer" class="mrm-footer-links"><a href="/services/">Services</a><a href="/account-intelligence/">Account Intelligence</a><a href="/proof/">Proof</a><a href="/pricing/">Pricing</a><a href="/insights/">Insights</a><a href="/resources/">Resources</a><a href="/about/">About</a><a href="/privacy/">Privacy</a></nav></div><div class="mrm-footer-bottom">© 2026 MRMProLeads · Public proof is anonymized · <a href="https://www.linkedin.com/in/mrahman01675/" rel="noopener noreferrer" target="_blank">LinkedIn</a> · <a href="https://medium.com/@mrahman01675" rel="noopener noreferrer" target="_blank">Medium</a> · <a href="https://mrmproleads.gumroad.com" rel="noopener noreferrer" target="_blank">Gumroad</a> · <a href="https://silken-pancake-4aa.notion.site/MRMProLeads-B2B-Resource-Hub-385320d911098092a62bd45d756c8c57" rel="noopener noreferrer" target="_blank">Resource Hub</a></div></div></footer>
+<footer class="mrm-canonical-footer">
+  <div class="mrm-footer-wrap">
+    <div class="mrm-footer-top">
+      <div class="mrm-footer-brand">
+        <a aria-label="MRMProLeads home" href="/"><img alt="MRMProLeads" class="footer-brand-logo" decoding="async" height="35" loading="lazy" src="/assets/logo-navbar-premium.webp" width="228"/></a>
+        <div>B2B Account Intelligence &amp; Sales Intelligence</div>
+        <div class="mrm-footer-copyright">© 2026 MRMProLeads · Public proof is anonymized</div>
+      </div>
+      <nav aria-label="Footer" class="mrm-footer-links">
+        <a class="site-link-glow" href="https://www.linkedin.com/in/mrahman01675/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+        <a class="site-link-glow" href="https://medium.com/@mrahman01675" rel="noopener noreferrer" target="_blank">Medium</a>
+        <a class="site-link-glow" href="https://mrmproleads.gumroad.com/" rel="noopener noreferrer" target="_blank">Gumroad</a>
+        <a class="site-link-glow" href="/resources/">Resources</a>
+        <a class="site-link-glow" href="/privacy/">Privacy</a>
+      </nav>
+    </div>
+  </div>
+</footer>
 <button aria-label="Back to top" class="backtop" id="backtop" type="button">↑</button>
 <script defer="" src="/assets/site-analytics.js"></script>
 </body>
