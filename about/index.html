@@ -79,7 +79,6 @@
 .brand img.brand-logo{display:block;width:210px;height:auto;max-width:100%;object-fit:contain}
 @media(max-width:780px){.brand img.brand-logo{width:165px}}
 </style> <link href="/assets/favicon-64.png" rel="icon" type="image/png"/>
-
 <style id="about-premium-presentation-v1">
 /* ABOUT — premium founder CTAs + operating standard */
 .about-cta-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px}
@@ -123,24 +122,165 @@
 .about-standard-card p{font-size:.9rem;max-width:31ch}
 @media(max-width:850px){.about-standard-panel{padding:38px 20px 24px}.about-standard-pillar-intro{flex-wrap:wrap}.about-standard-pillar-intro small{width:100%;margin-left:0}}
 </style>
-</head><body><header class="mrm-canonical-header"><div class="mrm-nav-wrap"><a aria-label="MRMProLeads home" class="mrm-brand" href="/"><img alt="MRMProLeads" class="mrm-brand-logo" decoding="async" height="35" loading="eager" src="/assets/logo-navbar-premium.webp" width="228"/></a><nav aria-label="Primary" class="mrm-nav"><a href="/services/">Services</a><a href="/account-intelligence/">Account Intelligence</a><a href="/proof/">Proof</a><a href="/pricing/">Pricing</a><a href="/insights/">Insights</a><a aria-current="page" href="/about/">About</a><a class="mrm-nav-cta" href="/#contact">Request a Pilot</a></nav></div></header><main class="deep-page"><div class="wrap"><div class="eyebrow">FOUNDER / RESEARCH PARTNER</div><h1>Mahbubur R.</h1><p class="lead">Founder, MRMProLeads · B2B Account Intelligence &amp; ABM Research</p></div><section class="section"><div class="wrap founder-premium"><div class="founder-visual card"><img alt="Mahbubur R. — Founder of MRMProLeads" src="/assets/founder-portrait.webp"/ width="640" height="800" loading="lazy"></div><div class="card"><blockquote>“The goal is not to produce a bigger spreadsheet. It is to give a sales team enough relevant account context to decide who to approach, why now, and who should be involved.”</blockquote><p>MRMProLeads was built around research-led ABM, account intelligence, buying committee mapping and sales intelligence for B2B SaaS teams and outbound agencies.</p><h2>Research philosophy</h2><p class="muted">The operating principle is simple: research the account before treating the contact as the opportunity. Separate ICP fit from buying intent, role from decision influence, and public evidence from assumptions.</p><h2>Evidence standard</h2><p class="muted">The portfolio prioritizes research quality, business context, human review and responsible handling over raw contact volume. Where public evidence is insufficient, the correct output is a qualification or evidence check—not an invented answer.</p><h2>Built for</h2><p class="muted">B2B SaaS teams and outbound agencies that need a research layer behind account selection, buying-context discovery and more relevant outreach.</p><div class="about-cta-grid" aria-label="Explore MRMProLeads">
-<a class="about-cta-card about-cta-gold" href="/account-intelligence/"><span class="about-cta-kicker">ACCOUNT INTELLIGENCE</span><strong>Explore the research offer</strong><span class="about-cta-arrow">→</span></a>
-<a class="about-cta-card about-cta-blue" href="/research-starter/"><span class="about-cta-kicker">RESEARCH STARTER</span><strong>Experience the workflow</strong><span class="about-cta-arrow">→</span></a>
-<a class="about-cta-card about-cta-violet" href="/insights/"><span class="about-cta-kicker">INSIGHTS</span><strong>Read the research thinking</strong><span class="about-cta-arrow">→</span></a>
+<style>
+/* V5.5.7.7 — site-wide premium CTA normalization */
+.premium-box{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:14px!important;
+  width:fit-content!important;
+  min-height:46px!important;
+  margin-top:14px!important;
+  padding:12px 16px!important;
+  border:1px solid rgba(255,205,92,.58)!important;
+  border-radius:14px!important;
+  background:linear-gradient(135deg,rgba(255,211,103,.16),rgba(255,190,66,.055))!important;
+  color:#ffd45f!important;
+  text-decoration:none!important;
+  font-weight:850!important;
+  line-height:1.25!important;
+  box-shadow:0 8px 24px rgba(245,189,75,.10), inset 0 1px 0 rgba(255,255,255,.05)!important;
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease,filter .18s ease!important;
+}
+.premium-box:hover{
+  transform:translateY(-2px)!important;
+  border-color:rgba(255,213,104,.95)!important;
+  background:linear-gradient(135deg,rgba(255,211,103,.23),rgba(255,190,66,.085))!important;
+  box-shadow:0 14px 34px rgba(245,189,75,.18),0 0 0 1px rgba(255,205,92,.08) inset!important;
+  filter:brightness(1.04)!important;
+}
+.premium-box:focus-visible{
+  outline:3px solid rgba(255,213,104,.34)!important;
+  outline-offset:3px!important;
+}
+@media (max-width:700px){
+  .premium-box{width:100%!important;max-width:100%!important;}
+}
+@media (prefers-reduced-motion:reduce){
+  .premium-box{transition:none!important}
+  .premium-box:hover{transform:none!important}
+}
+</style>
+<style id="site-wide-link-glow">
+/* V5.5.7.9 — every textual link gets the same restrained premium gold treatment.
+   Existing link text/arrows are preserved; no generated icons are added. */
+.site-link-glow{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  min-height:42px;
+  padding:.72rem 1rem;
+  border:1px solid rgba(245,190,58,.62);
+  border-radius:14px;
+  background:linear-gradient(180deg,rgba(245,190,58,.105),rgba(245,190,58,.035));
+  color:#ffd76a !important;
+  text-decoration:none !important;
+  box-shadow:0 0 0 1px rgba(245,190,58,.04),0 8px 24px rgba(245,190,58,.075);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease;
+}
+.site-link-glow:hover{
+  transform:translateY(-2px);
+  border-color:rgba(255,205,82,.95);
+  background:linear-gradient(180deg,rgba(245,190,58,.17),rgba(245,190,58,.065));
+  box-shadow:0 0 0 1px rgba(245,190,58,.08),0 0 24px rgba(245,190,58,.20),0 12px 28px rgba(245,190,58,.10);
+}
+.site-link-glow:focus-visible{
+  outline:2px solid #ffd76a;
+  outline-offset:3px;
+  box-shadow:0 0 0 4px rgba(245,190,58,.18),0 0 24px rgba(245,190,58,.20);
+}
+.site-link-glow:active{transform:translateY(0);}
+/* Keep the global navigation compact while retaining the same gold-light language. */
+header nav .site-link-glow,.site-header nav .site-link-glow{
+  min-height:38px;
+  padding:.48rem .72rem;
+  border-radius:10px;
+  box-shadow:0 0 0 1px rgba(245,190,58,.025),0 5px 16px rgba(245,190,58,.045);
+}
+@media (max-width:700px){
+  .site-link-glow{min-height:40px;padding:.65rem .85rem;}
+}
+@media (prefers-reduced-motion:reduce){
+  .site-link-glow{transition:none;}
+  .site-link-glow:hover{transform:none;}
+}
+</style>
+<style id="v55710-cta-icon-correction">
+/* V5.5.7.10 — CTA icon correction
+   Keep existing arrow characters in link text; never generate a second icon. */
+.site-link-glow::after,
+.premium-box::after,
+.resource-card .source-link::after{
+  content:none !important;
+  display:none !important;
+  width:0 !important;
+  height:0 !important;
+  flex:0 0 0 !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+</style>
+<style id="v5720-footer-final-layout">
+/* V5.5.7.20 — final footer layout
+   Left: brand + description + copyright.
+   Right: LinkedIn, Medium, Gumroad, Resources, Privacy.
+   Resource Hub removed because Resources already points to the resource library. */
+.mrm-footer-wrap{width:min(1180px,calc(100% - 40px));margin:auto;padding:46px 0 28px;}
+.mrm-footer-top{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:48px;padding-bottom:0;}
+.mrm-footer-brand a{display:inline-flex;text-decoration:none;}
+.mrm-footer-brand-logo{display:block;width:228px;height:auto;opacity:1;visibility:visible;}
+.mrm-footer-brand>div:not(.mrm-footer-copyright){margin-top:10px;color:#94a3b8;font-size:.92rem;line-height:1.55;}
+.mrm-footer-copyright{margin-top:14px;color:#8290a5;font-size:.84rem;line-height:1.7;}
+.mrm-footer-links{display:flex;justify-content:flex-end;align-items:center;gap:10px;flex-wrap:wrap;}
+.mrm-footer-links .site-link-glow{min-width:0;}
+.mrm-footer-bottom{display:none!important;}
+@media(max-width:900px){
+  .mrm-footer-top{grid-template-columns:1fr;gap:24px;align-items:start;}
+  .mrm-footer-links{justify-content:flex-start;}
+}
+@media(max-width:560px){
+  .mrm-footer-wrap{padding:36px 0 24px;}
+  .mrm-footer-brand-logo{width:190px;}
+  .mrm-footer-links{gap:8px;}
+}
+</style>
+</head><body><header class="mrm-canonical-header"><div class="mrm-nav-wrap"><a aria-label="MRMProLeads home" class="mrm-brand" href="/"><img alt="MRMProLeads" class="mrm-brand-logo" decoding="async" height="35" loading="eager" src="/assets/logo-navbar-premium.webp" width="228"/></a><nav aria-label="Primary" class="mrm-nav"><a class="site-link-glow" href="/services/">Services</a><a class="site-link-glow" href="/account-intelligence/">Account Intelligence</a><a class="site-link-glow" href="/proof/">Proof</a><a class="site-link-glow" href="/pricing/">Pricing</a><a class="site-link-glow" href="/insights/">Insights</a><a aria-current="page" class="site-link-glow" href="/about/">About</a><a class="mrm-nav-cta site-link-glow" href="/#contact">Request a Pilot</a></nav></div></header><main class="deep-page"><div class="wrap"><div class="eyebrow">FOUNDER / RESEARCH PARTNER</div><h1>Mahbubur R.</h1><p class="lead">Founder, MRMProLeads · B2B Account Intelligence &amp; ABM Research</p></div><section class="section"><div class="wrap founder-premium"><div class="founder-visual card"><img alt="Mahbubur R. — Founder of MRMProLeads" height="800" loading="lazy" src="/assets/founder-portrait.webp" width="640"/></div><div class="card"><blockquote>“The goal is not to produce a bigger spreadsheet. It is to give a sales team enough relevant account context to decide who to approach, why now, and who should be involved.”</blockquote><p>MRMProLeads was built around research-led ABM, account intelligence, buying committee mapping and sales intelligence for B2B SaaS teams and outbound agencies.</p><h2>Research philosophy</h2><p class="muted">The operating principle is simple: research the account before treating the contact as the opportunity. Separate ICP fit from buying intent, role from decision influence, and public evidence from assumptions.</p><h2>Evidence standard</h2><p class="muted">The portfolio prioritizes research quality, business context, human review and responsible handling over raw contact volume. Where public evidence is insufficient, the correct output is a qualification or evidence check—not an invented answer.</p><h2>Built for</h2><p class="muted">B2B SaaS teams and outbound agencies that need a research layer behind account selection, buying-context discovery and more relevant outreach.</p><div aria-label="Explore MRMProLeads" class="about-cta-grid">
+<a class="about-cta-card about-cta-gold site-link-glow" href="/account-intelligence/"><span class="about-cta-kicker">ACCOUNT INTELLIGENCE</span><strong>Explore the research offer</strong><span class="about-cta-arrow">→</span></a>
+<a class="about-cta-card about-cta-blue site-link-glow" href="/research-starter/"><span class="about-cta-kicker">RESEARCH STARTER</span><strong>Experience the workflow</strong><span class="about-cta-arrow">→</span></a>
+<a class="about-cta-card about-cta-violet site-link-glow" href="/insights/"><span class="about-cta-kicker">INSIGHTS</span><strong>Read the research thinking</strong><span class="about-cta-arrow">→</span></a>
 </div></div></div></section><section class="section about-standard-section"><div class="wrap">
 <div class="about-standard-panel">
-  <div class="about-standard-heading">
-    <span class="eyebrow">OPERATING STANDARD</span>
-    <h2>Research should reduce uncertainty — <em>not create more of it.</em></h2>
-    <p>Every MRMProLeads deliverable is built around evidence, human review and clear boundaries around what the public record can actually support.</p>
-  </div>
-  <div class="about-standard-pillar-intro"><span>THREE RESEARCH PILLARS</span><i></i><small>What every serious research deliverable should protect.</small></div>
-  <div class="about-standard-grid">
-    <article class="about-standard-card"><span class="about-standard-num">01</span><div><h3>Evidence first</h3><p>Public sources and observable business signals form the basis of account and contact claims.</p></div></article>
-    <article class="about-standard-card"><span class="about-standard-num">02</span><div><h3>Human reviewed</h3><p>Research is checked for relevance, consistency and business context before delivery.</p></div></article>
-    <article class="about-standard-card"><span class="about-standard-num">03</span><div><h3>Unknown stays unknown</h3><p>When evidence is insufficient, the output becomes a qualification or evidence check — never a guessed answer.</p></div></article>
-  </div>
-  <div class="about-standard-footer"><span>Research → Evidence → Confidence → Sales-useful decision</span><a href="/evidence/research-evidence-framework/">See the evidence framework →</a></div>
+<div class="about-standard-heading">
+<span class="eyebrow">OPERATING STANDARD</span>
+<h2>Research should reduce uncertainty — <em>not create more of it.</em></h2>
+<p>Every MRMProLeads deliverable is built around evidence, human review and clear boundaries around what the public record can actually support.</p>
 </div>
-</div></section></main><footer class="mrm-canonical-footer"><div class="mrm-footer-wrap"><div class="mrm-footer-top"><div class="mrm-footer-brand"><a aria-label="MRMProLeads home" href="/"><img alt="MRMProLeads" class="footer-brand-logo" decoding="async" height="35" loading="lazy" src="/assets/logo-navbar-premium.webp" width="228"/></a><div>B2B Account Intelligence &amp; Sales Intelligence</div></div><nav aria-label="Footer" class="mrm-footer-links"><a href="/services/">Services</a><a href="/account-intelligence/">Account Intelligence</a><a href="/proof/">Proof</a><a href="/pricing/">Pricing</a><a href="/insights/">Insights</a><a href="/resources/">Resources</a><a href="/about/">About</a><a href="/privacy/">Privacy</a></nav></div><div class="mrm-footer-bottom">© 2026 MRMProLeads · Public proof is anonymized · <a href="https://www.linkedin.com/in/mrahman01675/" rel="noopener noreferrer" target="_blank">LinkedIn</a> · <a href="https://medium.com/@mrahman01675" rel="noopener noreferrer" target="_blank">Medium</a> · <a href="https://mrmproleads.gumroad.com" rel="noopener noreferrer" target="_blank">Gumroad</a> · <a href="https://silken-pancake-4aa.notion.site/MRMProLeads-B2B-Resource-Hub-385320d911098092a62bd45d756c8c57" rel="noopener noreferrer" target="_blank">Resource Hub</a></div></div></footer><script src="/assets/site-analytics.js" defer></script>
+<div class="about-standard-pillar-intro"><span>THREE RESEARCH PILLARS</span><i></i><small>What every serious research deliverable should protect.</small></div>
+<div class="about-standard-grid">
+<article class="about-standard-card"><span class="about-standard-num">01</span><div><h3>Evidence first</h3><p>Public sources and observable business signals form the basis of account and contact claims.</p></div></article>
+<article class="about-standard-card"><span class="about-standard-num">02</span><div><h3>Human reviewed</h3><p>Research is checked for relevance, consistency and business context before delivery.</p></div></article>
+<article class="about-standard-card"><span class="about-standard-num">03</span><div><h3>Unknown stays unknown</h3><p>When evidence is insufficient, the output becomes a qualification or evidence check — never a guessed answer.</p></div></article>
+</div>
+<div class="about-standard-footer"><span>Research → Evidence → Confidence → Sales-useful decision</span><a class="premium-box site-link-glow" href="/evidence/research-evidence-framework/">See the evidence framework →</a></div>
+</div>
+</div></section></main><footer class="mrm-canonical-footer">
+  <div class="mrm-footer-wrap">
+    <div class="mrm-footer-top">
+      <div class="mrm-footer-brand">
+        <a aria-label="MRMProLeads home" href="/"><img alt="MRMProLeads" class="footer-brand-logo" decoding="async" height="35" loading="lazy" src="/assets/logo-navbar-premium.webp" width="228"/></a>
+        <div>B2B Account Intelligence &amp; Sales Intelligence</div>
+        <div class="mrm-footer-copyright">© 2026 MRMProLeads · Public proof is anonymized</div>
+      </div>
+      <nav aria-label="Footer" class="mrm-footer-links">
+        <a class="site-link-glow" href="https://www.linkedin.com/in/mrahman01675/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+        <a class="site-link-glow" href="https://medium.com/@mrahman01675" rel="noopener noreferrer" target="_blank">Medium</a>
+        <a class="site-link-glow" href="https://mrmproleads.gumroad.com/" rel="noopener noreferrer" target="_blank">Gumroad</a>
+        <a class="site-link-glow" href="/resources/">Resources</a>
+        <a class="site-link-glow" href="/privacy/">Privacy</a>
+      </nav>
+    </div>
+  </div>
+</footer><script defer="" src="/assets/site-analytics.js"></script>
 </body></html>
