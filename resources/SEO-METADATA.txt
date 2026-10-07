@@ -1,0 +1,6 @@
+MRMProLeads Resources — 20 Article SEO Master
+
+All 20 article records are normalized and audited in SEO-MASTER-AUDIT-20.md.
+Each article has: unique title, page-specific meta description, canonical URL, primary/secondary keyword cluster, search intent, Article schema, BreadcrumbList schema, OG/Twitter metadata, index status, and sitemap coverage.
+
+Serial order is Article #01 through Article #20.
