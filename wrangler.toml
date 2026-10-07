@@ -1,7 +1,7 @@
 name = "mrmproleads"
 main = "_worker.js"
 compatibility_date = "2026-10-05"
-
+keep_vars = true
 [assets]
 directory = "."
 binding = "ASSETS"
