@@ -46,7 +46,27 @@
     gtag('js', new Date());
     gtag('config', 'G-17ZBPZC3GE', { send_page_view: true });
   </script>
-<script>gtag('event','generate_lead',{method:'website_form'});</script>
+<script>
+(function(){
+  // Only count a lead when the server's successful POST redirect and a recent
+  // pilot-form submit in this tab agree. Consume the marker to avoid refresh duplicates.
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var startedAt = Number(sessionStorage.getItem('mrm_pilot_submit_started_at') || 0);
+    var recentSubmit = startedAt > 0 && (Date.now() - startedAt) >= 0 && (Date.now() - startedAt) < 120000;
+    sessionStorage.removeItem('mrm_pilot_submit_started_at');
+    if (params.get('submitted') === '1' && recentSubmit && typeof window.gtag === 'function') {
+      window.gtag('event', 'generate_lead', {method:'website_form'});
+    }
+    // Remove the marker from the address bar after the first page evaluation.
+    if (params.has('submitted') && window.history && window.history.replaceState) {
+      params.delete('submitted');
+      var cleanUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash;
+      window.history.replaceState({}, document.title, cleanUrl);
+    }
+  } catch (_) {}
+})();
+</script>
 <style>.nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}.nav a{color:#c7d1df}.nav .brand,.nav strong{color:#fff}.nav-cta{padding:10px 14px;border-radius:12px;background:linear-gradient(135deg,#ffd978,#f5bd4b);color:#111!important;font-weight:900!important}.footer-links{display:flex;gap:14px;flex-wrap:wrap}.footer-links a{color:#b9c5d5}.footer-modern{display:flex;flex-direction:column;gap:16px}.footer-brandline{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-brandline span{display:block;color:#8794a8;font-size:.9rem;margin-top:4px}.footer-bottom{color:#8794a8;font-size:.86rem}.footer-bottom a{color:#b9c5d5}@media(max-width:700px){.footer-brandline{flex-direction:column}}</style><style id="mrm-global-brand-footer-fix">
 .mrm-canonical-header{position:sticky;top:0;z-index:2000;background:rgba(7,10,18,.97);border-bottom:1px solid rgba(255,255,255,.10);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
 .mrm-nav-wrap{width:min(1180px,calc(100% - 40px));margin:auto;min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}.mrm-brand{display:flex;align-items:center;flex:0 0 auto;text-decoration:none}.mrm-brand-logo{display:block;width:228px;height:auto;max-width:100%;opacity:1;visibility:visible}.mrm-nav{display:flex;align-items:center;justify-content:flex-end;gap:20px;flex-wrap:wrap}.mrm-nav a{color:#dbe4f1;text-decoration:none;font-weight:600}.mrm-nav a:hover{color:#fff}.mrm-nav-cta{padding:11px 16px;border-radius:12px;background:linear-gradient(135deg,#ffd978,#f5bd4b);color:#111!important;font-weight:900!important}.mrm-canonical-footer{border-top:1px solid rgba(255,255,255,.10);margin-top:72px;background:linear-gradient(180deg,rgba(10,15,25,.2),rgba(5,9,16,.72))}.mrm-footer-wrap{width:min(1180px,calc(100% - 40px));margin:auto;padding:46px 0 28px}.mrm-footer-top{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:40px;padding-bottom:30px}.mrm-footer-brand a{display:inline-flex;text-decoration:none}.mrm-footer-brand-logo{display:block;width:228px;height:auto;opacity:1;visibility:visible}.mrm-footer-brand>div{margin-top:10px;color:#94a3b8;font-size:.92rem}.mrm-footer-links{display:flex;justify-content:flex-end;gap:16px;flex-wrap:wrap}.mrm-footer-links a,.mrm-footer-bottom a{color:#b9c6d8;text-decoration:none}.mrm-footer-links a:hover,.mrm-footer-bottom a:hover{color:#fff}.mrm-footer-bottom{padding-top:20px;border-top:1px solid rgba(255,255,255,.07);color:#8290a5;font-size:.84rem;line-height:1.7}@media(max-width:800px){.mrm-nav-wrap{min-height:70px;align-items:flex-start;padding:14px 0}.mrm-nav{gap:10px}.mrm-nav a{font-size:.9rem}.mrm-nav-cta{padding:9px 12px}.mrm-footer-top{grid-template-columns:1fr}.mrm-footer-links{justify-content:flex-start}}@media(max-width:560px){.mrm-nav-wrap{flex-direction:column;gap:12px}.mrm-brand-logo,.mrm-footer-brand-logo{width:190px}.mrm-nav{justify-content:flex-start}.mrm-footer-links{gap:12px}}
