@@ -81,6 +81,7 @@ a{color:var(--gold);text-decoration:none}
 .mrm-footer-copyright{margin-top:14px;color:#8290a5;font-size:.84rem;line-height:1.7}
 .mrm-footer-links{display:flex;justify-content:flex-end;align-items:center;gap:10px;flex-wrap:wrap}
 .mrm-footer-links .site-link-glow{min-width:0}
+.table-scroll-hint{display:none}
 @media(max-width:900px){
  .mrm-nav-wrap{min-height:72px;align-items:flex-start;padding:14px 0;flex-direction:column}
  .mrm-nav{justify-content:flex-start}
@@ -88,11 +89,34 @@ a{color:var(--gold);text-decoration:none}
  .mrm-footer-links{justify-content:flex-start}
 }
 @media(max-width:700px){
+ .mrm-nav-wrap{min-height:0;padding:10px 0;gap:8px}
+ .mrm-brand-logo{width:180px}
+ .mrm-nav{gap:6px;align-items:center}
+ .mrm-nav .site-link-glow{min-height:32px;padding:.32rem .52rem;font-size:.82rem;line-height:1.15}
+ .mrm-nav .mrm-nav-cta{
+   min-height:38px;
+   padding:.48rem .72rem;
+   border:1px solid var(--gold2);
+   border-radius:10px;
+   background:linear-gradient(180deg,var(--gold),var(--gold2));
+   color:#07101d!important;
+   font-weight:800;
+   box-shadow:0 5px 16px rgba(242,189,69,.18);
+ }
+ .mrm-nav .mrm-nav-cta:hover{
+   background:linear-gradient(180deg,#ffe28a,var(--gold));
+   color:#07101d!important;
+ }
+
  .article-shell{padding:52px 18px 72px}
  .article-title{font-size:clamp(2.05rem,10.5vw,3.25rem)}
  .article-card,.card{padding:20px;border-radius:15px}
  .article-cta,.cta{padding:22px}
+ .table-scroll-hint{display:block;margin:.25rem 0 .45rem;color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:.01em}
+ .article-table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+ .article-table{min-width:520px}
 }
+
 @media(max-width:560px){
  .mrm-footer-wrap{padding:36px 0 24px}
  .footer-brand-logo{width:190px}
@@ -106,6 +130,22 @@ a{color:var(--gold);text-decoration:none}
 .article-table th{color:var(--gold);background:rgba(9,25,48,.72);font-weight:700}
 .article-table td{background:rgba(9,25,48,.28)}
 .article-table td:first-child{width:31%}
+
+/* Mobile smart header: hide while scrolling down, reveal while scrolling up */
+@media(max-width:700px){
+ .mrm-canonical-header{
+   transition:transform .28s ease, opacity .28s ease;
+   will-change:transform;
+ }
+ .mrm-canonical-header.mrm-header-hidden{
+   transform:translateY(-110%);
+   opacity:0;
+   pointer-events:none;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ .mrm-canonical-header{transition:none}
+}
 </style><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
@@ -192,7 +232,8 @@ a{color:var(--gold);text-decoration:none}
 <section class="article-card">
 <h2>5. Define Stakeholder Roles</h2>
 <p>Identify the role each person may play in the specific decision. Avoid assigning buyer labels based on seniority alone. One person may hold several responsibilities, and some roles may not be visible in public sources.</p>
-<div class="article-table-wrap">
+<p class="table-scroll-hint" aria-hidden="true">Swipe horizontally to view the full table →</p>
+<div class="article-table-wrap" role="region" aria-label="Stakeholder roles table" tabindex="0">
 <table class="article-table">
 <thead><tr><th>Stakeholder role</th><th>What the role may involve</th></tr></thead>
 <tbody>
@@ -278,4 +319,55 @@ a{color:var(--gold);text-decoration:none}
 </div>
 </footer>
 <script defer="" src="/assets/site-analytics.js"></script>
-<script defer="" src="/assets/mobile-nav.js"></script></body></html>
+<script defer="" src="/assets/mobile-nav.js"></script>
+<script>
+(function () {
+  const header = document.querySelector('.mrm-canonical-header');
+  if (!header) return;
+
+  const mobileQuery = window.matchMedia('(max-width: 700px)');
+  const threshold = 90;
+  const directionDelta = 8;
+  let lastY = Math.max(window.scrollY || 0, 0);
+  let ticking = false;
+
+  function updateHeader() {
+    const currentY = Math.max(window.scrollY || 0, 0);
+
+    if (!mobileQuery.matches) {
+      header.classList.remove('mrm-header-hidden');
+      lastY = currentY;
+      ticking = false;
+      return;
+    }
+
+    if (currentY <= threshold) {
+      header.classList.remove('mrm-header-hidden');
+    } else if (currentY > lastY + directionDelta) {
+      header.classList.add('mrm-header-hidden');
+    } else if (currentY < lastY - directionDelta) {
+      header.classList.remove('mrm-header-hidden');
+    }
+
+    lastY = currentY;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener('resize', updateHeader, { passive: true });
+  if (mobileQuery.addEventListener) {
+    mobileQuery.addEventListener('change', updateHeader);
+  } else {
+    mobileQuery.addListener(updateHeader);
+  }
+  updateHeader();
+})();
+</script>
+
+</body></html>
