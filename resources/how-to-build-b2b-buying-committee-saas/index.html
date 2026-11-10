@@ -136,31 +136,35 @@ a.mrm-nav-cta:hover,
 .article-shell .article-cta-button{display:inline-block;margin-top:18px;padding:13px 20px;border-radius:10px;font-weight:800}
 .article-shell .article-cta-button:hover{transform:translateY(-1px)}
 
+
+/* Exact Article #19 mobile header auto-hide CSS */
+@media(max-width:700px){
+ .mrm-canonical-header{
+   transition:transform .28s ease, opacity .28s ease;
+   will-change:transform;
+ }
+ .mrm-canonical-header.mrm-header-hidden{
+   transform:translateY(-110%);
+   opacity:0;
+   pointer-events:none;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ .mrm-canonical-header{transition:none}
+}
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="Learn how to map a B2B SaaS buying committee, identify six stakeholder roles, verify evidence, uncover research gaps and build a practical account map.">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="MRMProLeads">
-<meta property="og:title" content="How to Build a B2B Buying Committee in SaaS">
-<meta property="og:description" content="Learn how to map a B2B SaaS buying committee, identify six stakeholder roles, verify evidence, uncover research gaps and build a practical account map.">
-<meta property="og:url" content="https://mrmproleads.com/resources/how-to-build-a-b2b-buying-committee-in-saas/">
-<meta property="og:image" content="https://mrmproleads.com/assets/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How to Build a B2B Buying Committee in SaaS">
-<meta name="twitter:description" content="Learn how to map a B2B SaaS buying committee, identify six stakeholder roles, verify evidence, uncover research gaps and build a practical account map.">
-<meta name="twitter:image" content="https://mrmproleads.com/assets/og-image.png">
-<link rel="canonical" href="https://mrmproleads.com/resources/how-to-build-a-b2b-buying-committee-in-saas/">
+<meta content="Learn how to map a B2B SaaS buying committee, identify six stakeholder roles, verify evidence, uncover research gaps and build a practical account map." name="description"/>
+<meta content="article" property="og:type"/>
+<meta content="MRMProLeads" property="og:site_name"/>
+<meta content="How to Build a B2B Buying Committee in SaaS | MRMProLeads" property="og:title"/>
+<meta content="Learn how to map a B2B SaaS buying committee, identify six stakeholder roles, verify evidence, uncover research gaps and build a practical account map." property="og:description"/>
+<meta content="https://mrmproleads.com/resources/how-to-build-b2b-buying-committee-saas/" property="og:url"/>
+<meta content="https://mrmproleads.com/assets/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="How to Build a B2B Buying Committee in SaaS | MRMProLeads" name="twitter:title"/>
+<meta content="Learn how to map a B2B SaaS buying committee, identify six stakeholder roles, verify evidence, uncover research gaps and build a practical account map." name="twitter:description"/>
+<meta content="https://mrmproleads.com/assets/og-image.png" name="twitter:image"/>
+<link href="https://mrmproleads.com/resources/how-to-build-b2b-buying-committee-saas/" rel="canonical"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -323,7 +327,6 @@ a.mrm-nav-cta:hover,
 <h1 class="article-title">How to Build a B2B Buying Committee in SaaS</h1>
 <p class="article-lede">A practical, evidence-led guide to identifying the people involved in a B2B SaaS purchase, understanding their potential roles and building a buying committee map your sales team can actually use.</p>
 <div class="article-meta">By Mahbubur R. · MRMProLeads</div>
-
 <h2>Why One Contact Is Rarely Enough</h2>
 <section class="article-card">
 <p>Finding a senior contact at a B2B SaaS company can be a useful starting point. It does not, by itself, tell you whether that person owns the business problem, controls the budget, evaluates the technology or will use the solution.</p>
@@ -333,12 +336,10 @@ a.mrm-nav-cta:hover,
 <p>A useful map helps answer six practical questions:</p>
 <ul><li>Who appears closest to the business problem?</li><li>Who may influence, evaluate or approve the purchase?</li><li>Who is likely to assess technical requirements?</li><li>Who will use or manage the solution?</li><li>Which relevant stakeholders or relationships remain unknown?</li><li>What evidence supports each proposed role?</li></ul>
 <p>The purpose is not to label every senior employee a decision-maker. It is to understand the account accurately enough to choose a relevant next step.</p>
-
 <h2>What Is a B2B Buying Committee?</h2>
 <p>A B2B buying committee is the group of people who may participate in, influence, evaluate, approve or use a business purchase. The group can include business leaders, executives, technical evaluators, finance stakeholders, end users and procurement, legal or security teams.</p>
 <p>Not every company has a formally defined committee. Its shape depends on company size, product complexity, contract value, budget ownership, integration requirements, data sensitivity and the business function that owns the problem. A small SaaS company may involve a founder and one functional lead. A more complex purchase in a larger organisation may require input from Sales, Operations, IT, Finance, Security, Legal and Procurement.</p>
 <p>There is no universal committee chart to copy. Research should reflect the specific account and the product being considered.</p>
-
 <h2>Six Buying Committee Roles to Research</h2>
 <p>Use the following as research categories, not fixed job titles. One person may perform more than one role, and some roles may not apply to a particular purchase.</p>
 <h3>1. Business or Problem Owner</h3>
@@ -362,7 +363,6 @@ a.mrm-nav-cta:hover,
 <h3>6. Procurement, Legal or Risk Stakeholder</h3>
 <p>These stakeholders may become involved when a purchase requires formal vendor approval or risk review. Their responsibilities can include contract and vendor review, data privacy, security, legal terms, regulatory compliance and procurement procedures.</p>
 <p>These roles may be less relevant for a small, low-complexity purchase but important for larger or regulated organisations. <strong>Research question:</strong> Are there formal purchasing, legal, privacy or security requirements that could affect the decision?</p>
-
 <h2>How to Build a B2B Buying Committee Map: Six Steps</h2>
 <h3>1. Establish Why the Account Matters</h3>
 <p>Start with the company and the use case—not a list of employees. Before researching stakeholders, document the product or service being sold, the business problem it addresses, the relevant department, the account’s fit with your ideal customer profile (ICP), and the evidence supporting that fit.</p>
@@ -390,7 +390,6 @@ a.mrm-nav-cta:hover,
 <h3>6. Decide the Next Action</h3>
 <p>The map should help the team make a decision. Depending on the evidence and commercial fit, the next step may be to contact a validated problem owner, research the potential budget owner, verify a technical stakeholder, investigate a functional gap, wait for stronger account-level evidence or exclude the account.</p>
 <p>Do not reach out simply because a contact has been found. The next action should reflect the quality of the evidence and whether the account is commercially relevant.</p>
-
 <h2>What Evidence Should You Use?</h2>
 <p>The quality of a buying committee map depends on the relevance, freshness and traceability of its sources. Different sources support different conclusions; none should be stretched beyond what it actually shows.</p>
 <div class="article-table-wrap"><table class="article-table"><thead><tr><th>Research source</th><th>Can help establish</th><th>Cannot prove on its own</th></tr></thead><tbody>
@@ -402,14 +401,12 @@ a.mrm-nav-cta:hover,
 <tr><td>Interview or presentation</td><td>Stated priorities and responsibilities</td><td>Internal approval authority</td></tr>
 </tbody></table></div>
 <p>Record when each source was checked and exactly what it supports. Prefer current, attributable evidence. If sources conflict, investigate the discrepancy rather than silently choosing one.</p>
-
 <h2>A Practical Buying Committee Research Template</h2>
 <p>Use a consistent structure across target accounts so that researchers and sales teams can understand the evidence and gaps quickly.</p>
 <div class="article-table-wrap"><table class="article-table"><thead><tr><th>Field</th><th>What to record</th></tr></thead><tbody>
 <tr><td>Account</td><td>Company name and official website</td></tr><tr><td>Stakeholder</td><td>Full name</td></tr><tr><td>Current role</td><td>Verified job title and current affiliation</td></tr><tr><td>Department</td><td>Relevant business function</td></tr><tr><td>Potential committee role</td><td>Problem owner, economic buyer, technical evaluator, end user, etc.</td></tr><tr><td>Evidence</td><td>Specific information supporting the proposed role</td></tr><tr><td>Source</td><td>Source URL or identifiable source name</td></tr><tr><td>Date checked</td><td>Date the information was last verified</td></tr><tr><td>Confidence</td><td>High, medium or low—with a clear reason</td></tr><tr><td>Unknowns</td><td>What remains unconfirmed</td></tr><tr><td>Next step</td><td>Research, validate, contact, monitor or exclude</td></tr>
 </tbody></table></div>
 <p><strong>Illustrative example only:</strong> A public profile may confirm that Person A is VP of Sales; their potential role as business owner remains a hypothesis until responsibility for the relevant problem is established. A CTO’s engineering remit may suggest technical relevance, but purchase-specific involvement still needs validation. A CEO’s leadership position does not, by itself, confirm budget approval. These examples are fictional and are not research on real companies.</p>
-
 <h2>Common Buying Committee Mapping Mistakes</h2>
 <h3>Assuming Seniority Means Decision Authority</h3><p>A senior executive may not own the problem, control the budget or lead the technical evaluation. Research responsibilities and evidence rather than relying on seniority.</p>
 <h3>Using the Same Structure for Every Account</h3><p>Company size, product complexity, price, risk and internal processes all affect who participates. Build the map around the actual account instead of forcing every company into one template.</p>
@@ -417,18 +414,15 @@ a.mrm-nav-cta:hover,
 <h3>Collecting Contacts Without a Business Use Case</h3><p>A list of executives, managers and technical employees is not a buying committee map unless it explains why each person may be relevant to the business problem.</p>
 <h3>Failing to Check Current Employment and Responsibilities</h3><p>People change roles, departments and companies. Verify current affiliation and role before using a contact in account research or outreach.</p>
 <h3>Treating Public Signals as Proof of Buying Intent</h3><p>Hiring activity, product announcements, funding news and technical changes can provide context. They do not independently prove that a company is actively evaluating or purchasing a solution.</p>
-
 <h2>How Buying Committee Mapping Improves B2B Sales and ABM</h2>
 <p>A well-researched map gives sales and marketing teams a more complete account-level view. It can support:</p>
 <ul><li><strong>More relevant outreach:</strong> tailor a message to documented responsibilities instead of sending the same pitch to every contact.</li><li><strong>Better stakeholder coverage:</strong> identify which functions are represented and where research gaps remain.</li><li><strong>More informed sales conversations:</strong> prepare questions about the business problem, technical requirements, operational needs and commercial priorities.</li><li><strong>Stronger ABM alignment:</strong> help sales and marketing understand the account roles they have evidence for and the information they still need.</li><li><strong>More disciplined prioritisation:</strong> distinguish a commercially relevant account with a researched stakeholder map from an account that contains only a list of names.</li></ul>
 <p>The objective is not to contact as many people as possible. It is to understand the account well enough to select a relevant, evidence-based next step.</p>
-
 <h2>How We Approach Buying Committee Mapping at MRMProLeads</h2>
 <p>At MRMProLeads, buying committee mapping is treated as account research—not simply contact collection. The aim is to understand which stakeholders may be relevant to a business problem, why they may be relevant and what evidence supports that assessment.</p>
 <p>Our research workflow focuses on:</p>
 <ol><li>Understanding the target account and its ICP fit.</li><li>Reviewing the business context and use case.</li><li>Identifying potential stakeholders by function and documented responsibility.</li><li>Checking current roles and attributable public evidence.</li><li>Recording sources, confidence levels and unknowns.</li><li>Mapping potential buying committee coverage.</li><li>Recommending practical next research or sales actions.</li></ol>
 <p>We distinguish verified information from research hypotheses. We do not assume budget authority, decision-making power or champion status without supporting evidence. The intended output is a useful account intelligence resource: who may be relevant, why, what is known, what remains uncertain and what your team should validate next.</p>
-
 <h2>Frequently Asked Questions About B2B Buying Committee Mapping</h2>
 <div class="article-faq">
 <details><summary>What is the difference between a buying committee and a decision-maker?</summary><div class="faq-answer"><p>A decision-maker is an individual with authority or influence over a purchase decision. A buying committee is the wider group of people who may evaluate, influence, approve or use the solution. Not every committee member has final purchasing authority.</p></div></details>
@@ -440,15 +434,13 @@ a.mrm-nav-cta:hover,
 <details><summary>Does a public hiring or funding announcement mean a company is ready to buy?</summary><div class="faq-answer"><p>No. Hiring, funding and product announcements can provide useful business context, but they do not independently establish active buying intent. Treat them as signals to investigate, not proof of a purchase process.</p></div></details>
 <details><summary>What should a buying committee map include?</summary><div class="faq-answer"><p>At minimum, record the account, stakeholder name, current role, department, potential committee role, supporting evidence, source, date checked, confidence, unknowns and recommended next step. Keep verified facts separate from hypotheses.</p></div></details>
 </div>
-
-<section class="article-cta" aria-labelledby="pilot-cta-title">
+<section aria-labelledby="pilot-cta-title" class="article-cta">
 <div class="article-eyebrow">RESEARCH PILOT · 3–5 ACCOUNTS</div>
 <h2 id="pilot-cta-title">Get a Clearer View of Your Target Accounts</h2>
 <p>If you have a target market or a shortlist of B2B SaaS accounts, MRMProLeads can help you build a focused 3–5 account research pilot. The work can identify relevant stakeholders by function, document potential buying committee roles, verify public professional information, record sources and confidence, highlight missing stakeholders and recommend practical next steps.</p>
 <p>Start with a defined set of accounts and a clear research outcome—without treating unverified assumptions as facts.</p>
 <a class="article-cta-button" href="/pricing/">View Research Pilot Options</a>
 </section>
-
 <!-- Preserve the four established bottom content sections: related articles, related topics, final thoughts and related articles. -->
 <p class="article-related"><strong>Related:</strong> <a href="https://mrmproleads.com/resources/how-to-research-b2b-decision-makers-without-guessing/">How to Research B2B Decision-Makers Without Guessing Who Buys</a> · <a href="https://mrmproleads.com/resources/how-to-map-b2b-stakeholders-before-sales-conversation/">How to Map B2B Stakeholders Before Your First Sales Conversation</a> · <a href="https://mrmproleads.com/resources/b2b-prospect-research/">B2B Prospect Research: How to Find and Verify the Right Contacts</a></p><section aria-labelledby="mrm-related-heading" class="mrm-related-articles" style="margin:2.5rem 0 1.5rem;padding:1.5rem;border:1px solid rgba(197,164,95,.28);border-radius:16px;background:rgba(9,25,48,.38)"><h2 id="mrm-related-heading" style="margin:0 0 .8rem">Explore Related Articles</h2><ul style="display:grid;gap:.55rem;padding-left:1.2rem"><li><a href="https://mrmproleads.com/resources/how-to-research-b2b-decision-makers-without-guessing/">How to Research B2B Decision-Makers Without Guessing Who Buys</a></li><li><a href="https://mrmproleads.com/resources/how-to-map-b2b-stakeholders-before-sales-conversation/">How to Map B2B Stakeholders Before Your First Sales Conversation</a></li><li><a href="https://mrmproleads.com/resources/b2b-prospect-research/">B2B Prospect Research: How to Find and Verify the Right Contacts</a></li><li><a href="https://mrmproleads.com/resources/what-is-b2b-account-intelligence/">What Is B2B Account Intelligence? A Practical Guide for SaaS Sales Teams</a></li></ul><h2 style="font-size:1rem;margin:1.4rem 0 .7rem">Related Topics</h2><nav aria-label="Related topics" style="display:flex;flex-wrap:wrap;gap:.55rem"><a href="https://mrmproleads.com/resources/how-to-research-b2b-decision-makers-without-guessing/" style="display:inline-block;border:1px solid rgba(197,164,95,.55);border-radius:999px;padding:.4rem .8rem;text-decoration:none;font-size:.9rem">Buying Committee Mapping</a><a href="https://mrmproleads.com/resources/how-to-map-b2b-stakeholders-before-sales-conversation/" style="display:inline-block;border:1px solid rgba(197,164,95,.55);border-radius:999px;padding:.4rem .8rem;text-decoration:none;font-size:.9rem">B2B Stakeholder Mapping</a><a href="https://mrmproleads.com/resources/b2b-prospect-research/" style="display:inline-block;border:1px solid rgba(197,164,95,.55);border-radius:999px;padding:.4rem .8rem;text-decoration:none;font-size:.9rem">Decision-Maker Research</a><a href="https://mrmproleads.com/resources/what-is-b2b-account-intelligence/" style="display:inline-block;border:1px solid rgba(197,164,95,.55);border-radius:999px;padding:.4rem .8rem;text-decoration:none;font-size:.9rem">Account Intelligence</a></nav></section>
 <h2>Final thoughts</h2>
@@ -479,4 +471,54 @@ a.mrm-nav-cta:hover,
 </div>
 </footer>
 <script defer="" src="/assets/site-analytics.js"></script>
-<script defer="" src="/assets/mobile-nav.js"></script></body></html>
+<script defer="" src="/assets/mobile-nav.js"></script>
+<script>
+(function () {
+  const header = document.querySelector('.mrm-canonical-header');
+  if (!header) return;
+
+  const mobileQuery = window.matchMedia('(max-width: 700px)');
+  const threshold = 90;
+  const directionDelta = 8;
+  let lastY = Math.max(window.scrollY || 0, 0);
+  let ticking = false;
+
+  function updateHeader() {
+    const currentY = Math.max(window.scrollY || 0, 0);
+
+    if (!mobileQuery.matches) {
+      header.classList.remove('mrm-header-hidden');
+      lastY = currentY;
+      ticking = false;
+      return;
+    }
+
+    if (currentY <= threshold) {
+      header.classList.remove('mrm-header-hidden');
+    } else if (currentY > lastY + directionDelta) {
+      header.classList.add('mrm-header-hidden');
+    } else if (currentY < lastY - directionDelta) {
+      header.classList.remove('mrm-header-hidden');
+    }
+
+    lastY = currentY;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener('resize', updateHeader, { passive: true });
+  if (mobileQuery.addEventListener) {
+    mobileQuery.addEventListener('change', updateHeader);
+  } else {
+    mobileQuery.addListener(updateHeader);
+  }
+  updateHeader();
+})();
+</script>
+</body></html>
