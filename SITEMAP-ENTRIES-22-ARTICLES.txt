@@ -1,4 +1,7 @@
-# SITEMAP ENTRIES — ARTICLES 01–20
+# MRMProLeads — Sitemap Entries: 22 Resource Articles
+
+Copy-ready article URL entries extracted from the repository `sitemap.xml`.
+All 22 article URLs are present in the sitemap. Preserve the existing lastmod dates; do not update dates unless the pages are actually changed.
 
 <!-- ARTICLE 01 -->
 <url><loc>https://mrmproleads.com/resources/why-generic-b2b-lead-lists-fail/</loc><lastmod>2026-10-07</lastmod></url>
@@ -59,3 +62,9 @@
 
 <!-- ARTICLE 20 -->
 <url><loc>https://mrmproleads.com/resources/b2b-prospect-research/</loc><lastmod>2026-10-07</lastmod></url>
+
+<!-- ARTICLE 21 -->
+<url><loc>https://mrmproleads.com/resources/b2b-buying-committee-mapping/</loc><lastmod>2026-11-10</lastmod></url>
+
+<!-- ARTICLE 22 -->
+<url><loc>https://mrmproleads.com/resources/how-to-prioritize-b2b-saas-accounts/</loc><lastmod>2026-11-10</lastmod></url>
