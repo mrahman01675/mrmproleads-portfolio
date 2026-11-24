@@ -22,6 +22,16 @@ export async function onRequestPost({ request, env }) {
   const honeypot = clean(form.get("website_confirm"));
   if (honeypot) return new Response('OK', {status:200, headers});
   if (!name || !email || !message) return new Response('Missing required fields', {status:400, headers});
+  const inquiryType = clean(form.get("inquiry_type"));
+  const inquiryTypes = {
+    client: { label: "I want to hire MRMProLeads.", subject: "NEW CLIENT INQUIRY" },
+    partner: { label: "I want to collaborate as a Research Partner.", subject: "PARTNERSHIP INQUIRY" },
+    other: { label: "Other Business Inquiry.", subject: "OTHER BUSINESS INQUIRY" }
+  };
+  if (!Object.prototype.hasOwnProperty.call(inquiryTypes, inquiryType)) {
+    return new Response('Please select a valid inquiry type', {status:400, headers});
+  }
+  const inquiry = inquiryTypes[inquiryType];
   const fields = {
     research_goal: clean(form.get("research_goal")),
     account_count: clean(form.get("account_count")),
@@ -37,7 +47,8 @@ export async function onRequestPost({ request, env }) {
   for (const [k,v] of Object.entries({name,email,company,website,message,...fields})) if (v.length > max[k]) return new Response('Input too long', {status:400, headers});
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return new Response('Invalid email', {status:400, headers});
   if (!env.RESEND_API_KEY || !env.CONTACT_TO_EMAIL || !env.CONTACT_FROM_EMAIL) return new Response('Form delivery is not configured yet.', {status:503, headers});
-  const html = `<h2>New MRMProLeads Research Starter Request</h2>
+  const html = `<h2>${esc(inquiry.subject)}</h2>
+    <p><b>Inquiry type:</b> ${esc(inquiry.label)}</p>
     <p><b>Name:</b> ${esc(name)}</p><p><b>Work email:</b> ${esc(email)}</p><p><b>Company:</b> ${esc(company)}</p><p><b>Website:</b> ${esc(website)}</p>
     <hr><p><b>Business type:</b> ${esc(fields.business_type)}</p><p><b>Account count:</b> ${esc(fields.account_count)}</p><p><b>Urgency:</b> ${esc(fields.urgency)}</p><p><b>Starting asset:</b> ${esc(fields.starting_asset)}</p><p><b>Research goal:</b> ${esc(fields.research_goal)}</p>
     <p><b>Suggested service:</b> ${esc(fields.suggested_service)}</p><p><b>Suggested scope:</b> ${esc(fields.suggested_scope)}</p><p><b>Uploaded account preview:</b> ${esc(fields.uploaded_accounts)}</p>
@@ -46,7 +57,7 @@ export async function onRequestPost({ request, env }) {
   const timeout = setTimeout(() => controller.abort(), 10_000);
   let res;
   try {
-    res = await fetch('https://api.resend.com/emails', { method:'POST', headers:{'Authorization':`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json'}, body:JSON.stringify({from:env.CONTACT_FROM_EMAIL,to:[env.CONTACT_TO_EMAIL],reply_to:email,subject:'New MRMProLeads Research Starter Request',html}), signal:controller.signal });
+    res = await fetch('https://api.resend.com/emails', { method:'POST', headers:{'Authorization':`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json'}, body:JSON.stringify({from:env.CONTACT_FROM_EMAIL,to:[env.CONTACT_TO_EMAIL],reply_to:email,subject:inquiry.subject,html}), signal:controller.signal });
   } catch (_) {
     clearTimeout(timeout);
     return new Response('Unable to deliver request', {status:502, headers});
